@@ -3,7 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
-<title>Buitenverblijven 3D product configurator</title>
+	<title>Buitenverblijven 3D product configurator</title>
 	<style>
 body {margin: 0;	padding: 0;					overflow: hidden;	}
 .loaderStyle{display:inline-block;width:80px;height:80px;position:absolute;top:50vh;left:50vw;margin-top:-40px;margin-left:-40px}
@@ -74,6 +74,77 @@ box-shadow: inset 0 0 2px rgba(255,233,233,1.75), 0 0 2px rgba(255, 233, 233, 1.
 
 <div id="uiSpace" style="display: none;">
 <div id="closeCross" onclick="spaceCloseUIdiv();"></div>
+
+<div id="sectionsList">
+
+
+<div id="sectionsListFront">
+<div class="uiSpaceText">Front sections</div>
+<div class="sectionButton" id="sectionButton0" onclick="spaceOpenUI(0); spaceOpenUIdiv(0);" >1</div>
+<div class="sectionButton" id="sectionButton1" onclick="spaceOpenUI(1); spaceOpenUIdiv(1);"  >2</div>
+<div class="sectionButton" id="sectionButton2" onclick="spaceOpenUI(2); spaceOpenUIdiv(2);" >3</div>
+<div class="sectionButton" id="sectionButton3" onclick="spaceOpenUI(3); spaceOpenUIdiv(3);" >4</div>
+<div class="sectionButton" id="sectionButton4" onclick="spaceOpenUI(4); spaceOpenUIdiv(4);" >5</div>
+<div class="sectionButton" id="sectionButton5" onclick="spaceOpenUI(5); spaceOpenUIdiv(5);" >6</div>
+<div class="sectionButton" id="sectionButton6" onclick="spaceOpenUI(6); spaceOpenUIdiv(6);" >7</div>
+</div>
+
+<div id="sectionsListBack">
+<div class="uiSpaceText">Back sections</div>
+<div class="sectionButton" id="sectionButton7" onclick="spaceOpenUI(7); spaceOpenUIdiv(7);" >1</div>
+<div class="sectionButton" id="sectionButton8" onclick="spaceOpenUI(8); spaceOpenUIdiv(8);" >2</div>
+<div class="sectionButton" id="sectionButton9" onclick="spaceOpenUI(9); spaceOpenUIdiv(9);" >3</div>
+<div class="sectionButton" id="sectionButton10" onclick="spaceOpenUI(10); spaceOpenUIdiv(10);" >4</div>
+<div class="sectionButton" id="sectionButton11" onclick="spaceOpenUI(11); spaceOpenUIdiv(11);" >5</div>
+<div class="sectionButton" id="sectionButton12" onclick="spaceOpenUI(12); spaceOpenUIdiv(12);" >6</div>
+<div class="sectionButton" id="sectionButton13" onclick="spaceOpenUI(13); spaceOpenUIdiv(13);" >7</div>
+</div>
+
+<div id="sectionsListLeft">
+<div class="uiSpaceText">Left sections</div>
+<div class="sectionButton" id="sectionButton14" onclick="spaceOpenUI(14); spaceOpenUIdiv(14);" >1</div>
+<div class="sectionButton" id="sectionButton15" onclick="spaceOpenUI(15); spaceOpenUIdiv(15);" >2</div>
+</div>
+
+<div id="sectionsListRight">
+<div class="uiSpaceText">Right sections</div>
+<div class="sectionButton" id="sectionButton16" onclick="spaceOpenUI(16); spaceOpenUIdiv(16);" >1</div>
+<div class="sectionButton" id="sectionButton17" onclick="spaceOpenUI(17); spaceOpenUIdiv(17);" >2</div>
+</div>
+
+
+</div>
+
+
+<div class="uiSpaceContainer">
+<div class="spaceTriggerText">Wall enabled</div>
+<div style="position:absolute; left: 370px; width: 150px; top: 14px;">
+		<div class="switch">
+			<label>
+
+				<input type="checkbox" id="spaceWall" value="false"  name="spaceWall" onchange="spaceSetWall();">
+				<span class="lever"></span>
+
+			</label>
+		</div>
+</div>
+</div>
+
+<div class="uiSpaceContainer">
+<div class="spaceTriggerText">Align to right</div>
+<div style="position:absolute; left: 370px; width: 150px; top: 14px;">
+		<div class="switch">
+			<label>
+
+				<input type="checkbox" id="spaceDirection" value="false"  name="spaceDirection" onchange="spaceSetDirection();">
+				<span class="lever"></span>
+
+			</label>
+		</div>
+</div>
+</div>
+
+
 
 
 <div id="spaceBlock1">
