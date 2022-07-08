@@ -4,7 +4,7 @@ for(let i=0;i<=17;i++)
 let sectionObj;
 sectionObj={};
 sectionObj.orientation=0;
-sectionObj.wall=0;
+sectionObj.wall=false;
 sectionObj.place=[];
 sectionObj.place[0]=0;
 sectionObj.place[1]=0;
@@ -15,7 +15,7 @@ window.appSection[i]=sectionObj;
 window.appSection[0].place[0]=1;
 window.appSection[0].place[1]=3;
 window.appSection[0].place[2]=1;
-
+window.appSection[1].wall=true;
 
 
 
@@ -153,6 +153,35 @@ window.scene.getMeshByName('zhaluzi').clone('sec_' + i + '_zhaluzi_1');
 window.scene.getMeshByName('zhaluzi').clone('sec_' + i + '_zhaluzi_2');
 
 
+//ROTATIONS
+//ROTATIONS
+if(i>13)
+{
+
+window.scene.getMeshByName('sec_' + i + '_window_2_0').rotation.y =  Math.PI/-2;
+window.scene.getMeshByName('sec_' + i + '_window_2_1').rotation.y =  Math.PI/-2;
+window.scene.getMeshByName('sec_' + i + '_window_2_2').rotation.y =  Math.PI/-2;
+
+window.scene.getMeshByName('sec_' + i + '_window_glass_2_0').rotation.y =  Math.PI/-2;
+window.scene.getMeshByName('sec_' + i + '_window_glass_2_1').rotation.y =  Math.PI/-2;
+window.scene.getMeshByName('sec_' + i + '_window_glass_2_2').rotation.y =  Math.PI/-2;
+
+window.scene.getMeshByName('sec_' + i + '_window_1_0').rotation.y =  Math.PI/-2;
+window.scene.getMeshByName('sec_' + i + '_window_1_1').rotation.y =  Math.PI/-2;
+window.scene.getMeshByName('sec_' + i + '_window_1_2').rotation.y =  Math.PI/-2;
+
+window.scene.getMeshByName('sec_' + i + '_window_glass_1_0').rotation.y =  Math.PI/-2;
+window.scene.getMeshByName('sec_' + i + '_window_glass_1_1').rotation.y =  Math.PI/-2;
+window.scene.getMeshByName('sec_' + i + '_window_glass_1_2').rotation.y =  Math.PI/-2;
+
+window.scene.getMeshByName('sec_' + i + '_zhaluzi_0').rotation.y =  Math.PI/2;
+window.scene.getMeshByName('sec_' + i + '_zhaluzi_1').rotation.y =  Math.PI/2;
+window.scene.getMeshByName('sec_' + i + '_zhaluzi_2').rotation.y =  Math.PI/2;
+
+window.scene.getMeshByName('sec_' + i + '_wall').rotation.y =  Math.PI/2;
+window.scene.getMeshByName('sec_' + i + '_plane').rotation.y =  Math.PI/2;
+
+}
 
 
 actionManager[i] = new BABYLON.ActionManager(window.scene);
@@ -173,9 +202,10 @@ if(i==window.appState['uiSpaceID'] && window.appState['uiSpaceUIEnabled']==true)
 
 actionManager[i].registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickDownTrigger, function(ev){
 window.appState['uiSpaceID']=i;
-window.scene.getMeshByName('sec_' + i + '_plane').visibility=0.5;
 spaceOpenUI(i);
 spaceOpenUIdiv(i);
+window.scene.getMeshByName('sec_' + i + '_plane').visibility=0.5;
+
 
 }));
 

@@ -766,7 +766,7 @@ if (z==5000 ){if(roofNum!=5){window.scene.getMeshByName(roofNum + 'roof_bulk_' +
 if (window.appState['rooftype']==0)
 {
 //central balk
-if (z==5000)
+if (z == 5000 || z == 4500)
 {
   window.scene.getMeshByName("balk_center_0").setEnabled(true);
   window.scene.getMeshByName("balk_center_1").setEnabled(true);

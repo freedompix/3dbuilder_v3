@@ -1,11 +1,24 @@
+function spaceSetWall()
+{
+let id = window.appState['uiSpaceID'];
+window.appSection[id].wall = document.getElementById("spaceWall").checked;
+console.log(window.appSection[id].wall);
+buildRound();
+}
+
+function spaceSetDirection(id, value)
+{
+
+}
+
 function spaceOpenUIdiv(id)
 {
 window.appState['uiSpaceUIEnabled']=true;
 document.getElementById('uiSpace').style.display='block';
-console.log('open');
+console.log('open' + id);
 
-
-
+window.appState['uiSpaceID']=id;
+buildRound();
 
 //spaceOpenUI(id);
 }
