@@ -12,10 +12,7 @@ sectionObj.place[2]=0;
 window.appSection[i]=sectionObj;
 }
 
-window.appSection[0].place[0]=1;
-window.appSection[0].place[1]=3;
-window.appSection[0].place[2]=1;
-window.appSection[1].wall=true;
+
 
 
 
