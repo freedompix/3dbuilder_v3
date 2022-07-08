@@ -1,3 +1,24 @@
+.uiSpaceContainer
+{
+position:relative;
+height: 60px;
+margin-top:30px;
+}
+
+.spaceTriggerText {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  position: absolute;
+  top: 18px;
+  left: 36px;
+  width: 200px;
+}
+
+
 #uiSpace
 {
 width: 468px;
@@ -13,8 +34,8 @@ z-index: 133;
 
 #spaceBlock1, #spaceBlock2, #spaceBlock3
 {
-position:relative;	
-height: 126px;	
+position:relative;
+height: 126px;
 }
 
 #closeCross
@@ -23,11 +44,11 @@ z-index:200;
 position: absolute;
 width: 16px;
 height: 16px;
-top:10px;	
+top:10px;
 left:440px;
   background-image:  url("../css/cross.png");
   background-repeat: no-repeat;
-  background-size:cover;	
+  background-size:cover;
 }
 
 
@@ -50,14 +71,14 @@ left:10px;
 }
 .uiSpaceButton1
 {
-left:76px;	
+left:76px;
   background-image:  url("../css/elem_1.png");
   background-repeat: no-repeat;
   background-size:cover;
 }
 .uiSpaceButton2
 {
-left:142px;	
+left:142px;
   background-image:  url("../css/elem_2.png");
   background-repeat: no-repeat;
   background-size:cover;
@@ -67,11 +88,49 @@ left:142px;
 left:208px;
   background-image:  url("../css/elem_3.png");
   background-repeat: no-repeat;
-  background-size:cover;	
+  background-size:cover;
 }
 
+#sectionsListFront, #sectionsListBack, #sectionsListLeft, #sectionsListRight
+{
+position: relative;
+height: 50px;
+margin-top: 20px;
+}
 
+.sectionButton
+{
+display: inline-block;
+width: 40px;
+height: 40px;
+text-align: center;
+border: 1px solid #CCCCCC;
+height: 25px;
+margin: 5px;
+margin-top: 30px;
 
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+color: #000000;
+
+cursor: pointer;
+}
+
+.uiSpaceText
+{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+color: #000000;
+position: absolute;
+top: 0px;
+left: 36px;
+width: 200px;
+}
 
 #uiSpaceText3, #uiSpaceText1, #uiSpaceText2
 {
@@ -84,10 +143,10 @@ color: #000000;
 position: absolute;
 top: 18px;
 left: 36px;
-width: 200px;	
+width: 200px;
 }
 
 #closeCross
 {
-	
+
 }
