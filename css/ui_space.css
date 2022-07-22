@@ -53,11 +53,11 @@ left:440px;
 
 
 
-.uiSpaceButton0, .uiSpaceButton1, .uiSpaceButton2, .uiSpaceButton3
+.uiSpaceButton0, .uiSpaceButton1, .uiSpaceButton2, .uiSpaceButton3, .uiSpaceButton4, .uiSpaceButton5, .uiSpaceButton6
 {
 position: absolute;
-width: 56px;
-height: 56px;
+width: 50px;
+height: 50px;
 border: 1px solid #cccccc;
 top:50px;
 }
@@ -71,25 +71,51 @@ left:10px;
 }
 .uiSpaceButton1
 {
-left:76px;
+left:70px;
   background-image:  url("../css/elem_1.png");
   background-repeat: no-repeat;
   background-size:cover;
 }
 .uiSpaceButton2
 {
-left:142px;
+left:130px;
   background-image:  url("../css/elem_2.png");
   background-repeat: no-repeat;
   background-size:cover;
 }
 .uiSpaceButton3
 {
-left:208px;
+left:190px;
   background-image:  url("../css/elem_3.png");
   background-repeat: no-repeat;
   background-size:cover;
 }
+
+.uiSpaceButton4
+{
+left:250px;
+  background-image:  url("../css/elem_4.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.uiSpaceButton5
+{
+left:310px;
+  background-image:  url("../css/elem_5.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.uiSpaceButton6
+{
+left:370px;
+  background-image:  url("../css/elem_6.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+
 
 #sectionsListFront, #sectionsListBack, #sectionsListLeft, #sectionsListRight
 {
