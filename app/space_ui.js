@@ -41,6 +41,9 @@ function spaceOpenUI(id)
 {
 window.appState['uiSpaceID']=id;
 
+
+//set red
+
 for(let ip=0; ip<=17; ip++)
 {
 if(window.scene.getMeshByName('sec_' + ip + '_plane')!=null) window.scene.getMeshByName('sec_' + ip + '_plane').visibility=0.0;
@@ -56,7 +59,7 @@ if(window.scene.getMeshByName('sec_' + ip + '_plane')!=null) window.scene.getMes
 for(let i=0; i<3; i++)
 {
 
-for(let ii=0; ii<4;ii++)
+for(let ii=0; ii<7;ii++)
 {
 document.getElementById('uiSpaceButton'+ i + '_' + ii).style.borderColor='#CCCCCC';
 if (window.appSection[id].place[i]==ii)
@@ -77,6 +80,12 @@ document.getElementById('spaceBlock1').style.display='block';
 document.getElementById('spaceBlock2').style.display='none';
 document.getElementById('spaceBlock3').style.display='none';
 }
+
+
+
+
+
+
 
 if(window.appSection[id].place[0]!=0 && window.appSection[id].place[1]==0 && window.appSection[id].place[2]==0)
 {
@@ -146,7 +155,19 @@ document.getElementById('spaceBlock3').style.display='none';
 
 
 
-
+if(
+window.appSection[id].place[0]==5 ||
+window.appSection[id].place[0]==6 ||
+window.appSection[id].place[1]==5 ||
+window.appSection[id].place[1]==6 ||
+window.appSection[id].place[2]==5 ||
+window.appSection[id].place[2]==6
+)
+{
+document.getElementById('spaceBlock1').style.display='block';
+document.getElementById('spaceBlock2').style.display='none';
+document.getElementById('spaceBlock3').style.display='none';
+}
 
 
 
@@ -161,13 +182,18 @@ function spaceUIupdateSections()
 for(let i=0;i<=17;i++)
 {
 let ID=i;
-let sectionWidth = window.appState['sectionWidth'];
+let sectionWidth;
+
+sectionWidth = window.appState['sectionWidth'];
+
+
 
 //if ( (sectionWidth < = 3300 && ) ){};
 
 
 	if (window.appSection[ID].place[2]==3 && window.appSection[ID].place[1]==3) window.appSection[ID].place[2]=0;
 	if (window.appSection[ID].place[2]==3 && window.appSection[ID].place[0]==3) window.appSection[ID].place[2]=0;
+
 
 
 
@@ -223,6 +249,15 @@ console.log(elementID + ' ' + value);
 
 let ID = window.appState['uiSpaceID'];
 window.appSection[ID].place[elementID]=value;
+
+if (value == 5 || value == 6)
+{
+window.appSection[ID].place[0] = value;
+window.appSection[ID].place[1] = 0;
+window.appSection[ID].place[2] = 0;
+}
+
+
 console.log(window.appSection[ID]);
 spaceUIupdateSections();
 spaceOpenUI(ID);

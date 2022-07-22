@@ -1,4 +1,8 @@
 window.appState=[];
+
+window.appState['widthLast']=null;
+window.appState['deepthLast']=null;
+
 window.appState['width']=8000;
 window.appState['deepth']=3000;
 
@@ -37,7 +41,7 @@ window.appState['wallInside']=false;
 
 function buildRound()
 {
-  setColor();
+
 var x = window.appState['width'];
 var z = window.appState['deepth'];
 
@@ -846,10 +850,10 @@ window.scene.getMeshByName('flatRoof' + i + '_right').scaling.x = z * 0.001 - sh
 
 
 
-let roofFlatShiftLeftBorder = roofFlatShiftLeft + 0.04 - 0.035;
-let roofFlatShiftRightBorder = roofFlatShiftRight + 0.04 - 0.035;
-let roofFlatShiftFrontBorder = roofFlatShiftFront + 0.04 - 0.035;
-let roofFlatShiftBackBorder = roofFlatShiftBack + 0.04 - 0.035;
+let roofFlatShiftLeftBorder = roofFlatShiftLeft + 0.06 - 0.035;
+let roofFlatShiftRightBorder = roofFlatShiftRight + 0.06 - 0.035;
+let roofFlatShiftFrontBorder = roofFlatShiftFront + 0.06 - 0.035;
+let roofFlatShiftBackBorder = roofFlatShiftBack + 0.06 - 0.035;
 
 let offset=0;
 let borderDeltaX = (roofFlatShiftLeftBorder - roofFlatShiftRightBorder)/2;
@@ -966,13 +970,21 @@ window.scene.getMeshByName('flat_roof_15mm' + i).scaling.z=3;
 window.scene.getMeshByName('flat_roof_15mm' + i).position.z=(z/1000)/2 - (i) * 0.2 + roofFlatShiftBack - 0.225 - 0.09;
 }
 
-if(z==((i-1)*200))
+if(z==((i-1)*200) )
 {
 window.scene.getMeshByName('flat_roof_15mm' + i).scaling.z=3;
 window.scene.getMeshByName('flat_roof_15mm' + i).position.z=(z/1000)/2 - (i-1) * 0.2 - roofFlatShiftFront + 0.225 + 0.09;
 }
 
+if(z==((i-1)*200 + 100))
+{
+window.scene.getMeshByName('flat_roof_15mm' + i).scaling.z=3;
+window.scene.getMeshByName('flat_roof_15mm' + i).position.z=(z/1000)/2 - (i-1) * 0.2 - roofFlatShiftFront + 0.225 + 0.09 - 0.1;
+}
 
+
+
+//console.log(((i-1)*200) + ' ' + ((i-1)*200 + 100) + ' ' + z);
 
 }
 
@@ -1038,6 +1050,56 @@ window.scene.getMaterialByName('RoofTileMaterialFlat').bumpTexture.uScale = 0.65
 console.log('sectionWidth: ' + sectionWidth);
 window.appState['sectionWidth'] = sectionWidth;
 
+
+
+
+//CREATING BALK ROOF CARKAS
+if (window.appState['rooftype'] == 1)
+{
+for (let i=0; i<10; i++)
+{
+window.scene.getMeshByName('roof_small_balk_min_' + i).setEnabled(false);
+}
+}
+
+if (window.appState['rooftype'] == 0)
+{
+
+for (let i=0; i<10; i++)
+{
+window.scene.getMeshByName('roof_small_balk_min_' + i).setEnabled(true);
+}
+
+for (let i=0; i<5; i++)
+{
+let startZ = z/-2000;
+let stepZ  = z/5000;
+window.scene.getMeshByName('roof_small_balk_min_' + i).position.x= x/-2000 - window.appState['overhangLeft']/1000 - 0.07;
+window.scene.getMeshByName('roof_small_balk_min_' + (i+5)).position.x= x/2000 ;
+
+window.scene.getMeshByName('roof_small_balk_min_' + i).scaling.x = (window.appState['overhangLeft'] + 70)/1000;
+window.scene.getMeshByName('roof_small_balk_min_' + (i+5)).scaling.x = (window.appState['overhangRight'] + 70) /1000;
+
+window.scene.getMeshByName('roof_small_balk_min_' + i).setEnabled(true);
+window.scene.getMeshByName('roof_small_balk_min_' + (i+5)).setEnabled(true);
+
+window.scene.getMeshByName('roof_small_balk_min_' + i).position.z     = startZ + i * stepZ;
+window.scene.getMeshByName('roof_small_balk_min_' + (i+5)).position.z = startZ + i * stepZ;
+
+
+
+}
+
+}
+
+
+//CREATING BALK ROOF CARKAS
+
+
+
+
+
+setColor();
 updateSections();
 rebuildHouses();
 elementsUpdate();
@@ -1046,15 +1108,33 @@ spaceUpdating();
 spaceUIupdateSections();
 spaceOpenUI(window.appState['uiSpaceID']);
 
+if (window.appState['widthLast']!= window.appState['width'] || window.appState['deepthLast']!= window.appState['deepth'])
+{
+
+window.appState['widthLast']  = window.appState['width'];
+window.appState['deepthLast'] = window.appState['deepth'];
+
+window.scene.getCameraByID('camera1').spinTo("target", new BABYLON.Vector3(0, 1.5, 0), 200);
 window.scene.getCameraByID('camera1').spinTo("radius", 9+x/2000, 200);
 window.scene.getCameraByID('camera1').lowerRadiusLimit=4+x/2000;
 window.scene.getCameraByID('camera1').upperRadiusLimit=20+x/2000;
 
 
-window.scene.getLightByName('light_point_2').position.x = 4 + x/2000;
-window.scene.getLightByName('light_point_4').position.x = -4 - x/2000;
+//window.scene.getCameraByID('camera1').upperBetaLimit=1.6;
+}
 
-window.scene.getLightByName('light_point_3').position.z = 8 + z/2000;
+window.scene.getLightByName('light_point_2').position.x = 4 + x/2000;
+window.scene.getLightByName('light_point_2').position.z = 8 + z/2000;
+
+
+window.scene.getLightByName('light_point_4').position.x = -4 - x/2000;
+window.scene.getLightByName('light_point_4').position.z = 8 + z/2000;
+
+
+window.scene.getLightByName('light_point_3').position.x = -4 - x/2000;
+window.scene.getLightByName('light_point_3').position.z = -8 - z/2000;
+
+window.scene.getLightByName('light_point_5').position.x = 4 + x/2000;
 window.scene.getLightByName('light_point_5').position.z = -8 - z/2000;
 
 }

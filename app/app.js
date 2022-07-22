@@ -166,12 +166,23 @@ console.log(importedNewName + ' loaded.');
 if (
 window.modelsLoaded==false &&
 
+
+
 window.modelsLoadingStatuses['zhaluzi']==true  &&
+window.modelsLoadingStatuses['window_1']==true  &&
+window.modelsLoadingStatuses['window_glass_1']==true  &&
 window.modelsLoadingStatuses['window_2']==true  &&
 window.modelsLoadingStatuses['window_glass_2']==true  &&
 
-window.modelsLoadingStatuses['window_1']==true  &&
-window.modelsLoadingStatuses['window_glass_1']==true  &&
+window.modelsLoadingStatuses['door2m']==true  &&
+window.modelsLoadingStatuses['door2m_glass']==true  &&
+
+window.modelsLoadingStatuses['door3m']==true  &&
+window.modelsLoadingStatuses['door3m_glass']==true  &&
+
+window.modelsLoadingStatuses['door4m']==true  &&
+window.modelsLoadingStatuses['door4m_glass']==true  &&
+
 
 
 window.modelsLoadingStatuses['door_single']==true  &&
@@ -232,6 +243,12 @@ window.modelsLoadingStatuses['balk_0']==true &&
 window.modelsLoadingStatuses['balk_small_0']==true)
 {
 
+
+
+
+
+
+
 //window.scene.getMeshByName('canopy2').setEnabled(false);
 //window.scene.getMeshByName('Object1259.004_primitive0').material=window.scene.getMaterialByName('Wood_Material');
 window.scene.getMeshByName('canopy1').setEnabled(false);
@@ -257,6 +274,28 @@ window.scene.getMeshByName('wall_small_carcas_0').material=window.scene.getMater
 
 window.scene.getMeshByName('wall_big').material=window.scene.getMaterialByName('wood_dark_0');
 window.scene.getMeshByName('wall_big_carcas').material=window.scene.getMaterialByName('Wood_Material');
+
+
+
+//CREATING BALK ROOF CARKAS
+for (let i=0; i<10; i++)
+{
+window.scene.getMeshByName('1meter_balk').clone('roof_small_balk_min_' + i);
+
+
+window.scene.getMeshByName('roof_small_balk_min_' + i).rotation=new BABYLON.Vector3(0, 0 , 0);
+window.scene.getMeshByName('roof_small_balk_min_' + i).position.y=2.42;
+//window.scene.getMeshByName('flat_roof_bulk_' + i).scaling.x=4.1;
+window.scene.getMeshByName('roof_small_balk_min_' + i).scaling.z=0.33;
+//window.scene.getMeshByName('flat_roof_bulk_' + i).position.y=2.42;
+
+}
+
+
+
+//CREATING BALK ROOF CARKAS
+
+
 
 
 //window.scene.getMeshByName('wall_small_0').makeGeometryUnique();
@@ -612,7 +651,7 @@ groundPlane.visibility=1;
 
 groundMaterial.albedoTexture  = new  BABYLON.Texture("models/tiles.jpg", window.scene);
 
-groundMaterial.albedoColor = new BABYLON.Color3(0.5,0.5,0.35);//Bordeaux Color RGB (95,2,31)
+groundMaterial.albedoColor = new BABYLON.Color3(0.9,0.9,0.5);//Bordeaux Color RGB (95,2,31)
 //groundMaterial.reflectivityColor = new BABYLON.Color3(0.003, 0.003, 0.003);
 //myMaterial.albedoTexture  = new BABYLON.Texture("textures/wall_pattern.jpg", scene);
 //myMaterial.emissiveTexture = new BABYLON.Texture("textures/wall_pattern_light.jpg", scene);
@@ -685,14 +724,16 @@ var createScene = function(){
 var scene = new BABYLON.Scene(engine);
 
 if (window.appState['debug']!=true){
-var el = document.querySelector('.tabs1');
-var instance = M.Tabs.init(el, {});
+window.el = document.querySelector('.tabs1');
+window.instance = M.Tabs.init(el, {});
+window.instance.select('house1_1');
 
-var el2 = document.querySelector('.tabs2');
-var instance2 = M.Tabs.init(el2, {});
+window.el2 = document.querySelector('.tabs2');
+window.instance2 = M.Tabs.init(el2, {});
+window.instance2.select('house2_1');
 
-instance.updateTabIndicator();
-instance2.updateTabIndicator();
+window.instance.updateTabIndicator();
+window.instance2.updateTabIndicator();
 
 
 }
@@ -725,11 +766,11 @@ scene.clearColor = new BABYLON.Color3(0.95, 0.95, 0.95);
 
 
 
-var light2 = new BABYLON.PointLight("light_point_2", new BABYLON.Vector3(10, 2, 0), scene);
+var light2 = new BABYLON.PointLight("light_point_2", new BABYLON.Vector3(10, 3, 0), scene);
 light2.intensity=20;
 light2.diffuse=new BABYLON.Color3(1,1,1);
 
-var light4 = new BABYLON.PointLight("light_point_4", new BABYLON.Vector3(-10, 2, 0), scene);
+var light4 = new BABYLON.PointLight("light_point_4", new BABYLON.Vector3(-10, 3, 0), scene);
 light4.intensity=20;
 light4.diffuse=new BABYLON.Color3(1,1,1);
 
@@ -737,13 +778,13 @@ light4.diffuse=new BABYLON.Color3(1,1,1);
 
 
 
-var light3 = new BABYLON.PointLight("light_point_3", new BABYLON.Vector3(0, 2, -5), scene);
+var light3 = new BABYLON.PointLight("light_point_3", new BABYLON.Vector3(0, 3, -5), scene);
 light3.intensity=70;
 light3.diffuse=new BABYLON.Color3(1,1,1);
 
 
 
-var light5 = new BABYLON.PointLight("light_point_5", new BABYLON.Vector3(0, 2, 5), scene);
+var light5 = new BABYLON.PointLight("light_point_5", new BABYLON.Vector3(0, 3, 5), scene);
 light5.intensity=70;
 light5.diffuse=new BABYLON.Color3(1,1,1);
 
@@ -874,6 +915,23 @@ ArchetypeUI.load3DModelByPath("./models/element_space/", "window_glass_2.obj", "
 
 ArchetypeUI.load3DModelByPath("./models/element_space/", "window_1.obj", "window_1");
 ArchetypeUI.load3DModelByPath("./models/element_space/", "window_glass_1.obj", "window_glass_1");
+
+//ArchetypeUI.load3DModelByPath("./models/element_space/", "door2m.obj", "door2m");
+//ArchetypeUI.load3DModelByPath("./models/element_space/", "door2m_glass.obj", "door2m_glass");
+
+//ArchetypeUI.load3DModelByPath("./models/element_space/", "door_2.obj", "door2m");
+//ArchetypeUI.load3DModelByPath("./models/element_space/", "door_2_glass.obj", "door2m_glass");
+
+ArchetypeUI.load3DModelByPath("./models/element_space/new/", "door2m.obj", "door2m");
+ArchetypeUI.load3DModelByPath("./models/element_space/new/", "door2m_glass.obj", "door2m_glass");
+
+ArchetypeUI.load3DModelByPath("./models/element_space/new/", "door3m.obj", "door3m");
+ArchetypeUI.load3DModelByPath("./models/element_space/new/", "door3m_glass.obj", "door3m_glass");
+
+ArchetypeUI.load3DModelByPath("./models/element_space/new/", "door4m.obj", "door4m");
+ArchetypeUI.load3DModelByPath("./models/element_space/new/", "door4m_glass.obj", "door4m_glass");
+
+
 
 
 //wall big
