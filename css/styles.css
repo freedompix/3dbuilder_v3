@@ -5,6 +5,7 @@
   top:0;
   left:0;
   background-color: #CCCCCC;
+  z-index: 400;
 }
 
 #renderCanvas{
@@ -17,7 +18,17 @@
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* mobile webkit */
 }
 
-
+#canvas2d
+{
+  width:calc(100vw - 468px);
+  height:calc(100vw - 468px);
+  position:absolute;
+  tgop:0;
+  top: calc((100vh - (100vw - 468px))/2);
+  left:468px;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* mobile webkit */
+}
 
 
 #topDiv{
@@ -311,6 +322,7 @@ background-color: #FFFFFF;
   background-image:  url("../css/icon_3d.png");
   background-repeat: no-repeat;
 }
+
 #icon2D{
   width:48px;
   height:48px;
