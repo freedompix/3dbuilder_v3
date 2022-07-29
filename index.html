@@ -6,9 +6,9 @@
 	<title>Buitenverblijven 3D product configurator</title>
 	<style>
 body {margin: 0;	padding: 0;					overflow: hidden;	}
-.loaderStyle{display:inline-block;width:80px;height:80px;position:absolute;top:50vh;left:50vw;margin-top:-40px;margin-left:-40px}
+.loaderStyle{display:inline-block;width:80px;height:80px;position:absolute;top:50vh;left:50vw;margin-top:-40px;margin-left:-40px; z-index: 401;}
 .loaderStyle:after{content:" ";display:block;width:64px;height:64px;margin:8px;border-radius:50%;border:2px solid #fff;border-color:#fff transparent #fff transparent;animation:loaderStyle 1.2s linear infinite}
-.loaderStyle2{display:inline-block;width:60px;height:60px;position:absolute;top:50vh;left:50vw;margin-top:-30px;margin-left:-30px}
+.loaderStyle2{display:inline-block;width:60px;height:60px;position:absolute;top:50vh;left:50vw;margin-top:-30px;margin-left:-30px; z-index: 402;}
 .loaderStyle2:after{content:" ";display:block;width:52px;height:52px;margin:4px;border-radius:50%;border:2px solid #fff;border-color:#fff transparent #fff transparent;animation:loaderStyle2 1.2s linear infinite}
 .loaderStyle:after, .loaderStyle2:after
 {
@@ -35,8 +35,18 @@ box-shadow: inset 0 0 2px rgba(255,233,233,1.75), 0 0 2px rgba(255, 233, 233, 1.
 
 
 
+
+
+
+<!--
+<script>window.appState['debug']=true;</script>
+<script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+
+<script src="app/_appbild.js"></script>
+!-->
+
 <script src="app/constructor.js"></script>
-<script src="app/section.js"></script>
+
 <script src="app/houses.js"></script>
 <script src="app/color.js"></script>
 <script src="app/ui.js"></script>
@@ -50,11 +60,7 @@ box-shadow: inset 0 0 2px rgba(255,233,233,1.75), 0 0 2px rgba(255, 233, 233, 1.
 <script src="app/space_ui.js"></script>
 
 <script src="app/app.js"></script>
-
-<!--
-<script>window.appState['debug']=true;</script>
-<script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
-!-->
+<script src="app/2d.js"></script>
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -66,6 +72,8 @@ box-shadow: inset 0 0 2px rgba(255,233,233,1.75), 0 0 2px rgba(255, 233, 233, 1.
 <body>
 
 <canvas id="renderCanvas"></canvas>
+<canvas id="canvas2d" width="1200" height="1200" style="display: none;"></canvas>
+
 
 <div class="" id="topDiv">
 <div id="logotype"><img src="css/buitenverblijven_logo.png" height="40" width="160"/></div>
@@ -76,8 +84,6 @@ box-shadow: inset 0 0 2px rgba(255,233,233,1.75), 0 0 2px rgba(255, 233, 233, 1.
 <div id="closeCross" onclick="spaceCloseUIdiv();"></div>
 
 <div id="sectionsList">
-
-
 <div id="sectionsListFront">
 <div class="uiSpaceText">Front sections</div>
 <div class="sectionButton" id="sectionButton0" onclick="spaceOpenUI(0); spaceOpenUIdiv(0);" >1</div>
@@ -111,8 +117,6 @@ box-shadow: inset 0 0 2px rgba(255,233,233,1.75), 0 0 2px rgba(255, 233, 233, 1.
 <div class="sectionButton" id="sectionButton16" onclick="spaceOpenUI(16); spaceOpenUIdiv(16);" >1</div>
 <div class="sectionButton" id="sectionButton17" onclick="spaceOpenUI(17); spaceOpenUIdiv(17);" >2</div>
 </div>
-
-
 </div>
 
 
@@ -1019,8 +1023,8 @@ Overhangen verbergen
 
 
 
-<div class="" id="icon2D"></div>
-<div class="" id="icon3D"></div>
+<div class="" id="icon2D" onclick="switch2D();"></div>
+<div class="" id="icon3D" onclick="switch3D();"></div>
 
 <div class="" id="iconZoomIn" onclick="zoom(1);"></div>
 <div class="" id="iconZoomOut" onclick="zoom(0);"></div>
