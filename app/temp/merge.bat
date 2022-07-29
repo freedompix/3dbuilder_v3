@@ -1,1 +1,0 @@
-type app.js color.js constructor.js elements_creating.js elements_updating.js houses.js section.js ui.js > appbild.js
