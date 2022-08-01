@@ -87,7 +87,6 @@ left: 24px;
 position: absolute;
 width: 408px;
 height: 56px;
-top: 56px;
 left: 24px;
 
 }
@@ -97,7 +96,60 @@ left: 24px;
 position: absolute;
 width: 408px;
 height: 56px;
-top: 118px;
+top: 62px;
+left: 24px;
+}
+
+
+#builderOptions3
+{
+position: relative;
+}
+
+
+#roofColor1
+{
+position: absolute;
+width: 408px;
+height: 56px;
+top: 0px;
+left: 24px;
+
+}
+
+#roofColor2
+{
+position: absolute;
+width: 408px;
+height: 56px;
+top: 62px;
+left: 24px;
+}
+
+#roofColor3
+{
+position: absolute;
+width: 408px;
+height: 56px;
+top: 124px;
+left: 24px;
+}
+
+#roofColor4
+{
+position: absolute;
+width: 408px;
+height: 56px;
+top: 186px;
+left: 24px;
+}
+
+#roofColor5
+{
+position: absolute;
+width: 408px;
+height: 56px;
+top: 248px;
 left: 24px;
 }
 
@@ -107,8 +159,30 @@ left: 24px;
 
 
 
-#builderOptions3
+
+
+
+#waterpipeColor1
 {
-position: relative;
-height: 400px;
+position: absolute;
+width: 408px;
+height: 56px;
+top: 0px;
+left: 24px;
+
 }
+
+#waterpipeColor2
+{
+position: absolute;
+width: 408px;
+height: 56px;
+top: 62px;
+left: 24px;
+}
+
+
+
+
+
+

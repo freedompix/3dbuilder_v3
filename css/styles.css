@@ -31,6 +31,12 @@
 }
 
 
+#builderOptions1, #builderOptions2, #builderOptions3, #builderOptions4, #builderOptions5, #builderOptions6, #builderOptions7
+{
+display: none;
+}	
+
+
 #topDiv{
   width:100vw;
   height:56px;
