@@ -55,6 +55,7 @@ box-shadow: inset 0 0 2px rgba(255,233,233,1.75), 0 0 2px rgba(255, 233, 233, 1.
 
 
 </head>
+
 <body>
 
 <canvas id="renderCanvas"></canvas>
@@ -63,6 +64,73 @@ box-shadow: inset 0 0 2px rgba(255,233,233,1.75), 0 0 2px rgba(255, 233, 233, 1.
 
 <div class="" id="topDiv">
 <div id="logotype"><img src="css/buitenverblijven_logo.png" height="40" width="160"/></div>
+</div>
+
+<div class="" id="optionsBox">
+<div style="position: absolute; width: 1px; height: 60px; left: 215px; top: 16px; background: #CCCCCC;"></div>
+<div style="position: absolute; width: 1px; height: 60px; left: 431px; top: 16px; background: #CCCCCC;"></div>
+<div style="position: absolute; width: 1px; height: 60px; left: 647px; top: 16px; background: #CCCCCC;"></div>
+
+
+
+
+
+
+
+
+
+<div class="" id="optionsBoxBlock1">
+	<div class="optionsTopText_top">Daklijn</div>
+
+	<div class="optionsTopText1">Breedte</div>
+	<div class="optionsTopText1_right" id="info1_1">--</div>
+
+	<div class="optionsTopText2">Diepte</div>
+	<div class="optionsTopText2_right" id="info1_2">--</div>
+	
+	<div style="position: absolute; width: 39px; height: 0px; right: 17px; top: 24px;border-top: 3px dashed #000000;"></div>
+</div>
+
+<div class="" id="optionsBoxBlock2">
+	<div class="optionsTopText_top">Fundering</div>
+
+	<div class="optionsTopText1">Breedte</div>
+	<div class="optionsTopText1_right" id="info2_1">--</div>
+
+	<div class="optionsTopText2">Diepte</div>
+	<div class="optionsTopText2_right" id="info2_2">--</div>
+
+	<div style="position: absolute;width: 6px;height: 6px;right: 27px;top: 21px;background: #170E0E;"></div>
+	<div style="position: absolute;width: 6px;height: 6px;right: 16px;top: 21px;background: #170E0E;"></div>
+</div>
+
+<div class="" id="optionsBoxBlock3">
+	<div class="optionsTopText_top">Linker berging</div>
+
+	<div class="optionsTopText1">Breedte</div>
+	<div class="optionsTopText1_right" id="info3_1">--</div>
+
+	<div class="optionsTopText2">Diepte</div>
+	<div class="optionsTopText2_right" id="info3_2">--</div>
+
+	<div style="position: absolute;width: 40px;height: 1px;right: 16px;top: 24px;background: #170E0E;"></div>
+	
+</div>
+
+<div class="" id="optionsBoxBlock4">
+	<div class="optionsTopText_top">Rechter berging</div>
+
+	<div class="optionsTopText1">Breedte</div>
+	<div class="optionsTopText1_right" id="info4_1">--</div>
+
+	<div class="optionsTopText2">Diepte</div>
+	<div class="optionsTopText2_right"  id="info4_2">--</div>
+	
+	<div style="position: absolute;width: 40px;height: 1px;right: 16px;top: 24px;background: #170E0E;"></div>
+
+</div>
+
+
 </div>
 
 
@@ -182,10 +250,9 @@ box-shadow: inset 0 0 2px rgba(255,233,233,1.75), 0 0 2px rgba(255, 233, 233, 1.
 </div>
 
 
-<div class="" id="viewSelector">
-<div class="" id="2dButton"></div>
-<div class="" id="3dButton"></div>
-</div>
+
+
+
 
 
 <div class="" id="builderUI" style="">
@@ -1108,18 +1175,22 @@ Overhangen verbergen
 
 
 
+<div class="" id="viewSelector">
+<div class="" id="2dButton"></div>
+<div class="" id="3dButton"></div>
+</div>
+
 <div class="" id="icon2D" onclick="switch2D();"></div>
 <div class="" id="icon3D" onclick="switch3D();"></div>
 
 <div class="" id="iconZoomIn" onclick="zoom(1);"></div>
 <div class="" id="iconZoomOut" onclick="zoom(0);"></div>
 
-<div class="" id="iconFullScreen"></div>
+<div class="" id="iconFullScreen" onclick="fullScreen();"></div>
 <div class="" id="iconInfo" onclick="switchUIsummary(); return false;"></div>
 
 
-<div class="" id="optionsBox">
-</div>
+
 
 
 
