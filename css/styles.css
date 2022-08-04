@@ -259,8 +259,8 @@ text-align: center;
 }
 
 
-body {margin: 0;	padding: 0;			background-color: #FFFFFF;			overflow: hidden;	}
-
+body {margin: 0;	padding: 0;			background-color: #FFFFFF;	overflow: hidden; width: 100vw; height: 100vh;}
+html {overflow: hidden; width: 100vw; height: 100vh;}
 
 
 
@@ -274,7 +274,7 @@ body {margin: 0;	padding: 0;			background-color: #FFFFFF;			overflow: hidden;	}
 
 
 /* Canvas ui */
-#optionsBox
+#optionsBox_old
 {
 position: absolute;
 width: 864px;
@@ -285,6 +285,134 @@ background-color: #FFFFFF;
   background-image:  url("../css/texts.png");
   background-repeat: no-repeat;
 }
+
+#optionsBox
+{
+position: absolute;
+width: 864px;
+height: 104px;
+bottom:20px;
+left:calc((100vw + 468px)/2  - 432px );
+background-color: #FFFFFF;
+}
+
+#optionsBoxBlock1, #optionsBoxBlock2, #optionsBoxBlock3, #optionsBoxBlock4
+{
+position: absolute;	
+width:	216px;
+height: 100px;
+top:0;
+}
+
+#optionsBoxBlock1{left:0;}
+#optionsBoxBlock2{left:216px;} 
+#optionsBoxBlock3{left:432px;} 
+#optionsBoxBlock4{left:648px;} 
+
+.optionsTopText_top{
+position: absolute;
+width: 113px;
+height: 16px;
+left: 16px;
+top: 16px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+
+color: #170E0E;
+}
+
+
+
+
+.optionsTopText1{
+	
+position: absolute;
+width: 45px;
+height: 15px;
+left: 16px;
+top: 40px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 15px;
+
+color: #6C6C6C;
+}
+
+.optionsTopText2
+{
+
+position: absolute;
+width: 45px;
+height: 15px;
+left: 16px;
+top: 61px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 15px;
+
+color: #6C6C6C;	
+}
+
+
+.optionsTopText1_right
+{
+position: absolute;
+width: 76px;
+height: 15px;
+right: 16px;
+top: 40px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 15px;
+text-align: right;
+
+color: #6C6C6C;	
+}
+
+
+.optionsTopText2_right
+{
+position: absolute;
+width: 76px;
+height: 15px;
+right: 16px;
+top: 61px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 15px;
+text-align: right;
+
+color: #6C6C6C;
+
+	
+}
+
+
+
+
+
+
+
+
+
+
+
 
 #uiForCanvas
 {
