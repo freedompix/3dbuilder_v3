@@ -43,8 +43,8 @@ box-shadow: inset 0 0 2px rgba(255,233,233,1.75), 0 0 2px rgba(255, 233, 233, 1.
 <script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
 
 <script src="app/_appbild.js"></script>
+<script src="app/appbild.js"></script>
 !-->
-
 
 <script src="app/appbild.js"></script>
 
@@ -55,16 +55,14 @@ box-shadow: inset 0 0 2px rgba(255,233,233,1.75), 0 0 2px rgba(255, 233, 233, 1.
 
 
 </head>
-
 <body>
 
 <canvas id="renderCanvas"></canvas>
 <canvas id="canvas2d" width="1200" height="1200" style="display: none;"></canvas>
 
+<div id="waterMark">Visser Montage</div>
+<div class="" id="topDiv"><div id="logotype"><img src="css/buitenverblijven_logo.png" height="40" width="160"/></div></div>
 
-<div class="" id="topDiv">
-<div id="logotype"><img src="css/buitenverblijven_logo.png" height="40" width="160"/></div>
-</div>
 
 <div class="" id="optionsBox">
 <div style="position: absolute; width: 1px; height: 60px; left: 215px; top: 16px; background: #CCCCCC;"></div>
@@ -87,7 +85,7 @@ box-shadow: inset 0 0 2px rgba(255,233,233,1.75), 0 0 2px rgba(255, 233, 233, 1.
 
 	<div class="optionsTopText2">Diepte</div>
 	<div class="optionsTopText2_right" id="info1_2">--</div>
-	
+
 	<div style="position: absolute; width: 39px; height: 0px; right: 17px; top: 24px;border-top: 3px dashed #000000;"></div>
 </div>
 
@@ -114,7 +112,7 @@ box-shadow: inset 0 0 2px rgba(255,233,233,1.75), 0 0 2px rgba(255, 233, 233, 1.
 	<div class="optionsTopText2_right" id="info3_2">--</div>
 
 	<div style="position: absolute;width: 40px;height: 1px;right: 16px;top: 24px;background: #170E0E;"></div>
-	
+
 </div>
 
 <div class="" id="optionsBoxBlock4">
@@ -125,7 +123,7 @@ box-shadow: inset 0 0 2px rgba(255,233,233,1.75), 0 0 2px rgba(255, 233, 233, 1.
 
 	<div class="optionsTopText2">Diepte</div>
 	<div class="optionsTopText2_right"  id="info4_2">--</div>
-	
+
 	<div style="position: absolute;width: 40px;height: 1px;right: 16px;top: 24px;background: #170E0E;"></div>
 
 </div>
@@ -1058,8 +1056,8 @@ Overhangen verbergen
 
 
 
-<div class="builderBlockStyleInactive waves-effect waves-light z-depth-0" id="builderBlock5" onclick="switchUI(5);">
-<div class="builderBlockTextInactive" id="builderBlockText5">5. ANGLE ROOF COLOR</div>
+<div class="builderBlockStyleInactive waves-effect waves-light z-depth-0" id="builderBlock5" onclick="switchUI(5);"  style="display: none;">
+<div class="builderBlockTextInactive" id="builderBlockText5">5. OPTIES</div>
 <div class="builderArrowInactive" id="builderArrow5"></div>
 </div>
 
@@ -1079,7 +1077,7 @@ Overhangen verbergen
 	<div class="roofColor2image"></div>
 	<div class="optionColorText">Red</div>
 	</div>
-	
+
 	<div class="optionColorInactive" id="roofColor3" onclick="roofColorSelect(3); return false;">
 	<div class="optionColorCheckboxInactive" id="roofColorCheckbox3"></div>
 	<div class="roofColor3image"></div>
@@ -1090,33 +1088,21 @@ Overhangen verbergen
 	<div class="optionColorCheckboxInative" id="roofColorCheckbox4"></div>
 	<div class="roofColor4image"></div>
 	<div class="optionColorText">Black glazed</div>
-	</div>	
-	
+	</div>
+
 	<div class="optionColorInactive" id="roofColor5" onclick="roofColorSelect(5); return false;">
 	<div class="optionColorCheckboxInative" id="roofColorCheckbox5"></div>
 	<div class="roofColor5image"></div>
 	<div class="optionColorText">Red glazed</div>
-	</div>	
-	
-	
-	
+	</div>
+
+
+
+
+
+
+
 </div>
-
-</div>
-
-<div class="builderBlockStyleInactive waves-effect waves-light z-depth-0" id="builderBlock6"  onclick="switchUI(6);">
-<div class="builderBlockTextInactive" id="builderBlockText6">6. roof drainpipe</div>
-<div class="builderArrowInactive" id="builderArrow6"></div>
-</div>
-
-<div id="builderOptions6" style="display: none;">
-
-
-
-
-
-
-
 <div style="position: relative; height: 60px;">
 <div class="builderOptionText">Enable roof drainpipe</div>
 <div style="position:absolute; left: 370px; width: 150px; top: 14px;">
@@ -1150,25 +1136,164 @@ Overhangen verbergen
 	<div class="waterpipeColor2image"></div>
 	<div class="optionColorText">Plastic</div>
 	</div>
-	
+
+</div>
+
+</div>
+
+
+<div class="builderBlockStyleInactive waves-effect waves-light z-depth-0" id="builderBlock6"  onclick="switchUI(6);">
+<div class="builderBlockTextInactive" id="builderBlockText6">5. CALCULATE PRICE  AND ORDER</div>
+<div class="builderArrowInactive" id="builderArrow6"></div>
+</div>
+
+<div id="builderOptions6" style="display: none;">
+
+<div class="builderItemText">Items:</div>
+
+<div class="itemDiv">
+<div class="itemListLeft">Betonpoer Antraciet</div>
+<div class="itemListCenter">15 x 15 x 60 cm</div>
+<div id="item_vertical_beam_fundament" class="itemListRight"></div>
+</div>
+
+<div class="itemDiv">
+<div class="itemListLeft">Staanders</div>
+<div class="itemListCenter">  15 x 15  cm </div>
+<div id="item_vertical_beam" class="itemListRight"></div>
+<!-- бАЛКИ !-->
+</div>
+
+<div class="itemDiv"  id="item_balks">
+<div class="itemListLeft">Ringbalk</div>
+<div class="itemListCenter" id="item_horisontal_beam_m"></div>
+<div id="item_horisontal_beam" class="itemListRight">
+</div><!-- ПЕРЕКЛАДИНЫ НА КРЫШЕ ВДОЛЬ БАЛОК !-->
+</div>
+
+<div class="itemDiv">
+<div class="itemListLeft">Ringbalk (side)</div>
+<div class="itemListCenter" id="item_horisontal_beam_side_m"></div>
+<div id="item_horisontal_beam_side" class="itemListRight">
+</div><!-- ПЕРЕКЛАДИНЫ НА КРЫШЕ ВДОЛЬ БАЛОК БОКОВЫЕ!-->
+</div>
+
+
+<div class="itemDiv"  id="item_canopy_l">
+<div class="itemListLeft">Ringbalk (Linker berging)</div>
+<div class="itemListCenter" id="item_horisontal_beam_l_m"></div>
+<div id="item_horisontal_beam_l" class="itemListRight">
+</div><!-- ПЕРЕКЛАДИНЫ НА КРЫШЕ ВДОЛЬ БАЛОК !-->
+</div>
+
+<div class="itemDiv" id="item_canopy_r">
+<div class="itemListLeft">Ringbalk (Rechter berging)</div>
+<div class="itemListCenter" id="item_horisontal_beam_r_m"></div>
+<div id="item_horisontal_beam_r" class="itemListRight"></div><!-- ПЕРЕКЛАДИНЫ НА КРЫШЕ ВДОЛЬ БАЛОК !-->
+</div>
+
+
+
+<div class="itemDiv">
+<div class="itemListLeft">Liggers</div>
+<div class="itemListCenter" id="item_roofbeams_m"></div>
+<div id="item_roofbeams" class="itemListRight"></div><!-- ПЕРЕКЛАДИНЫ НА КРЫШЕ ПОПЕРЕЧНЫЕ !-->
+</div>
+
+<div class="itemDiv">
+<div class="itemListLeft">Boeideel</div>
+<div class="itemListCenter" id="item_bordersM"></div>
+<div id="item_borders" class="itemListRight"></div><!-- обкладка крыши ПОПЕРЕЧНЫЕ !-->
+</div>
+
+
+<div class="itemDiv">
+<div class="itemListLeft">Frame voor wanden</div>
+
+<div id="item_frame" class="itemListRight"></div>
+</div>
+
+
+<div class="itemDiv">
+<div class="itemListLeft">Raam schuurdeel</div>
+<div class="itemListCenter" >66 x 86 cm </div>
+<div id="item_window" class="itemListRight"></div>
+</div>
+
+<div class="itemDiv">
+<div class="itemListLeft">Left single door</div>
+<div class="itemListCenter">88 x 198 cm</div>
+<div id="item_door_left" class="itemListRight">
+</div>
+</div>
+
+<div class="itemDiv">
+<div class="itemListLeft">Right single door</div>
+<div class="itemListCenter">88 x 198 cm</div>
+<div id="item_door_right" class="itemListRight">
+</div>
+</div>
+
+<div class="itemDiv">
+<div class="itemListLeft">Double door</div>
+<div class="itemListCenter">176 x 198 cm</div>
+<div id="item_door_double" class="itemListRight">
+</div>
+</div>
+
+
+<div class="itemDiv">
+<div class="itemListLeft">Shutter</div>
+<div class="itemListCenter">100 x 220 cm</div>
+<div id="item_shutter" class="itemListRight">
+</div>
+</div>
+
+<div class="itemDiv">
+<div class="itemListLeft">Window 1m</div>
+<div class="itemListCenter">100 x 220 cm</div>
+<div id="item_window1m" class="itemListRight">
+</div>
+</div>
+
+<div class="itemDiv">
+<div class="itemListLeft">Window 2m</div>
+<div class="itemListCenter">200 x 220 cm</div>
+<div id="item_window2m" class="itemListRight">
+</div>
+</div>
+
+<div class="itemDiv">
+<div class="itemListLeft">Glass door 2m</div>
+<div class="itemListCenter">200 x 220 cm</div>
+<div id="item_door2m" class="itemListRight"></div>
+</div>
+
+<div class="itemDiv">
+<div class="itemListLeft">Glass door 3m</div>
+<div class="itemListCenter">300 x 220 cm</div>
+<div id="item_door3m" class="itemListRight">
+</div>
+</div>
+
+<div class="itemDiv">
+<div class="itemListLeft">Glass door 4m</div>
+<div class="itemListCenter">300 x 220 cm</div>
+<div id="item_door4m" class="itemListRight">
+</div>
 </div>
 
 
 
 
-
-
+<div class="builderItemText">Price:</div>
+<div class="itemListPrice" id="price">
+</div>
 
 </div>
 
 
-<div class="builderBlockStyleInactive waves-effect waves-light z-depth-0" id="builderBlock7" onclick="switchUI(7);">
-<div class="builderBlockTextInactive" id="builderBlockText7">7.Opties</div>
-<div class="builderArrowInactive" id="builderArrow7"></div>
-</div>
 
-<div id="builderOptions7" style="display: none;">
-</div>
 
 </div>
 
