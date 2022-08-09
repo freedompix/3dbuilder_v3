@@ -34,7 +34,7 @@
 #builderOptions1, #builderOptions2, #builderOptions3, #builderOptions4, #builderOptions5, #builderOptions6, #builderOptions7
 {
 display: none;
-}	
+}
 
 
 #topDiv{
@@ -286,6 +286,23 @@ background-color: #FFFFFF;
   background-repeat: no-repeat;
 }
 
+#waterMark
+{
+position: absolute;
+width: 864px;
+height: 104px;
+top:100px;
+left:calc((100vw + 468px)/2  - 432px );
+
+text-align: center;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 54px;
+color: #FFFFFF;
+text-shadow: 0px 0px 10px #00000055;
+}
+
 #optionsBox
 {
 position: absolute;
@@ -298,16 +315,16 @@ background-color: #FFFFFF;
 
 #optionsBoxBlock1, #optionsBoxBlock2, #optionsBoxBlock3, #optionsBoxBlock4
 {
-position: absolute;	
+position: absolute;
 width:	216px;
 height: 100px;
 top:0;
 }
 
 #optionsBoxBlock1{left:0;}
-#optionsBoxBlock2{left:216px;} 
-#optionsBoxBlock3{left:432px;} 
-#optionsBoxBlock4{left:648px;} 
+#optionsBoxBlock2{left:216px;}
+#optionsBoxBlock3{left:432px;}
+#optionsBoxBlock4{left:648px;}
 
 .optionsTopText_top{
 position: absolute;
@@ -329,7 +346,7 @@ color: #170E0E;
 
 
 .optionsTopText1{
-	
+
 position: absolute;
 width: 45px;
 height: 15px;
@@ -360,7 +377,7 @@ font-weight: 400;
 font-size: 13px;
 line-height: 15px;
 
-color: #6C6C6C;	
+color: #6C6C6C;
 }
 
 
@@ -379,7 +396,7 @@ font-size: 13px;
 line-height: 15px;
 text-align: right;
 
-color: #6C6C6C;	
+color: #6C6C6C;
 }
 
 
@@ -400,7 +417,7 @@ text-align: right;
 
 color: #6C6C6C;
 
-	
+
 }
 
 
@@ -747,4 +764,76 @@ border-style: solid;
   position:absolute;
   background-image:  url("../css/checkboxactive.png");
   background-repeat: no-repeat;
+}
+
+
+.builderItemText{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  padding-top: 18px;
+  padding-left: 36px;
+  width: 200px;
+}
+
+.itemDiv{
+position: relative;
+margin-top:4px;
+height:16px;
+}
+
+
+
+
+.itemListLeft
+{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 19px;
+color: #000000;
+position: absolute;
+left: 18px;
+}
+
+.itemListCenter
+{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 19px;
+color: #000000;
+position: absolute;
+left: 180px;
+}
+
+.itemListRight
+{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 19px;
+color: #000000;
+position: absolute;
+left: 320px;
+width: 20px;
+text-align: right;
+}
+
+#price
+{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 26px;
+line-height: 19px;
+color: #000000;
+padding-left: 260px;
+width: 30px;
 }
