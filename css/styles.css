@@ -301,6 +301,11 @@ font-weight: 500;
 font-size: 54px;
 color: #FFFFFF;
 text-shadow: 0px 0px 10px #00000055;
+
+background-image: url("../css/logo.svg");
+background-position: center center;
+background-size: contain;
+background-repeat: no-repeat;
 }
 
 #optionsBox
