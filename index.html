@@ -1231,22 +1231,23 @@ return false;">
 		</div>
 
 		<div id="builderOptions6" style="display: none;">
+		
 			
-
-
-<div class="builderItemText" style="width: 300px;">Share model using the link bellow: </div>
-<div style="text-align: center; ">
-<div class="input-field">
-<input type="text" id="shareLink" style="width: 360px;" value="https://url" onClick="this.select();">
-</div>
-
-
-<div style="margin-bottom: 30px; text-align: center;">
-<a class="waves-effect red btn-small" onclick="navigator.clipboard.writeText(document.getElementById('shareLink').value); return false;">Copy link</a>
-</div>
-
-</div>
 			
+			
+			
+		
+
+			<div style="text-align: center;">
+			<div class="builderItemText" style="width: 300px;">Share model using the link bellow: </div>
+			<div class="input-field">
+			<input type="text" id="shareLink" style="width: 360px;" value="https://url" onClick="this.select();">
+			</div>
+			<div style="margin-bottom: 30px; text-align: center;">
+			<a class="waves-effect red btn-small" onclick="navigator.clipboard.writeText(document.getElementById('shareLink').value); return false;">Copy link</a>
+			</div>
+			</div>
+
 
 			<div class="builderItemText">Items:</div>
 
@@ -1266,14 +1267,20 @@ return false;">
 				<div class="itemListLeft">Rabat</div>
 				<div class="itemListCenter">250 x 1.2 x 18 cm</div>
 				<div id="rabat" class="itemListRight"></div>
-			</div>	
-			
-			
+			</div>
+
+
+
+
 			<div class="itemDiv">
 				<div class="itemListLeft">Betonpoer Antraciet</div>
 				<div class="itemListCenter">15 x 15 x 60 cm</div>
 				<div id="item_vertical_beam_fundament" class="itemListRight"></div>
 			</div>
+
+
+
+
 
 			<div class="itemDiv">
 				<div class="itemListLeft">Staanders</div>
@@ -1281,6 +1288,23 @@ return false;">
 				<div id="item_vertical_beam" class="itemListRight"></div>
 				<!-- бАЛКИ !-->
 			</div>
+
+
+			<div class="itemDiv" id="item_balks">
+				<div class="itemListLeft">Ringbalk</div>
+				<div class="itemListCenter" id="item_ringbalk_m"></div>
+				<div id="item_ringbalk" class="itemListRight">
+				</div><!-- ПЕРЕКЛАДИНЫ НА КРЫШЕ ВДОЛЬ БАЛОК !-->
+			</div>
+
+<div style="display:none;">
+
+	<div class="itemDiv">
+		<div class="itemListLeft">ligger</div>
+		<div class="itemListCenter"></div>
+		<div id="ligger" class="itemListRight"></div>
+	</div>
+
 
 			<div class="itemDiv" id="item_balks">
 				<div class="itemListLeft">Ringbalk</div>
@@ -1296,6 +1320,8 @@ return false;">
 				</div><!-- ПЕРЕКЛАДИНЫ НА КРЫШЕ ВДОЛЬ БАЛОК БОКОВЫЕ!-->
 			</div>
 
+
+
 			<div class="itemDiv" id="item_canopy_l">
 				<div class="itemListLeft">Ringbalk (Linker berging)</div>
 				<div class="itemListCenter" id="item_horisontal_beam_l_m"></div>
@@ -1308,6 +1334,9 @@ return false;">
 				<div class="itemListCenter" id="item_horisontal_beam_r_m"></div>
 				<div id="item_horisontal_beam_r" class="itemListRight"></div><!-- ПЕРЕКЛАДИНЫ НА КРЫШЕ ВДОЛЬ БАЛОК !-->
 			</div>
+
+</div>
+
 
 			<div class="itemDiv">
 				<div class="itemListLeft">Liggers</div>
@@ -1381,38 +1410,47 @@ return false;">
 			</div>
 
 			<div class="itemDiv">
-				<div class="itemListLeft">Window 1m</div>
+				<div class="itemListLeft">Vaste raam 1m</div>
 				<div class="itemListCenter">100 x 220 cm</div>
 				<div id="item_window1m" class="itemListRight">
 				</div>
 			</div>
 
 			<div class="itemDiv">
-				<div class="itemListLeft">Window 2m</div>
+				<div class="itemListLeft">Vaste raam 2m</div>
 				<div class="itemListCenter">200 x 220 cm</div>
 				<div id="item_window2m" class="itemListRight">
 				</div>
 			</div>
 
 			<div class="itemDiv">
-				<div class="itemListLeft">Glass door 2m</div>
+				<div class="itemListLeft">Schuifdeur frame boven 2m</div>
 				<div class="itemListCenter">200 x 220 cm</div>
 				<div id="item_door2m" class="itemListRight"></div>
 			</div>
 
 			<div class="itemDiv">
-				<div class="itemListLeft">Glass door 3m</div>
+				<div class="itemListLeft">Schuifdeur frame boven 3m</div>
 				<div class="itemListCenter">300 x 220 cm</div>
 				<div id="item_door3m" class="itemListRight">
 				</div>
 			</div>
 
 			<div class="itemDiv">
-				<div class="itemListLeft">Glass door 4m</div>
+				<div class="itemListLeft">Schuifdeur frame boven 4m</div>
 				<div class="itemListCenter">400 x 220 cm</div>
 				<div id="item_door4m" class="itemListRight">
 				</div>
 			</div>
+
+			<div class="itemDiv">
+				<div class="itemListLeft">Glass elements</div>
+				<div class="itemListCenter"></div>
+				<div id="item_glass_element" class="itemListRight">
+				</div>
+			</div>
+
+
 
 			<div class="itemDiv">
 				<div class="itemListLeft">Frame links/rechts</div>
@@ -1430,7 +1468,13 @@ return false;">
 
 			<div class="builderItemText">Price:</div>
 			<div class="itemListPrice" id="price">
-			</div>
+			</div>	
+			
+			
+			
+			
+			
+			
 		</div>
 	</div>
 	<div class="" id="viewSelector">
