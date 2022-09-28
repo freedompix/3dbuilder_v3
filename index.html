@@ -101,11 +101,29 @@
 	<script src="app/babylonjs.loaders.min.js"></script>
 
 
+<script>
+function onOrientationChange() {
 
+    var landscape = screen.width > screen.height;
+    var viewportmeta = document.querySelector('meta[name="viewport"]');
 
+    if(landscape) {
 
+        viewportmeta.content = "width=device-width, initial-scale=1.0";
 
-	<!--
+    } else {
+
+        viewportmeta.content = "width=468, initial-scale=0.5";
+
+    }
+
+}
+
+window.addEventListener('orientationchange', onOrientationChange);
+onOrientationChange();
+</script>
+
+<!--
 <script>window.appState['debug']=true;</script>
 <script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
 
@@ -113,11 +131,32 @@
 <script src="app/appbild.js"></script>
 !-->
 
-<script src="app/appbild.js"></script>
+<script src="app/constructor.js"></script>
+
+<script src="app/houses.js"></script>
+<script src="app/color.js"></script>
+<script src="app/roof_color.js"></script>
+<script src="app/ui.js"></script>
+
+<script src="app/elements_updating.js"></script>
+<script src="app/elements_creating.js"></script>
+
+
+<script src="app/space_creating.js"></script>
+<script src="app/space_updating.js"></script>
+<script src="app/space_ui.js"></script>
+
+<script src="app/app.js"></script>
+<script src="app/2d.js"></script>
+<script src="app/waterpipe.js"></script>
+
+<script src="app/calculate.js"></script>
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
 </head>
 
 <body>
@@ -1077,7 +1116,7 @@ return false;">
 			</div>
 
 
-			<div class="uiSpaceContainer">
+			<div class="uiSpaceContainer" style="height: 15px !important;">
 				<div class="spaceTriggerText">Wall enabled</div>
 				<div style="position:absolute; left: 370px; width: 150px; top: 14px;">
 					<div class="switch">
@@ -1091,9 +1130,25 @@ return false;">
 				</div>
 			</div>
 
-			<div class="uiSpaceContainer">
-				<div class="spaceTriggerText">Align to right</div>
+			<div class="uiSpaceContainer" style="height: 15px !important;">
+				<div class="spaceTriggerText">Inner Wall enabled</div>
 				<div style="position:absolute; left: 370px; width: 150px; top: 14px;">
+					<div class="switch">
+						<label>
+
+							<input type="checkbox" id="spaceInnerWall" value="" name="spaceInnerWall" onchange="spaceSetInnerWall();">
+							<span class="lever"></span>
+
+						</label>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="uiSpaceContainer" style="height: 15px !important;  margin-bottom: 30px;">
+				<div class="spaceTriggerText">Align to right</div>
+				<div style="position:absolute; left: 370px; width: 150px; top: 14px; ">
 					<div class="switch">
 						<label>
 
@@ -1313,7 +1368,6 @@ return false;">
 </div>
 
 
-
 <div class="itemDiv">
 	<div class="itemListLeft">Boeideel 2.2 x 20 cm</div>
 	<div class="itemListCenter" >m</div>
@@ -1526,6 +1580,7 @@ return false;">
 			<div class="builderItemText">Price:</div>
 			<div class="itemListPrice" id="price">
 			</div>
+
 
 
 
