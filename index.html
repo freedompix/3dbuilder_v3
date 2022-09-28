@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="user-scalable=no">
 	<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
 	<title>Buitenverblijven 3D product configurator</title>
 	<style>
@@ -109,11 +109,11 @@ function onOrientationChange() {
 
     if(landscape) {
 
-        viewportmeta.content = "width=device-width, initial-scale=1.0";
+        viewportmeta.content = "width=device-width, initial-scale=1.0, user-scalable=no";
 
     } else {
 
-        viewportmeta.content = "width=468, initial-scale=0.5";
+        viewportmeta.content = "width=468, initial-scale=1.0, user-scalable=no";
 
     }
 
@@ -131,26 +131,7 @@ onOrientationChange();
 <script src="app/appbild.js"></script>
 !-->
 
-<script src="app/constructor.js"></script>
-
-<script src="app/houses.js"></script>
-<script src="app/color.js"></script>
-<script src="app/roof_color.js"></script>
-<script src="app/ui.js"></script>
-
-<script src="app/elements_updating.js"></script>
-<script src="app/elements_creating.js"></script>
-
-
-<script src="app/space_creating.js"></script>
-<script src="app/space_updating.js"></script>
-<script src="app/space_ui.js"></script>
-
-<script src="app/app.js"></script>
-<script src="app/2d.js"></script>
-<script src="app/waterpipe.js"></script>
-
-<script src="app/calculate.js"></script>
+<script src="app/appbild.js"></script>
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
