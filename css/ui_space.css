@@ -20,10 +20,13 @@
 
 #uiSpace {
   width: 468px;
-  height: calc(100vh - 56px);
+
   position: relative;
-  /* top: 56px;
-  left: 0px; */
+  /* 
+  height: calc(100vh - 56px);
+  top: 56px;
+  left: 0px; 
+  */
   /* position: absolute; */
   /* background-color: #FFFFFF; */
   background-color: #F3F3F3;
