@@ -5187,7 +5187,7 @@ document.getElementById('shareLink').value = "https://freedompix.github.io/3dbui
 function linkParse()
 {
 	alert('before hash');
-if(window.location.hash &&){
+if(window.location.hash){
 alert('entering');
 let hash =  window.location.hash.slice(1);
 console.log(hash);
