@@ -825,7 +825,7 @@ html {
   line-height: 19px;
   color: #000000;
   position: absolute;
-  left: 180px;
+  left: 220px;
 }
 
 .itemListRight {
@@ -836,7 +836,7 @@ html {
   line-height: 19px;
   color: #000000;
   position: absolute;
-  left: 320px;
+  left: 380px;
   width: 20px;
   text-align: right;
 }
