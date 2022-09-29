@@ -5186,14 +5186,16 @@ document.getElementById('shareLink').value = "https://freedompix.github.io/3dbui
 
 function linkParse()
 {
+	alert('before hash');
 if(window.location.hash){
-//console.log(111);
+alert('entering');
 let hash =  window.location.hash.substr(1);
-//hash  = 'eyIwIjp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF19LCIxIjp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF19LCIyIjp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF19LCIzIjp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF19LCI0Ijp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF19LCI1Ijp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF19LCI2Ijp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF19LCI3Ijp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF19LCI4Ijp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF19LCI5Ijp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF19LCIxMCI6eyJvcmllbnRhdGlvbiI6MCwid2FsbCI6ZmFsc2UsInBsYWNlIjpbMCwwLDBdfSwiMTEiOnsib3JpZW50YXRpb24iOjAsIndhbGwiOmZhbHNlLCJwbGFjZSI6WzAsMCwwXX0sIjEyIjp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF19LCIxMyI6eyJvcmllbnRhdGlvbiI6MCwid2FsbCI6ZmFsc2UsInBsYWNlIjpbMCwwLDBdfSwiMTQiOnsib3JpZW50YXRpb24iOjAsIndhbGwiOmZhbHNlLCJwbGFjZSI6WzAsMCwwXX0sIjE1Ijp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF19LCIxNiI6eyJvcmllbnRhdGlvbiI6MCwid2FsbCI6ZmFsc2UsInBsYWNlIjpbMCwwLDBdfSwiMTciOnsib3JpZW50YXRpb24iOjAsIndhbGwiOmZhbHNlLCJwbGFjZSI6WzAsMCwwXX0sInJvb2Z0eXBlIjowLCJyb29mY29sb3IiOjEsIndhdGVycGlwZSI6MCwid2lkdGgiOjY1MDAsImRlZXB0aCI6MzAwMCwib3ZlcmhhbmdMZWZ0IjoyMDAsIm92ZXJoYW5nUmlnaHQiOjIwMCwib3ZlcmhhbmdGcm9udCI6MjAwLCJvdmVyaGFuZ0JhY2siOjIwMCwiaG91c2Uxb24iOmZhbHNlLCJob3VzZTJvbiI6ZmFsc2UsImhvdXNlMXdpZHRoIjozMDAwLCJob3VzZTJ3aWR0aCI6MzAwMCwiY29sb3IxIjowLCJjb2xvcjIiOjAsIndhbGxJbnNpZGUiOmZhbHNlLCJob3VzZTF3YWxsMSI6MiwiaG91c2Uxd2FsbDIiOjAsImhvdXNlMXdhbGwzIjoxLCJob3VzZTF3YWxsNCI6MCwiaG91c2Uyd2FsbDEiOjMsImhvdXNlMndhbGwyIjowLCJob3VzZTJ3YWxsMyI6MCwiaG91c2Uyd2FsbDQiOjF9';
-//hash =  window.location.hash;
 console.log(hash);
+alert('atob');
 console.log(atob(hash));
+alert('json');
 let oxj = JSON.parse(atob(hash));
+alert('parsed good');
 console.log(oxj);
   window.appState['rooftype'] =   oxj.rooftype;
   window.appState['roofcolor'] =   oxj.roofcolor;
@@ -5247,9 +5249,7 @@ console.log(oxj);
 
 
 if(window.appState['waterpipe']==0)  document.getElementById("waterpipe").checked =false;
-if(window.appState['waterpipe']==1)  {document.getElementById("waterpipe").checked =true;
-//  document.getElementById("waterpipe").checked =false;
-setWaterpipe();};
+if(window.appState['waterpipe']==1)  {document.getElementById("waterpipe").checked =true; setWaterpipe();};
 
 
 
@@ -5288,7 +5288,7 @@ window.appSection[i]=oxj[i];
 }
 //console.log(oxj);
 setSizes();
-
+alert('link done');
 }
 
 
