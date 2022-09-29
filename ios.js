@@ -165,7 +165,7 @@ window.modelsLoadingStatuses['canopy2']=true;
 
 
 console.log(importedNewName + ' loaded.');
-alert('step0_entering');
+//alert('step0_entering');
 
 
 
@@ -306,7 +306,7 @@ window.modelsLoadingStatuses['balk_0']==true &&
 window.modelsLoadingStatuses['balk_small_0']==true)
 {
 
-
+alert('step0_entering');
 
 waterpipeCreate();
 
