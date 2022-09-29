@@ -5187,10 +5187,11 @@ document.getElementById('shareLink').value = "https://freedompix.github.io/3dbui
 function linkParse()
 {
 	alert('before hash');
-if(window.location.hash){
+if(window.location.hash &&){
 alert('entering');
-let hash =  window.location.hash.substr(1);
+let hash =  window.location.hash.slice(1);
 console.log(hash);
+alert(hash);
 alert('atob');
 console.log(atob(hash));
 alert('json');
