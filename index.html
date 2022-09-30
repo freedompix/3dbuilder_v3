@@ -100,28 +100,28 @@
 	<script src="app/babylon.js"></script>
 	<script src="app/babylonjs.loaders.min.js"></script>
 
-
 <script>
 function onOrientationChange() {
-	let width  = document.documentElement.clientWidth;
+  let width  = document.documentElement.clientWidth;
   let height = document.documentElement.clientHeight;
   let landscape = width > height;
   let viewportmeta = document.querySelector('meta[name="viewport"]');
 
 if(landscape)
 {
-// adding zoom 0.5	
+// adding zoom 0.5
 if (width < 900)   viewportmeta.content = "width=device-width, initial-scale=0.5, user-scalable=no";
 }
 else
 {
-if (width < 900)  viewportmeta.content = "width=468, initial-scale=1.0, user-scalable=no";
+if (width < 980)  viewportmeta.content = "width=468, initial-scale=1.0, user-scalable=no";
 }
 
 
 window.addEventListener('orientationchange', onOrientationChange);
 onOrientationChange();
 </script>
+
 	
 <!--
 <script>window.appState['debug']=true;</script>
