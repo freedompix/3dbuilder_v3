@@ -99,38 +99,35 @@
 
 	<script src="app/babylon.js"></script>
 	<script src="app/babylonjs.loaders.min.js"></script>
-
+	
 <script>
 function onOrientationChange() {
-  alert(window.innerWidth);
-    var landscape = window.innerWidth > window.innerHeight;
-    var viewportmeta = document.querySelector('meta[name="viewport"]');
+  let width  = document.documentElement.clientWidth;
+  let height = document.documentElement.clientHeight;
+  let landscape = width > height;
+	
+alert('clientWidth: ' +  document.documentElement.clientWidth + ', innerWidth: '  + window.InnerWidth);	
+let viewportmeta = document.querySelector('meta[name="viewport"]');
 
-    if(landscape) {
-
-        viewportmeta.content = "width=device-width, initial-scale=1.0, user-scalable=no";
-
-    } else {
-
-        viewportmeta.content = "width=468, initial-scale=1.0, user-scalable=no";
-
-    }
-
+if(landscape)
+{
+alert ('landscape orientation');	
+// adding zoom 0.5
+if (width < 900)   viewportmeta.content = "width=device-width, initial-scale=0.5, user-scalable=no";
 }
-
+else
+{
+lert ('portrait orientation');	
+//if (width < 980) 
+viewportmeta.content = "width=468, initial-scale=1.0, user-scalable=no";
+}
 window.addEventListener('orientationchange', onOrientationChange);
 onOrientationChange();
 </script>
 
-<!--
-<script>window.appState['debug']=true;</script>
-<script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
 
-<script src="app/_appbild.js"></script>
 <script src="app/appbild.js"></script>
-!-->
 
-<script src="ios.js"></script>
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
