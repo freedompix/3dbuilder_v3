@@ -102,8 +102,8 @@
 
 <script>
 function onOrientationChange() {
-
-    var landscape = screen.width > screen.height;
+  alert(screen.innerWidth);
+    var landscape = screen.innerWidth > screen.innerHeight;
     var viewportmeta = document.querySelector('meta[name="viewport"]');
 
     if(landscape) {
