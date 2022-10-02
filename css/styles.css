@@ -880,7 +880,7 @@ html {
     left: 0px;
     width: 468px !important;
     top:56px;
-    height: 30vh;
+    height: calc(30vh + 56px);
     position: absolute;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -888,7 +888,7 @@ html {
 
     #builderUI {
     top: 30vh;
-    height: 70vh;
+    height: calc(70vh - 56px);
     position: absolute;
     background-color: #FFFFFF;
     overflow-x: auto;
