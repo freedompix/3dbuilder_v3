@@ -937,15 +937,15 @@ html {
       background-repeat: no-repeat;
     }
   
-  #optionsBox {
+    #optionsBox {
       position: absolute;
       transform: scale(0.4);
-      width: 468px !important;
+      width: 864px !important;
       height: 104px;
-      left: -100px;
-      bottom: 67vh;
+      left: calc((100vw + -45px)/2 - 432px);
+      top: 27vh;
       background-color: #FFFFFF;
       background-repeat: no-repeat;
-      overflow-x: auto;
     }
+}
 }
