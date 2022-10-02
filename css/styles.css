@@ -909,29 +909,16 @@ html {
 }
 @media screen and ( max-width: 468px ){
   #renderCanvas {
-    transform: scale(1.0);
     left: 0px;
-    width: 320px;
-    bottom: 26vh;
-    top: auto;
+    width: 468px;
+    top: 30vh;
     position: absolute;
     overflow-x: auto;
     overflow-y: auto;
   }
 
-  #optionsBox {
-    transform: scale(0.8);
-    position: absolute;
-    left: -47px;
-    bottom: 48vh;
-    background-color: #FFFFFF;
-    background-repeat: no-repeat;
-    width: 410px;
-    overflow-x: auto;
-  }
-  
-  #builderUI {
-    top: 50vh;
+    #builderUI {
+    top: 30vh;
     height: 130px;
     position: absolute;
     background-color: #FFFFFF;
@@ -940,21 +927,9 @@ html {
     box-shadow: 0px 0px 18px rgba(52, 52, 52, 0.2);
   }
 
-  .builderBlockStyleInactive {
-    width: var(--ld);
-    word-break: break-word;
-    word-wrap: break-word;
-  }
 
-  .builderArrowInactive {
-      width: 12px;
-      height: 12px;
-      position: absolute;
-      top: 26px;
-      left: calc(var(--ld) - 40px);
-      background-image: url(../css/arrow_inactive.png);
-      background-repeat: no-repeat;
-  }
+
+
 
   #icon2D {
     display: none;
