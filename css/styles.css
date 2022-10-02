@@ -854,59 +854,7 @@ html {
   width: 30px;
 }
 
-/* adaptive  */
-:root {
-  --md: 300px;
-  --ld: 200px;
-}
-@media screen and ( max-width: 1024px ){
-  #renderCanvas {
-    width: calc(100vw - var(--md));
-    left: var(--md);
-  }
-  #builderUI {
-    width: var(--md); /* 468px; */
-    height: calc(100vh - 56px);
-    top: 56px;
-    left: 0px;
-    position: absolute;
-    background-color: #FFFFFF;
-    overflow-y: auto;
-    overflow-x: hidden;
-    box-shadow: 0px 0px 18px rgba(52, 52, 52, 0.2);
-    
-  }
-  .builderBlockTextInactive {
-    left: calc(var(--md)/10);
-    margin-right: 2em;
-    
-  }
-  .builderBlockStyleInactive {
-    width: var(--md);
-    word-break: break-word;
-    word-wrap: break-word;
-    margin-right: 3em;
-    
-  }
-  .builderArrowInactive {
-      width: 12px;
-      height: 12px;
-      position: absolute;
-      top: 26px;
-      left: calc(var(--md) - 40px);
-      background-image: url(../css/arrow_inactive.png);
-      background-repeat: no-repeat;
-  }
-  .builderArrowInactive {
-      width: 12px;
-      height: 12px;
-      position: absolute;
-      top: 26px;
-      left: calc(var(--md) - 40px);
-      background-image: url(../css/arrow_inactive.png);
-      background-repeat: no-repeat;
-  }
-}
+
 @media screen and ( max-width: 468px ){
   #renderCanvas {
     left: 0px;
