@@ -933,7 +933,6 @@ html {
   #builderUI {
     top: 50vh;
     height: 130px;
-    width: 320px;
     position: absolute;
     background-color: #FFFFFF;
     overflow-x: auto;
