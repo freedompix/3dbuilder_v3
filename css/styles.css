@@ -856,7 +856,10 @@ html {
 
 
 @media screen and ( max-width: 468px ){
-  
+@-ms-viewport 
+{ 
+  width: 468px; 
+}   
  html, body
 {
   overflow: hidden;
