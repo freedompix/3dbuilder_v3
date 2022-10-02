@@ -876,12 +876,26 @@ html {
     left: 0px;
     width: 468px !important;
     top:56px;
-    height: 30vh;
+    height: calc(30vh + 56px);
     position: absolute;
     overflow-x: hidden;
     overflow-y: hidden;
   }
 
+
+  #canvas2d {
+    left: 0px;
+    width: 468px !important;
+    top:26px;
+    height: calc(30vh + 56px);
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    /* mobile webkit */
+  }
+  
     #builderUI {
     top: calc(30vh + 56px);
     height: calc(70vh - 56px);
@@ -894,14 +908,26 @@ html {
 
 
 
-
-
-  #icon2D {
-    display: none;
-  }
-
   #icon3D {
-    display: none;
+    transform: scale(0.9);
+    width: 48px;
+    height: 48px;
+    top: 14vh;
+    right: calc((100vw + 70px)/1 - 125px);
+    position: absolute;
+    background-image: url("../css/icon_3d.png");
+    background-repeat: no-repeat;
+  }
+  
+  #icon2D {
+    transform: scale(0.9);
+    width: 48px;
+    height: 48px;
+    top: 21vh;
+    right: calc((100vw + 70px)/1 - 125px);
+    position: absolute;
+    background-image: url("../css/icon_2d.png");
+    background-repeat: no-repeat;
   }
 
   #iconZoomIn{
@@ -926,7 +952,14 @@ html {
     }
 
     #iconFullScreen {
-      display: none;
+      transform: scale(0.9);
+      width: 48px;
+      height: 48px;
+      top: 30.5vh;
+      left: calc((100vw + 50px)/2 - 255px);
+      position: absolute;
+      background-image: url("../css/icon_full.png");
+      background-repeat: no-repeat;
     }
 
     #iconInfo {
@@ -940,15 +973,16 @@ html {
       background-repeat: no-repeat;
     }
   
-    #optionsBox {
+    #optionsBox::before  {
       position: absolute;
       transform: scale(0.4);
       width: 864px !important;
       height: 104px;
-      left: calc((100vw + -45px)/2 - 432px);
-      top: 27vh;
+      left: calc((100vw + -15px)/2 - 430px);
+      top: 26.9vh;
       background-color: #FFFFFF;
       background-repeat: no-repeat;
     }
+    
 }
 
