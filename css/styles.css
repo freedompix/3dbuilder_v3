@@ -876,7 +876,7 @@ html {
     left: 0px;
     width: 468px !important;
     top:56px;
-    height: calc(30vh + 56px);
+    height: 30vh;
     position: absolute;
     overflow-x: hidden;
     overflow-y: hidden;
