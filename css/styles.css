@@ -978,7 +978,7 @@ html {
       transform: scale(0.4);
       width: 864px !important;
       height: 104px;
-      left: calc((100vw + -15px)/2 - 430px);
+      left: calc((100vw + -15px)/2 - 425px);
       top: 26.9vh;
       background-color: #FFFFFF;
       background-repeat: no-repeat;
