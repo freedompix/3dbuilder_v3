@@ -973,7 +973,7 @@ html {
       background-repeat: no-repeat;
     }
   
-    #optionsBox::before  {
+    #optionsBox {
       position: absolute;
       transform: scale(0.4);
       width: 864px !important;
