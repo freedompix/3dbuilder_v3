@@ -941,7 +941,7 @@ html {
   position: absolute;
   transform: scale(0.4);
   left: -207px;
-  top: 30vh - 11;
+  top: calc(30vh - 11);
 }
 
 }
