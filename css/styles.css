@@ -913,7 +913,7 @@ html {
     width: 48px;
     height: 48px;
     top: 14vh;
-    right: calc((100vw + 50px)/1 - 125px);
+    left: calc((100vw + 50px)/2 - 255px);
     position: absolute;
     background-image: url("../css/icon_3d.png");
     background-repeat: no-repeat;
@@ -924,7 +924,7 @@ html {
     width: 48px;
     height: 48px;
     top: 21vh;
-    right: calc((100vw + 50px)/1 - 125px);
+    left: calc((100vw + 50px)/2 - 255px);
     position: absolute;
     background-image: url("../css/icon_2d.png");
     background-repeat: no-repeat;
