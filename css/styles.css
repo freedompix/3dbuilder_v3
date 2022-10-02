@@ -859,15 +859,16 @@ html {
   #renderCanvas {
     left: 0px;
     width: 468px;
-    top: 30vh;
+    top:56px;
+    height: 30vh;
     position: absolute;
-    overflow-x: auto;
-    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
 
     #builderUI {
     top: 30vh;
-    height: 130px;
+    height: 70vh;
     position: absolute;
     background-color: #FFFFFF;
     overflow-x: auto;
