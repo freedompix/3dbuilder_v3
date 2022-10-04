@@ -51,7 +51,7 @@
 
   position: absolute;
   top: 15px;
-  left: 72px;
+  left: 92px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
@@ -104,7 +104,8 @@
   height: 56px;
   top: 0px;
   left: 24px;
-
+  background-image: url("../css/1_black.png");
+  background-repeat: no-repeat;
 }
 
 #roofColor2 {
@@ -113,6 +114,8 @@
   height: 56px;
   top: 62px;
   left: 24px;
+  background-image: url("../css/2_red.png");
+  background-repeat: no-repeat;
 }
 
 #roofColor3 {
@@ -121,6 +124,8 @@
   height: 56px;
   top: 124px;
   left: 24px;
+  background-image: url("../css/3_anthracite.png");
+  background-repeat: no-repeat;
 }
 
 #roofColor4 {
@@ -129,6 +134,8 @@
   height: 56px;
   top: 186px;
   left: 24px;
+  background-image: url("../css/4_black_glazed.png");
+  background-repeat: no-repeat;
 }
 
 #roofColor5 {
@@ -137,14 +144,9 @@
   height: 56px;
   top: 248px;
   left: 24px;
+  background-image: url("../css/5_red_glazed.png");
+  background-repeat: no-repeat;
 }
-
-
-
-
-
-
-
 
 
 
