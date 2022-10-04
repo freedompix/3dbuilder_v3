@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<meta name="viewport" content="user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
 	<title>Buitenverblijven 3D product configurator</title>
 	<style>
@@ -100,6 +100,7 @@
 	<script src="app/babylon.js"></script>
 	<script src="app/babylonjs.loaders.min.js"></script>
 
+
 <script>
 function onOrientationChange() {
   let width  = document.documentElement.clientWidth;
@@ -109,28 +110,22 @@ function onOrientationChange() {
 
 if(landscape)
 {
-// adding zoom 0.5 
-//if (width < 900)   
+// adding zoom 0.5
+//if (width < 900)
 viewportmeta.content = "width=device-width, initial-scale=0.33, user-scalable=no";
 }
 else
 {
-//if (width < 980) 
+//if (width < 980)
 viewportmeta.content = "width=468, user-scalable=no";
 }
-}	
+}
 window.addEventListener('orientationchange', onOrientationChange);
+window.addEventListener('resize', onOrientationChange);
+
+
 onOrientationChange();
 </script>
-
-	
-<!--
-<script>window.appState['debug']=true;</script>
-<script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
-
-<script src="app/_appbild.js"></script>
-<script src="app/appbild.js"></script>
-!-->
 
 <script src="app/appbild.js"></script>
 
@@ -1059,6 +1054,8 @@ return false;">
 
 		<!-- NEW TAB start -->
 		<div id="uiSpace" style="display: none;">
+
+			<div class="builderBlockTextInactive" id="sss">Configuratie Segmenten</div>
 			<div id="closeCross" onclick="spaceCloseUIdiv();"></div>
 
 			<div id="sectionsList" style="display:none;">
@@ -1098,7 +1095,7 @@ return false;">
 			</div>
 
 
-			<div class="uiSpaceContainer" style="height: 15px !important;">
+			<div class="uiSpaceContainer" style="height: 15px !important; margin-top: 40px;">
 				<div class="spaceTriggerText">Wall enabled</div>
 				<div style="position:absolute; left: 370px; width: 150px; top: 14px;">
 					<div class="switch">
@@ -1112,8 +1109,8 @@ return false;">
 				</div>
 			</div>
 
-			<div class="uiSpaceContainer" style="height: 15px !important;">
-				<div class="spaceTriggerText">Inner Wall enabled</div>
+			<div class="uiSpaceContainer" style="height: 15px !important; display: none;" >
+				<div class="spaceTriggerText">Wood finish</div>
 				<div style="position:absolute; left: 370px; width: 150px; top: 14px;">
 					<div class="switch">
 						<label>
