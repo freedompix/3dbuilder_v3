@@ -898,7 +898,7 @@ html {
   
     #builderUI {
     top: calc(30vh + 150px);
-    height: calc(90vh - 60px);
+    height: calc(70vh - 60px);
     position: absolute;
     background-color: #FFFFFF;
     overflow-y: auto;
