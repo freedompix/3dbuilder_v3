@@ -2,8 +2,8 @@
 <html>
 
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+<meta name="viewport" content="user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
 	<title>Buitenverblijven 3D product configurator</title>
 	<style>
 		body {
@@ -112,7 +112,7 @@ if(landscape)
 {
 // adding zoom 0.5
 //if (width < 900)
-viewportmeta.content = "width=device-width, initial-scale=0.33, user-scalable=no";
+viewportmeta.content = "initial-scale=0.33, user-scalable=no";
 }
 else
 {
@@ -126,10 +126,7 @@ window.addEventListener('resize', onOrientationChange);
 
 onOrientationChange();
 </script>
-
 <script src="app/appbild.js"></script>
-
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
@@ -425,7 +422,7 @@ return false;">
 			</div>
 
 			<div style="position: relative; height: 60px;">
-				<div class="builderOptionText">Wood finish</div>
+				<div class="builderOptionText">Internal Wall Enabled</div>
 				<div style="position:absolute; left: 370px; width: 150px; top: 14px;">
 					<div class="switch">
 						<label>
@@ -1053,12 +1050,16 @@ return false;">
 		</div>
 
 		<!-- NEW TAB start -->
-		<div id="uiSpace" style="display: none;">
 
-			<div class="builderBlockTextInactive" id="sss">Configuratie Segmenten</div>
-			<div id="closeCross" onclick="spaceCloseUIdiv();"></div>
 
-			<div id="sectionsList" style="display:none;">
+		<div class="builderBlockStyleInactive waves-effect waves-light z-depth-0" id="builderBlock7" onclick="switchUI(7);">
+			<div class="builderBlockTextInactive" id="builderBlockText7">5. Configuratie Segmenten</div>
+			<div class="builderArrowInactive" id="builderArrow7"></div>
+		</div>
+
+		<div id="builderOptions7" style="display: none; position: relative;">
+
+			<div id="sectionsList" style="">
 				<div id="sectionsListFront">
 					<div class="uiSpaceText">Front sections</div>
 					<div class="sectionButton" id="sectionButton0" onclick="spaceOpenUI(0); spaceOpenUIdiv(0);">1</div>
@@ -1087,7 +1088,7 @@ return false;">
 					<div class="sectionButton" id="sectionButton15" onclick="spaceOpenUI(15); spaceOpenUIdiv(15);">2</div>
 				</div>
 
-				<div id="sectionsListRight">
+				<div id="sectionsListRight" style="margin-bottom: 20px;">
 					<div class="uiSpaceText">Right sections</div>
 					<div class="sectionButton" id="sectionButton16" onclick="spaceOpenUI(16); spaceOpenUIdiv(16);">1</div>
 					<div class="sectionButton" id="sectionButton17" onclick="spaceOpenUI(17); spaceOpenUIdiv(17);">2</div>
@@ -1095,7 +1096,18 @@ return false;">
 			</div>
 
 
-			<div class="uiSpaceContainer" style="height: 15px !important; margin-top: 40px;">
+
+
+
+
+
+
+		<div id="uiSpace" style="display: none; background-color: #FFFFFF;">
+		<div id="closeCross" style="left: 440px;" onclick="spaceCloseUIdiv();"></div>
+
+
+
+			<div class="uiSpaceContainer" style="height: 15px !important; margin-top: 0px;">
 				<div class="spaceTriggerText">Wall enabled</div>
 				<div style="position:absolute; left: 370px; width: 150px; top: 14px;">
 					<div class="switch">
@@ -1110,7 +1122,7 @@ return false;">
 			</div>
 
 			<div class="uiSpaceContainer" style="height: 15px !important; display: none;" >
-				<div class="spaceTriggerText">Wood finish</div>
+				<div class="spaceTriggerText">Internal Wall Enabled</div>
 				<div style="position:absolute; left: 370px; width: 150px; top: 14px;">
 					<div class="switch">
 						<label>
@@ -1175,14 +1187,14 @@ return false;">
 				<div class="uiSpaceButton6" id="uiSpaceButton2_6" onclick="spaceSetUI(2,6);"></div>
 
 			</div>
-
+</div>
 		</div>
 
 		<!-- NEW TAB end -->
 
 		<div class="builderBlockStyleInactive waves-effect waves-light z-depth-0" id="builderBlock5" onclick="switchUI(5);"
 			style="display: none;">
-			<div class="builderBlockTextInactive" id="builderBlockText5">5. OPTIES</div>
+			<div class="builderBlockTextInactive" id="builderBlockText5">6. OPTIES</div>
 			<div class="builderArrowInactive" id="builderArrow5"></div>
 		</div>
 
@@ -1252,7 +1264,7 @@ return false;">
 		</div>
 
 		<div class="builderBlockStyleInactive waves-effect waves-light z-depth-0" id="builderBlock6" onclick="switchUI(6);">
-			<div class="builderBlockTextInactive" id="builderBlockText6">5. CALCULATE PRICE AND ORDER</div>
+			<div class="builderBlockTextInactive" id="builderBlockText6">6. CALCULATE PRICE AND ORDER</div>
 			<div class="builderArrowInactive" id="builderArrow6"></div>
 		</div>
 
