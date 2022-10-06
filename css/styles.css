@@ -893,7 +893,7 @@ html {
   }
   
     #builderUI {
-    top: calc(41vh + 73px);
+    top: calc(36vh + 125px);
     height: 50vh;
     position: absolute;
     background-color: #FFFFFF;
