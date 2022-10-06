@@ -893,12 +893,13 @@ html {
   }
   
     #builderUI {
-    top: calc(36vh + 125px);
-    height: 50vh;
+    top: 49vh;
+    height: 51vh;
     position: absolute;
     background-color: #FFFFFF;
-    overflow-y: scroll;
+    scroll-behavior: smooth;
     box-shadow: 0px 0px 18px rgba(52, 52, 52, 0.2);
+    background-repeat: round;
   }
 
 
