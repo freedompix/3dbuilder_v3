@@ -874,12 +874,10 @@ html {
   
   #renderCanvas {
     left: 0px;
-    top:-169px;
+    top: -169px;
     width: calc(80vw - -94px);
     height: calc(46vh + 407px);
     position: absolute;
-    overflow-x: hidden;
-    overflow-y: hidden;
   }
 
 
@@ -889,8 +887,6 @@ html {
     top:41px;
     height: calc(30vh + 145px);
     position: absolute;
-    overflow-x: hidden;
-    overflow-y: hidden;
     outline: none;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     /* mobile webkit */
@@ -901,7 +897,7 @@ html {
     height: 50vh;
     position: absolute;
     background-color: #FFFFFF;
-    overflow-y: auto;
+    overflow-y: scroll;
     box-shadow: 0px 0px 18px rgba(52, 52, 52, 0.2);
   }
 
@@ -927,6 +923,15 @@ html {
     position: absolute;
     background-image: url("../css/icon_2d.png");
     background-repeat: no-repeat;
+  }
+
+  #uiForCanvas {
+    width: calc(100vw - 468px);
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 468px;
+    outline: none;
   }
 
   #iconZoomIn{
