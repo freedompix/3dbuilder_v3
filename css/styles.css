@@ -899,13 +899,14 @@ html {
   }
   
     #builderUI {
-    display: block;
+    display: inline-block;
     top: 51vh;
     height: 49vh;
     position: absolute;
     background-color: #FFFFFF;
-    overflow-x: hidden;
+    overflow-x: auto;
     box-shadow: 0px 0px 18px rgba(52, 52, 52, 0.2);
+    transform: scale(0.9999);
   }
 
   #builderBlockStyleInactive {
