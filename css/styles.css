@@ -872,7 +872,6 @@ html {
 
   html, body {
     position: fixed;
-    scroll-behavior: smooth;
     width: 468px !important;
     height: 100vh;
   }
@@ -901,7 +900,9 @@ html {
     #builderUI {
     display: inline-block;
     top: 51vh;
-    height: 49vh;
+    height: calc(49vh - 1px);
+    /*height: calc(49vh + 10px);
+    height: 49vh;*/
     position: absolute;
     background-color: #FFFFFF;
     overflow-x: auto;
