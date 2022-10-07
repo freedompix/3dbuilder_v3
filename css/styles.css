@@ -859,21 +859,19 @@ html {
 @media screen and ( max-width: 468px ){
   @-ms-viewport {
     width: 468px; 
-    overflow-y: auto;
   }
   @-o-viewport {
     width: 468px; 
-    overflow-y: auto;
   }
   @viewport {
     width: 468px; 
-    overflow-y: auto;
   }
 
   html, body {
     position: fixed;
     width: 468px !important;
     height: 100vh;
+    overflow-y: auto;
   }
   
   #renderCanvas {
@@ -910,7 +908,7 @@ html {
 
   .builderBlockStyleInactive {
     width: 468px;
-    height: 56vh;
+    height: 8vh;
     top: 0px;
     left: 0px;
     position: absolute;
@@ -919,11 +917,6 @@ html {
     margin-bottom: 2px;
     overflow-y: auto;
 
-  }
-
-  .waves-effect{
-    height: 8vh;
-    overflow-y: auto;
   }
   
   #icon3D {
