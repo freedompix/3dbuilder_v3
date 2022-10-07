@@ -854,7 +854,60 @@ html {
 }
 
 
+.renderCanvasFullScreen {
+width: 100vw !important;
+left: 0px !important;
+}
+.canvas2dFullScreen {
+width: 100vh !important;
+height: 100vh !important;	
+top: 0px !important;
+left: calc((100vw - (100vh))/2) !important;
+}
+.optionsBoxFullScreen {
+left: calc((100vw - 864px)/2) !important;	
+}
+.iconInfoFullScreen {
+}
+.iconFullScreenFullScreen {
+}
+.iconZoomInFullScreen{
+}  
+.iconZoomOutFullScreen{  
+}
+
+
+
+
 @media screen and ( max-width: 468px ){
+
+
+.renderCanvasFullScreen {
+width: 100vw !important;
+left: 0px !important;
+}
+.canvas2dFullScreen {
+width: 100vh !important;
+height: 100vh !important;	
+top: 0px !important;
+left: calc((100vw - (100vh))/2) !important;
+}
+.optionsBoxFullScreen {
+left: calc((100vw - 864px)/2) !important;	
+}
+.iconInfoFullScreen {
+}
+.iconFullScreenFullScreen {
+}
+.iconZoomInFullScreen{
+}  
+.iconZoomOutFullScreen{  
+}
+
+  
+  
+  
+  
   @-ms-viewport {
     width: 468px; 
   }
