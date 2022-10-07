@@ -875,7 +875,6 @@ html {
   overflow: hidden;
   width: 468px !important;
   height: 100vh;
-  overflow: hidden;
 }
   
   #renderCanvas {
@@ -911,6 +910,17 @@ html {
     background-repeat: round;
   }
 
+  #builderBlockStyleInactive {
+    width: 468px;
+    height: 56px;
+    top: 0px;
+    left: 0px;
+    position: relative;
+    background-color: #F3F3F3;
+    color: #000000;
+    margin-bottom: 2px;
+    overflow-x: auto;
+  }
 
 
   #icon3D {
