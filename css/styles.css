@@ -872,7 +872,7 @@ html {
 
   html, body {
     position: fixed;
-    overflow: hidden;
+    scroll-behavior: smooth;
     width: 468px !important;
     height: 100vh;
   }
