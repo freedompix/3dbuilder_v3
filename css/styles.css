@@ -910,7 +910,7 @@ html {
 
   .builderBlockStyleInactive {
     width: 468px;
-    height: 56px;
+    height: 56vh;
     top: 0px;
     left: 0px;
     position: absolute;
@@ -922,8 +922,7 @@ html {
   }
 
   .waves-effect{
-    width: 468px;
-    height: 56px;
+    height: 10vh;
     overflow-y: auto;
   }
   
