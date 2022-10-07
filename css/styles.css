@@ -762,7 +762,6 @@ html {
   position: absolute;
   background-image: url("../css/house2.png");
   background-repeat: no-repeat;
-  
 }
 
 #optionHouse1image {
@@ -851,8 +850,11 @@ html {
 }
 
 .renderCanvasFullScreen {
-width: 100vw !important;
-left: 0px !important;
+  
+  width: 100vw !important;
+  height: 60vh !important;  
+  left: 0px !important;
+  top: 150px !important;
 }
 
 .canvas2dFullScreen {
@@ -863,7 +865,13 @@ left: calc((100vw - (100vh))/2) !important;
 }
 
 .optionsBoxFullScreen {
-left: calc((100vw - 864px)/2) !important;	
+  position: absolute;
+  transform: scale(0.4);
+  width: 864px;
+  height: 104px;
+  left: calc((100vw + -15px)/2 - 425px);
+  top: calc(46.8vh + -65px);
+  background-color: #FFFFFF;
 }
 
 .iconInfoFullScreen {
@@ -873,7 +881,7 @@ left: calc((100vw - 864px)/2) !important;
 
 .iconFullScreenFullScreen {
   right: calc(100vw - 58px) !important;	
-  top: calc(95.8vh + -37px) !important; 
+  top: calc(95.8vh + -157px) !important; 
 }
 
 .iconZoomInFullScreen {
@@ -888,10 +896,13 @@ left: calc((100vw - 864px)/2) !important;
 
 @media screen and ( max-width: 468px ){
 
-.renderCanvasFullScreen {
-width: 100vw !important;
-height: 100vh !important;  
-left: 0px !important;
+
+#renderCanvasFullScreen {
+  
+    width: 100vw !important;
+    height: 100vh !important;  
+    left: 0px !important;
+    top: 150px !important;
 }
 
 .canvas2dFullScreen {
@@ -903,17 +914,17 @@ left: calc((100vw - (100vh))/2) !important;
 
 .optionsBoxFullScreen {
 left: calc((100vw - 864px)/2) !important;	
-top: calc(95.8vh + -65px) !important; 
+top: calc(95.8vh + -185px) !important; 
 }
 
 .iconInfoFullScreen {    
   left: calc((100vw - 58px)/1) !important;	
-  top: calc(95.8vh + -37px) !important; 
+  top: calc(95.8vh + -157px) !important; 
 }
 
 .iconFullScreenFullScreen {
   right: calc(100vw - 58px) !important;	
-  top: calc(95.8vh + -37px) !important; 
+  top: calc(95.8vh + -157px) !important; 
 }
 
 .iconZoomInFullScreen {
