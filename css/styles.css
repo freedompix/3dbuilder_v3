@@ -894,7 +894,7 @@ html {
   #builderUI {
     display: block;
     top: 51vh;
-    height: 49vh;
+    height: 30vh;
     position: absolute;
     background-color: #FFFFFF;
     overflow-x: hidden;
