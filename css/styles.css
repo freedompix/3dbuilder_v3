@@ -871,6 +871,7 @@ html {
   }
 
   html, body {
+    position: fixed;
     overflow: hidden;
     width: 468px !important;
     height: 100vh;
@@ -888,8 +889,8 @@ html {
   #canvas2d {
     left: 0px;
     width: 468px !important;
-    top: -54px;
-    height: calc(32vh + -241px);
+    top: -30px;
+    height: 60vh;
     position: absolute;
     outline: none;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
