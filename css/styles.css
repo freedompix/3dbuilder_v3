@@ -859,15 +859,15 @@ html {
 @media screen and ( max-width: 468px ){
   @-ms-viewport {
     width: 468px; 
-    overflow: hidden;
+    overflow-y: auto;
   }
   @-o-viewport {
     width: 468px; 
-    overflow: hidden;
+    overflow-y: auto;
   }
   @viewport {
     width: 468px; 
-    overflow: hidden;
+    overflow-y: auto;
   }
 
   html, body {
@@ -882,7 +882,7 @@ html {
     width: calc(80vw - -94px);
     height: 55vh;
     position: absolute;
-    overflow: hidden;
+    overflow-y: auto;
   }
 
   #canvas2d {
@@ -894,29 +894,39 @@ html {
     outline: none;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     /* mobile webkit */
-    overflow: hidden;
   }
   
     #builderUI {
-    display: inline-block;
+    display: block;
     top: 51vh;
-    height: calc(49vh - 1px);
-    /*height: calc(49vh + 10px);
-    height: 49vh;*/
+    height: 49vh;
     position: absolute;
     background-color: #FFFFFF;
-    overflow-x: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
     box-shadow: 0px 0px 18px rgba(52, 52, 52, 0.2);
     transform: scale(0.9999);
   }
 
-  #builderBlockStyleInactive {
-    display: inline-block;
+  .builderBlockStyleInactive {
+    width: 468px;
+    height: 56px;
+    top: 0px;
+    left: 0px;
+    position: absolute;
     background-color: #F3F3F3;
     color: #000000;
-    overflow-x: auto;
+    margin-bottom: 2px;
+    overflow-y: auto;
+
   }
 
+  .waves-effect{
+    width: 468px;
+    height: 56px;
+    overflow-y: auto;
+  }
+  
   #icon3D {
     transform: scale(0.86);
     width: 48px;
