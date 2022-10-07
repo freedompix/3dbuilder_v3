@@ -884,6 +884,7 @@ left: calc((100vw - 864px)/2) !important;
 
 .renderCanvasFullScreen {
 width: 100vw !important;
+height: 100vh !important;  
 left: 0px !important;
 }
 .canvas2dFullScreen {
@@ -894,6 +895,7 @@ left: calc((100vw - (100vh))/2) !important;
 }
 .optionsBoxFullScreen {
 left: calc((100vw - 864px)/2) !important;	
+top: calc(95.8vh + -65px) !important; 
 }
 .iconInfoFullScreen {
 }
