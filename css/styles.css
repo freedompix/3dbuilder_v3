@@ -431,9 +431,10 @@ html {
   text-align: right;
 
   color: #6C6C6C;
-
+  
 
 }
+
 
 
 
@@ -870,14 +871,16 @@ html {
   overflow: hidden;
   width: 468px !important;
   height: 100vh;
+  overflow: hidden;
 }
   
   #renderCanvas {
     left: 0px;
-    top: -169px;
+    top: -23px;
     width: calc(80vw - -94px);
-    height: calc(46vh + 407px);
+    height: 55vh;
     position: absolute;
+    overflow: hidden;
   }
 
 
@@ -890,6 +893,7 @@ html {
     outline: none;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     /* mobile webkit */
+    overflow: hidden;
   }
   
     #builderUI {
@@ -898,6 +902,7 @@ html {
     position: absolute;
     background-color: #FFFFFF;
     scroll-behavior: smooth;
+    overflow: auto;
     box-shadow: 0px 0px 18px rgba(52, 52, 52, 0.2);
     background-repeat: round;
   }
@@ -933,6 +938,7 @@ html {
     top: 0;
     left: 468px;
     outline: none;
+    overflow: hidden;
   }
 
   #iconZoomIn{
@@ -968,6 +974,7 @@ html {
       position: absolute;
       background-image: url("../css/icon_full.png");
       background-repeat: no-repeat;
+      overflow: hidden;
     }
 
     #iconInfo {
@@ -990,9 +997,10 @@ html {
       top: calc(46.8vh + -65px);
       background-color: #FFFFFF;
       background-repeat: no-repeat;
+      overflow: hidden;
     }
-  
-      .itemListPrice{
+    
+    .itemListPrice{
       padding-bottom: 20%;
     }
 }
