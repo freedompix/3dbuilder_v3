@@ -51,7 +51,6 @@
   top: 0;
   left: 0;
   background-color: #000000;
-
 }
 
 #logotype {
@@ -850,9 +849,8 @@ html {
 }
 
 .renderCanvasFullScreen {
-  
   width: 100vw !important;
-  height: 85vh !important;  
+  height: 81.8vh !important;  
   left: 0px !important;
   top: 0px !important;
 }
@@ -866,17 +864,17 @@ left: calc((100vw - (100vh))/2) !important;
 
 .optionsBoxFullScreen {
   left: calc((100vw - 864px)/2) !important;	
-  top: calc(95.8vh + -135px) !important;  
+  top: calc(95.8vh + -170px) !important;  
 }
 
 .iconInfoFullScreen {
   left: calc((100vw - 56px)/1) !important;	
-  top: calc(95.8vh + -108px) !important;  
+  top: calc(95.8vh + -142px) !important;  
 }
 
 .iconFullScreenFullScreen {
   right: calc(100vw - 58px) !important;	
-  top: calc(95.8vh + -108px) !important; 
+  top: calc(95.8vh + -142px) !important; 
 }
 
 .iconZoomInFullScreen {
@@ -909,17 +907,17 @@ left: calc((100vw - (100vh))/2) !important;
 
 .optionsBoxFullScreen {
 left: calc((100vw - 864px)/2) !important;	
-top: calc(95.8vh + -135px) !important; 
+top: calc(95.8vh + -170px) !important; 
 }
 
 .iconInfoFullScreen {    
   left: calc((100vw - 58px)/1) !important;	
-  top: calc(95.8vh + -108px) !important; 
+  top: calc(95.8vh + -142px) !important; 
 }
 
 .iconFullScreenFullScreen {
   right: calc(100vw - 58px) !important;	
-  top: calc(95.8vh + -108px) !important; 
+  top: calc(95.8vh + -142px) !important; 
 }
 
 .iconZoomInFullScreen {
@@ -1005,7 +1003,7 @@ top: calc(95.8vh + -135px) !important;
     background-repeat: no-repeat;
   }
 
-  #iconZoomIn{
+  #iconZoomIn {
     transform: scale(0.875);
     width: 48px;
     height: 48px;
@@ -1016,7 +1014,7 @@ top: calc(95.8vh + -135px) !important;
     background-repeat: no-repeat;
   }
   
-  #iconZoomOut{
+  #iconZoomOut {
     transform: scale(0.875);
     width: 48px;
     height: 48px;
@@ -1059,7 +1057,7 @@ top: calc(95.8vh + -135px) !important;
     background-color: #FFFFFF;
   }
   
-  .itemListPrice{
+  .itemListPrice {
     padding-bottom: 20%;
   }
 }
