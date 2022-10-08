@@ -39,7 +39,7 @@
 #spaceBlock2,
 #spaceBlock3 {
   position: relative;
-  height: 126px;
+  height: 456px;
 }
 
 #closeCross {
@@ -71,55 +71,82 @@
 }
 
 .uiSpaceButton0 {
-  left: 10px;
+  position: absolute;
+  width: 408px;
+  height: 56px;
+  top: 10px;
+  left: 24px;
   background-image: url("../css/elem_0.png");
+  background-size: 55px;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .uiSpaceButton1 {
-  left: 70px;
+  position: absolute;
+  width: 408px;
+  height: 56px;
+  top: 72px;
+  left: 24px;
   background-image: url("../css/elem_1.png");
+  background-size: 55px;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .uiSpaceButton2 {
-  left: 130px;
+  position: absolute;
+  width: 408px;
+  height: 56px;
+  top: 134px;
+  left: 24px;
   background-image: url("../css/elem_2.png");
+  background-size: 55px;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .uiSpaceButton3 {
-  left: 190px;
+  position: absolute;
+  width: 408px;
+  height: 56px;
+  top: 196px;
+  left: 24px;
   background-image: url("../css/elem_3.png");
+  background-size: 55px;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .uiSpaceButton4 {
-  left: 250px;
+  position: absolute;
+  width: 408px;
+  height: 56px;
+  top: 258px;
+  left: 24px;
   background-image: url("../css/elem_4.png");
+  background-size: 55px;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .uiSpaceButton5 {
-  left: 310px;
+  position: absolute;
+  width: 408px;
+  height: 56px;
+  top: 320px;
+  left: 24px;
   background-image: url("../css/elem_5.png");
+  background-size: 55px;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .uiSpaceButton6 {
-  left: 370px;
+  position: absolute;
+  width: 408px;
+  height: 56px;
+  top: 382px;
+  left: 24px;
   background-image: url("../css/elem_6.png");
+  background-size: 55px;
   background-repeat: no-repeat;
-  background-size: cover;
+  
 }
-
-
 
 #sectionsListFront,
 #sectionsListBack,
@@ -128,6 +155,18 @@
   position: relative;
   height: 50px;
   margin-top: 20px;
+}
+
+.uiSpaceButtonText {
+  width: 192px;
+
+  position: absolute;
+  left: 68px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: left;
 }
 
 .sectionButton {
@@ -165,17 +204,17 @@
 #uiSpaceText3,
 #uiSpaceText1,
 #uiSpaceText2 {
+  width: 192px;
+  position: absolute;
+  top: 25px;
+  left: 92px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 19px;
-  color: #000000;
-  position: absolute;
-  top: 18px;
-  left: 36px;
-  width: 200px;
+  text-align: left;
 }
+
 
 #closeCross {
   z-index: 200;
