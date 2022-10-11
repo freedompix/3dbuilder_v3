@@ -940,10 +940,13 @@ html {
     width: 468px; 
   }
 
-  html, body {
+  html{
+    min-height: -webkit-fill-availabel;
+  }
+  body {
     position: fixed;
     width: 468px !important;
-    height: 150vh !important;
+    min-height: 101vh !important;
   }
   
   #renderCanvas {
