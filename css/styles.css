@@ -863,6 +863,7 @@ left: calc((100vw - (100vh))/2) !important;
 }
 
 .optionsBoxFullScreen {
+  position: absolute;
   left: calc((100vw - 864px)/2) !important;	
   top: calc(95.8vh + -170px) !important;  
 }
@@ -887,11 +888,12 @@ left: calc((100vw - (100vh))/2) !important;
   top: 120px !important;
 }
 
+
+
 @media screen and ( max-width: 468px ){
 
 
 #renderCanvasFullScreen {
-  
   width: 100vw !important;
   height: 100vh !important;  
   left: 0px !important;
@@ -906,12 +908,13 @@ left: calc((100vw - (100vh))/2) !important;
 }
 
 .optionsBoxFullScreen {
+  position: absolute;
   left: calc((100vw - 864px)/2) !important;	
-  /*top: calc(95.8vh + -170px) !important; */
-  top: calc((100vh - 20vh)/1) !important; 
+  top: calc(95.8vh + -65px) !important; 
 }
 
-.iconInfoFullScreen {    
+.iconInfoFullScreen { 
+     
   left: calc((100vw - 58px)/1) !important;	
   top: calc(95.8vh + -142px) !important; 
 }
