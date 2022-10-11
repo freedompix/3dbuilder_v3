@@ -847,7 +847,6 @@ html {
 }
 
 .renderCanvasFullScreen { 
-  display: fixed !important;
   width: 100vw !important;
   height: 100vh !important;  
   left: 0px !important;
@@ -855,7 +854,6 @@ html {
 }
 
 .canvas2dFullScreen {
-  display: fixed !important;
   width: 100vh !important;
   height: 100vh !important;	
   top: 0px !important;
@@ -864,18 +862,18 @@ html {
 
 .optionsBoxFullScreen {
   left: calc((100vw - 864px) / 2) !important;	
-  top: calc(95.8vh + -170px) !important;  
+  top: calc(100vh + -170px) !important;  
 }
 
 .iconInfoFullScreen {
   display: fixed !important;
   left: calc((100vw - 56px) / 1) !important;	
-  top: calc(95.8vh + -142px) !important;  
+  top: calc(100vh + -142px) !important;  
 }
 
 .iconFullScreenFullScreen {
   right: calc(100vw - 58px) !important;	
-  top: calc(95.8vh + -142px) !important; 
+  top: calc(100vh + -142px) !important; 
 }
 
 .iconZoomInFullScreen {
@@ -892,7 +890,7 @@ html {
 @media screen and ( max-width: 468px ){
 
 
-#renderCanvasFullScreen {
+.renderCanvasFullScreen {
   width: 100vw !important;
   height: 100vh !important;  
   left: 0px !important;
@@ -908,17 +906,17 @@ html {
 
 .optionsBoxFullScreen {
   left: calc((100vw - 864px) / 2) !important; 	
-  top: calc(95.8vh + -65px) !important; 
+  top: calc(100vh + -85px) !important; 
 }
 
 .iconInfoFullScreen {    
   left: calc((100vw - 58px)/1) !important;	
-  top: calc(95.8vh + -142px) !important; 
+  top: calc(100vh + -122px) !important; 
 }
 
 .iconFullScreenFullScreen {
   right: calc(100vw - 58px) !important;	
-  top: calc(95.8vh + -142px) !important; 
+  top: calc(100vh + -122px) !important; 
 }
 
 .iconZoomInFullScreen {
