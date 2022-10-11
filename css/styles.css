@@ -940,15 +940,14 @@ html {
     width: 468px; 
   }
 
-  html{
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
-  }
-  
   body {
-    position: fixed;
     width: 468px !important;
-    min-height: 101vh !important;
+    min-height: 100vh !important;
+    min-height: -webkit-fill-available !important;
+  }
+
+  html{
+    height: -webkit-fill-available !important;
   }
   
   #renderCanvas {
