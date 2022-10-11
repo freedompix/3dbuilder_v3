@@ -248,8 +248,6 @@
 
 
 body {
-  margin: 0;
-  padding: 50px 50px 50px 50px;
   background-color: #F2F2F2;
   overflow: hidden;
   width: 100vw;
@@ -947,7 +945,7 @@ html {
   html, body {
     position: fixed;
     width: 468px !important;
-    height: 100vh !important;
+    height: 150vh !important;
   }
   
   #renderCanvas {
