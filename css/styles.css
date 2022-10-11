@@ -943,7 +943,6 @@ html {
   html, body {
     position: fixed;
     width: 468px !important;
-    height: 150vh !important;
     min-height: 101vh !important;
   }
   
