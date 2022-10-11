@@ -940,12 +940,10 @@ html {
     width: 468px; 
   }
 
-  html{
-    min-height: -webkit-fill-availabel;
-  }
-  body {
+  html, body {
     position: fixed;
     width: 468px !important;
+    height: 150vh !important;
     min-height: 101vh !important;
   }
   
