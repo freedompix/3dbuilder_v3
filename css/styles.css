@@ -894,6 +894,7 @@ left: calc((100vw - (100vh))/2) !important;
 
 
 #renderCanvasFullScreen {
+  position: fixed;
   width: 100vw !important;
   height: 100vh !important;  
   left: 0px !important;
@@ -949,6 +950,7 @@ left: calc((100vw - (100vh))/2) !important;
     position: fixed;
     width: 468px !important;
     height: 100vh;
+    top: 0px;
   }
   
   #renderCanvas {
