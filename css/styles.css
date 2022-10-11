@@ -249,7 +249,7 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 50px 50px 50px 50px;
   background-color: #F2F2F2;
   overflow: hidden;
   width: 100vw;
@@ -848,7 +848,8 @@ html {
   width: 30px;
 }
 
-.renderCanvasFullScreen {
+.renderCanvasFullScreen { 
+  display: fixed !important;
   width: 100vw !important;
   height: 100vh !important;  
   left: 0px !important;
@@ -856,20 +857,21 @@ html {
 }
 
 .canvas2dFullScreen {
-width: 100vh !important;
-height: 100vh !important;	
-top: 0px !important;
-left: calc((100vw - (100vh))/2) !important;
+  display: fixed !important;
+  width: 100vh !important;
+  height: 100vh !important;	
+  top: 0px !important;
+  left: calc((100vw - 100vh) / 2) !important;
 }
 
 .optionsBoxFullScreen {
-  position: absolute;
-  left: calc((100vw - 864px)/2) !important;	
+  left: calc((100vw - 864px) / 2) !important;	
   top: calc(95.8vh + -170px) !important;  
 }
 
 .iconInfoFullScreen {
-  left: calc((100vw - 56px)/1) !important;	
+  display: fixed !important;
+  left: calc((100vw - 56px) / 1) !important;	
   top: calc(95.8vh + -142px) !important;  
 }
 
@@ -889,12 +891,10 @@ left: calc((100vw - (100vh))/2) !important;
 }
 
 
-
 @media screen and ( max-width: 468px ){
 
 
 #renderCanvasFullScreen {
-  position: fixed;
   width: 100vw !important;
   height: 100vh !important;  
   left: 0px !important;
@@ -902,38 +902,33 @@ left: calc((100vw - (100vh))/2) !important;
 }
 
 .canvas2dFullScreen {
-position: fixed;
-width: 100vh !important;
-height: 100vh !important;	
-top: 0px !important;
-left: calc((100vw - (100vh))/2) !important;
+  width: 100vh !important;
+  height: 100vh !important;	
+  top: 0px !important;
+  left: calc((100vw - 100vh) / 2) !important; 
 }
 
 .optionsBoxFullScreen {
-  position: fixed;
-  left: calc((100vw - 864px)/2) !important;	
+  left: calc((100vw - 864px) / 2) !important; 	
   top: calc(95.8vh + -65px) !important; 
 }
 
-.iconInfoFullScreen { 
+.iconInfoFullScreen {    
   left: calc((100vw - 58px)/1) !important;	
   top: calc(95.8vh + -142px) !important; 
 }
 
 .iconFullScreenFullScreen {
-  position: fixed;
   right: calc(100vw - 58px) !important;	
   top: calc(95.8vh + -142px) !important; 
 }
 
 .iconZoomInFullScreen {
-  position: fixed;
   right: 10px !important;	
   top: 72px !important;
 }
 
 .iconZoomOutFullScreen { 
-  position: fixed;
   right: 10px !important;	
   top: 120px !important;
 }
@@ -952,8 +947,7 @@ left: calc((100vw - (100vh))/2) !important;
   html, body {
     position: fixed;
     width: 468px !important;
-    height: 900px;
-    top: 0px;
+    height: 100vh !important;
   }
   
   #renderCanvas {
@@ -1057,7 +1051,7 @@ left: calc((100vw - (100vh))/2) !important;
   }
 
   #optionsBox {
-    position: absolute;
+    position: fixed;
     transform: scale(0.4);
     width: 864px;
     height: 104px;
