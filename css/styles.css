@@ -846,7 +846,8 @@ html {
   width: 30px;
 }
 
-.renderCanvasFullScreen { 
+.renderCanvasFullScreen {
+  position: absolute !important;
   width: 100vw !important;
   height: 100vh !important;  
   left: 0px !important;
@@ -854,9 +855,9 @@ html {
 }
 
 .canvas2dFullScreen {
+  position: absolute !important;
   width: 100vw !important;
-  height: 100vh !important;	
-  top: 0px !important;
+  top: 100px !important;
   left: 0px !important;
 }
 
@@ -938,10 +939,13 @@ html {
     width: 468px !important;
     min-height: 101vh !important;
     padding-bottom: 468px !important;
+    min-height: -webkit-fill-available;
   }
   body {
     min-height: 101vh !important;
     padding-bottom: 468px !important;
+    min-height: 101vh !important;
+    min-height: -webkit-fill-available;
   }
     
  /*html, body {
@@ -952,9 +956,9 @@ html {
   }*/
   
   #renderCanvas {
+    position: absolute;
     width: 100vw;
     height: calc(100vh - 213px);
-    position: absolute;
     outline: none;
     top: -54px;
     left: 0px;
@@ -964,6 +968,7 @@ html {
   }
 
   #canvas2d {
+    position: absolute;
     width: 100vw;
     height: calc(100vh - 213px);
     top: -54px;
