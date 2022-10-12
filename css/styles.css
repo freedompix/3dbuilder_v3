@@ -937,9 +937,11 @@ html {
    html {
     width: 468px !important;
     min-height: 101vh !important;
+    padding-bottom: 468px !important;
   }
   body {
     min-height: 101vh !important;
+    padding-bottom: 468px !important;
   }
     
  /*html, body {
