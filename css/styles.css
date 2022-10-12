@@ -889,23 +889,23 @@ html {
 @media screen and ( max-width: 468px ){
 
 
-.renderCanvasFullScreen {
+/*.renderCanvasFullScreen {
   width: 100vw !important;
   height: 100vh !important;
-}
+}*/
 
-.canvas2dFullScreen {
+/*.canvas2dFullScreen {
   width: 100vw !important;
   height: 100vh !important;
-}
+}*/
 
 .optionsBoxFullScreen {
-  left: calc((100vw - 864px)/2) !important; 	
+  left: calc(100vw - 666px) !important; 	
   top: calc(100vh - 85px) !important; 
 }
 
 .iconInfoFullScreen {    
-  left: calc((100vw - 58px)/1) !important;	
+  left: calc(100vw - 58px) !important;	
   top: calc(100vh - 58px) !important; 
 }
 
@@ -941,7 +941,7 @@ html {
   body {
     max-width: 468px !important; 
     margin: 0 auto !important;
-    min-height: 105vh !important;
+    min-height: 101vh !important;
   }
     
    /*  html, body {
@@ -995,6 +995,7 @@ html {
   #icon2D {
     transform: scale(0.875);
     left: 10px;
+    top: 120px;
     background-image: url("../css/icon_2d.png");
     background-repeat: no-repeat;
     overflow-x: hidden;
