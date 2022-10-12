@@ -941,8 +941,8 @@ html {
 
   body {
     display: block;
-    max-width: 468px !important;
-    height: 100vh !important;
+    padding-bottom: 468px !important;
+    min-height: 101vh !important;
     height: -webkit-fill-available !important;
   }
     
