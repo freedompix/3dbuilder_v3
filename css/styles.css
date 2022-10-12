@@ -936,16 +936,14 @@ html {
   }
 
    html {
-    width: 468px !important;
-    min-height: 101vh !important;
-    padding-bottom: 468px !important;
-    min-height: -webkit-fill-available;
+    height: -webkit-fill-available !important;
   }
+
   body {
-    min-height: 101vh !important;
-    padding-bottom: 468px !important;
-    min-height: 101vh !important;
-    min-height: -webkit-fill-available !important;
+    display: block;
+    max-width: 468px !important;
+    height: 100vh !important;
+    height: -webkit-fill-available !important;
   }
     
  /*html, body {
@@ -979,7 +977,7 @@ html {
   }
 
   #builderUI {
-    min-height: 101vh !important;
+    
     position: absolute;
     top: calc(100vh - 343px);
     left: 0;
