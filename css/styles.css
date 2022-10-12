@@ -857,7 +857,7 @@ html {
   width: 100vw !important;
   height: 100vh !important;	
   top: 0px !important;
-  left: calc((100vw - 100vh) / 2) !important;
+  left: 0px !important;
 }
 
 .optionsBoxFullScreen {
@@ -872,7 +872,7 @@ html {
 
 .iconFullScreenFullScreen {
   right: calc(100vw - 58px) !important;	
-  top: calc(100vh - 58px) !important; 
+  top: 58px !important; 
 }
 
 .iconZoomInFullScreen {
@@ -895,12 +895,12 @@ html {
 }
 
 .canvas2dFullScreen {
-  width: 100vh !important;
+  width: 100vw !important;
   height: 100vh !important;
 }
 
 .optionsBoxFullScreen {
-  left: calc((100vw - 864px) / 2) !important; 	
+  left: calc((100vw - 864px)/2) !important; 	
   top: calc(100vh - 85px) !important; 
 }
 
