@@ -901,17 +901,23 @@ html {
 
 .optionsBoxFullScreen {
   left: calc(100vw - 666px) !important; 	
-  top: calc(100vh - 85px) !important; 
+  top: calc(100vh - 85px) !important;
+  width: 864px !important;
+  height: 22vmin !important;
 }
 
 .iconInfoFullScreen {    
   left: calc(100vw - 58px) !important;	
   top: calc(100vh - 58px) !important; 
+  width: 50px !important;
+  height: 10vmin !important;
 }
 
 .iconFullScreenFullScreen {
   right: calc(100vw - 58px) !important;	
   top: calc(100vh - 58px) !important; 
+  width: 50px !important;
+  height: 10vmin !important;
 }
 
 .iconZoomInFullScreen {
@@ -977,7 +983,7 @@ html {
 
   #builderUI {
     position: fixed;
-    top: calc(100% - 343px);
+    top: calc(100vh - 343px);
     width: 468px;
     height: 73vmin;
     left: 0;
@@ -1025,7 +1031,7 @@ html {
 
   #iconFullScreen {
     transform: scale(0.875);
-    top: calc(100% - 398px);
+    top: calc(100vh - 398px);
     left: 10px;
     background-image: url("../css/icon_full.png");
     background-repeat: no-repeat;
@@ -1034,7 +1040,7 @@ html {
 
   #iconInfo {
     transform: scale(0.875);
-    top: calc(100% - 398px);
+    top: calc(100vh - 398px);
     right: 10px;
     background-image: url("../css/icon_information.png");
     background-repeat: no-repeat;
@@ -1045,7 +1051,7 @@ html {
     transform: scale(0.4);
     width: 864px;
     left: -198px;
-    top: calc(100% - 426px);
+    top: calc(100vh - 426px);
     background-color: #FFFFFF;
     overflow-x: hidden;
   }
