@@ -977,7 +977,7 @@ html {
 
   #builderUI {
     position: fixed;
-    top: calc(100vh - 343px);
+    top: calc(100% - 343px);
     width: 468px;
     height: 73vmin;
     left: 0;
@@ -1025,7 +1025,7 @@ html {
 
   #iconFullScreen {
     transform: scale(0.875);
-    top: calc(100vh - 398px);
+    top: calc(100% - 398px);
     left: 10px;
     background-image: url("../css/icon_full.png");
     background-repeat: no-repeat;
@@ -1034,7 +1034,7 @@ html {
 
   #iconInfo {
     transform: scale(0.875);
-    top: calc(100vh - 398px);
+    top: calc(100% - 398px);
     right: 10px;
     background-image: url("../css/icon_information.png");
     background-repeat: no-repeat;
@@ -1045,7 +1045,7 @@ html {
     transform: scale(0.4);
     width: 864px;
     left: -198px;
-    top: calc(100vh - 426px);
+    top: calc(100% - 426px);
     background-color: #FFFFFF;
     overflow-x: hidden;
   }
