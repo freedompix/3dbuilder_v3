@@ -901,17 +901,17 @@ html {
 
 .optionsBoxFullScreen {
   left: calc(100vw - 666px) !important; 	
-  top: calc(100vh - 85px) !important; 
+  top: calc(100% - 85px) !important; 
 }
 
 .iconInfoFullScreen {    
   left: calc(100vw - 58px) !important;	
-  top: calc(100vh - 58px) !important; 
+  top: calc(100% - 58px) !important; 
 }
 
 .iconFullScreenFullScreen {
   right: calc(100vw - 58px) !important;	
-  top: calc(100vh - 58px) !important; 
+  top: calc(100% - 58px) !important; 
 }
 
 .iconZoomInFullScreen {
