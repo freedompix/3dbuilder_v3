@@ -852,6 +852,8 @@ html {
   height: 100vh !important;  
   left: 0px !important;
   top: 0px !important;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .canvas2dFullScreen {
@@ -859,6 +861,8 @@ html {
   width: 100vw !important;
   top: 100px !important;
   left: 0px !important;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .optionsBoxFullScreen {
@@ -892,6 +896,8 @@ html {
 .optionsBoxFullScreen {
   left: calc(100vw - 666px) !important; 	
   top: calc(100% - 85px) !important; 
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .iconInfoFullScreen {    
@@ -926,8 +932,10 @@ html {
   }
 
   html, body {
-    display: block;
+    display: fixed;
     min-height: -webkit-fill-available;
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
   
   #renderCanvas {
@@ -975,7 +983,7 @@ html {
     top: 72px;
     background-image: url("../css/icon_3d.png");
     background-repeat: no-repeat;
-    overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   #icon2D {
@@ -984,7 +992,7 @@ html {
     top: 120px;
     background-image: url("../css/icon_2d.png");
     background-repeat: no-repeat;
-    overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   #iconZoomIn {
@@ -993,7 +1001,7 @@ html {
     right: 10px;
     background-image: url("../css/icon_zoom1.png");
     background-repeat: no-repeat;
-    overflow-x: hidden;
+    overflow-y: hidden;
   }
   
   #iconZoomOut {
@@ -1002,7 +1010,7 @@ html {
     right: 10px;
     background-image: url("../css/icon_zoom2.png");
     background-repeat: no-repeat;
-    overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   #iconFullScreen {
@@ -1011,7 +1019,7 @@ html {
     left: 10px;
     background-image: url("../css/icon_full.png");
     background-repeat: no-repeat;
-    overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   #iconInfo {
@@ -1020,7 +1028,7 @@ html {
     right: 10px;
     background-image: url("../css/icon_information.png");
     background-repeat: no-repeat;
-    overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   #optionsBox {
@@ -1029,6 +1037,6 @@ html {
     left: -198px;
     top: calc(100% - 426px);
     background-color: #FFFFFF;
-    overflow-x: hidden;
+    overflow-y: hidden;
   }
 }
