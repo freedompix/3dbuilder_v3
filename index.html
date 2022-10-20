@@ -112,7 +112,7 @@ if(landscape)
 {
 // adding zoom 0.5
 //if (width < 900)
-viewportmeta.content = "initial-scale=0.33, user-scalable=no";
+viewportmeta.content = "width=device-width, initial-scale=0.33, user-scalable=no";
 }
 else
 {
@@ -126,7 +126,37 @@ window.addEventListener('resize', onOrientationChange);
 
 onOrientationChange();
 </script>
+
+<!--
+<script>window.appState['debug']=true;</script>
+<script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+
+<script src="app/_appbild.js"></script>
 <script src="app/appbild.js"></script>
+!-->
+
+<script src="app/constructor.js"></script>
+
+<script src="app/houses.js"></script>
+<script src="app/color.js"></script>
+<script src="app/roof_color.js"></script>
+<script src="app/ui.js"></script>
+
+<script src="app/elements_updating.js"></script>
+<script src="app/elements_creating.js"></script>
+
+
+<script src="app/space_creating.js"></script>
+<script src="app/space_updating.js"></script>
+<script src="app/space_ui.js"></script>
+
+<script src="app/app.js"></script>
+<script src="app/2d.js"></script>
+<script src="app/waterpipe.js"></script>
+
+<script src="app/calculate.js"></script>
+
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
@@ -1052,12 +1082,12 @@ return false;">
 		<!-- NEW TAB start -->
 
 
-		<div class="builderBlockStyleInactive waves-effect waves-light z-depth-0" id="builderBlock7" onclick="switchUI(7);">
-			<div class="builderBlockTextInactive" id="builderBlockText7">5. Configuratie Segmenten</div>
-			<div class="builderArrowInactive" id="builderArrow7"></div>
+		<div class="builderBlockStyleInactive waves-effect waves-light z-depth-0" id="builderBlock8" onclick="switchUI(8);">
+			<div class="builderBlockTextInactive" id="builderBlockText8">5. Configuratie Segmenten</div>
+			<div class="builderArrowInactive" id="builderArrow8"></div>
 		</div>
 
-		<div id="builderOptions7" style="display: none; position: relative;">
+		<div id="builderOptions8" style="display: none; position: relative;">
 
 			<div id="sectionsList" style="">
 				<div id="sectionsListFront">
@@ -1152,7 +1182,7 @@ return false;">
 				</div>
 			</div>
 
-			<div id="spaceBlock1">
+						<div id="spaceBlock1">
 				<div id="uiSpaceText1">Remove Element 1</div>
 				<div class="uiSpaceButton0" id="uiSpaceButton0_0" onclick="spaceSetUI(0,0);"></div>
 				<div class="uiSpaceButton1" id="uiSpaceButton0_1" onclick="spaceSetUI(0,1);"><p class="uiSpaceButtonText">Shatter</p></div>
@@ -1377,6 +1407,7 @@ return false;">
 	<div id="itemframe_mm" class="itemListRight"></div>
 </div>
 
+
 <div class="itemDiv">
 				<div class="itemListLeft">Rabat (black) 250 x 1.2 x 18 cm</div>
 				<div class="itemListCenter">m</div>
@@ -1388,6 +1419,8 @@ return false;">
 				<div class="itemListCenter">m</div>
 				<div id="rabat_mm2" class="itemListRight"></div>
 </div>
+
+
 
 <!-- обкладка крыши ПОПЕРЕЧНЫЕ !-->
 
@@ -1574,13 +1607,43 @@ return false;">
 			<div class="builderItemText">Price:</div>
 			<div class="itemListPrice" id="price">
 			</div>
-
-
-
-
-
-
 		</div>
+
+
+		<div class="builderBlockStyleInactive waves-effect waves-light z-depth-0" id="builderBlock7" onclick="switchUI(7);">
+			<div class="builderBlockTextInactive" id="builderBlockText7">7. OVERKAPPING OPSLAAN</div>
+			<div class="builderArrowInactive" id="builderArrow7"></div>
+		</div>
+		
+		<div id="builderOptions7" style="display: none;">
+	
+				<script src ="https://form.jotform.com/static/feedback2.js" type="text/javascript">
+					var uniquelink = "https://form.jotform.com/222553148237354";
+					
+				 var JFL_222553148237354 = new JotformFeedback({
+				formId: '222553148237354',
+				base: 'https://form.jotform.com/',
+				windowTitle: '',
+				iframeParameters: {
+				'3durl': uniquelink
+				 },
+				
+				background: '#f8e71c',
+				fontColor: '#FFFFFF',
+				type: '1',
+				height: 500,
+				width: 700,
+				openOnLoad: false
+				});
+				</script>
+				
+				<a class="btn lightbox-222553148237354" style="">
+				
+					Overkapping opslaan
+				
+				</a>
+		</div>
+		
 	</div>
 
 
