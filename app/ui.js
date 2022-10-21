@@ -557,9 +557,9 @@ document.getElementById('builderOptions2_1').style.display='block';
 document.getElementById('builderBlock5').style.display = 'none';
 document.getElementById('builderOptions5').style.display = 'none';
 
-document.getElementById('builderBlockText8').innerHTML = '5. Configuratie Segmenten';
+document.getElementById('builderBlockText7').innerHTML = '5. Configuratie Segmenten';
 document.getElementById('builderBlockText6').innerHTML = '6. CALCULATE PRICE AND ORDER';
-document.getElementById('builderBlockText7').innerHTML = '7. OVERKAPPING OPSLAAN';
+document.getElementById('builderBlockText8').innerHTML = '7. OVERKAPPING OPSLAAN';
 
 
 
@@ -589,9 +589,9 @@ document.getElementById('builderBlock5').style.display = 'block';
 if (window.appState['uiMenu5']==0) document.getElementById('builderOptions5').style.display = 'none';
 else document.getElementById('builderOptions5').style.display = 'block';
 
-document.getElementById('builderBlockText8').innerHTML = '5. Configuratie Segmenten';
+document.getElementById('builderBlockText7').innerHTML = '5. Configuratie Segmenten';
 document.getElementById('builderBlockText6').innerHTML = '7. CALCULATE PRICE AND ORDER';
-document.getElementById('builderBlockText7').innerHTML = '8. OVERKAPPING OPSLAAN';
+document.getElementById('builderBlockText8').innerHTML = '8. OVERKAPPING OPSLAAN';
 
 
 document.getElementById('builderOptions2_1').style.display='none';
