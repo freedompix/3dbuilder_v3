@@ -135,7 +135,26 @@ onOrientationChange();
 <script src="app/appbild.js"></script>
 !-->
 
-<script src="app/appbild.js"></script>
+<script src="app/constructor.js"></script>
+
+<script src="app/houses.js"></script>
+<script src="app/color.js"></script>
+<script src="app/roof_color.js"></script>
+<script src="app/ui.js"></script>
+
+<script src="app/elements_updating.js"></script>
+<script src="app/elements_creating.js"></script>
+
+
+<script src="app/space_creating.js"></script>
+<script src="app/space_updating.js"></script>
+<script src="app/space_ui.js"></script>
+
+<script src="app/app.js"></script>
+<script src="app/2d.js"></script>
+<script src="app/waterpipe.js"></script>
+
+<script src="app/calculate.js"></script>
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -1301,7 +1320,6 @@ return false;">
 			</div>
 			</div>
 
-<div style="display: none;">
 
 			<div class="builderItemText">Items:</div>
 
@@ -1596,12 +1614,7 @@ return false;">
 				<div id="item_rails_2" class="itemListRight">
 				</div>
 			</div>
-			
-			</div>
 
-
-			
-			
 			<div class="builderItemText">Price:</div>
 			<div class="itemListPrice" id="price">
 			</div>
@@ -1616,14 +1629,36 @@ return false;">
 		<div id="builderOptions8" style="display: none;">
 
 				<script src ="https://form.jotform.com/static/feedback2.js" type="text/javascript">
-					var uniquelink = "https://freedompix.github.io/3dbuilder_v3/admin.html#eyIwIjp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF0sImlubmVyIjpmYWxzZX0sIjEiOnsib3JpZW50YXRpb24iOjAsIndhbGwiOmZhbHNlLCJwbGFjZSI6WzAsMCwwXSwiaW5uZXIiOmZhbHNlfSwiMiI6eyJvcmllbnRhdGlvbiI6MCwid2FsbCI6ZmFsc2UsInBsYWNlIjpbMCwwLDBdLCJpbm5lciI6ZmFsc2V9LCIzIjp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF0sImlubmVyIjpmYWxzZX0sIjQiOnsib3JpZW50YXRpb24iOjAsIndhbGwiOmZhbHNlLCJwbGFjZSI6WzAsMCwwXSwiaW5uZXIiOmZhbHNlfSwiNSI6eyJvcmllbnRhdGlvbiI6MCwid2FsbCI6ZmFsc2UsInBsYWNlIjpbMCwwLDBdLCJpbm5lciI6ZmFsc2V9LCI2Ijp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF0sImlubmVyIjpmYWxzZX0sIjciOnsib3JpZW50YXRpb24iOjAsIndhbGwiOmZhbHNlLCJwbGFjZSI6WzAsMCwwXSwiaW5uZXIiOmZhbHNlfSwiOCI6eyJvcmllbnRhdGlvbiI6MCwid2FsbCI6ZmFsc2UsInBsYWNlIjpbMCwwLDBdLCJpbm5lciI6ZmFsc2V9LCI5Ijp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF0sImlubmVyIjpmYWxzZX0sIjEwIjp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF0sImlubmVyIjpmYWxzZX0sIjExIjp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF0sImlubmVyIjpmYWxzZX0sIjEyIjp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF0sImlubmVyIjpmYWxzZX0sIjEzIjp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF0sImlubmVyIjpmYWxzZX0sIjE0Ijp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF0sImlubmVyIjpmYWxzZX0sIjE1Ijp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF0sImlubmVyIjpmYWxzZX0sIjE2Ijp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF0sImlubmVyIjpmYWxzZX0sIjE3Ijp7Im9yaWVudGF0aW9uIjowLCJ3YWxsIjpmYWxzZSwicGxhY2UiOlswLDAsMF0sImlubmVyIjpmYWxzZX0sInJvb2Z0eXBlIjoxLCJyb29mY29sb3IiOjEsIndhdGVycGlwZSI6MCwid2lkdGgiOjUwMDAsImRlZXB0aCI6MzAwMCwib3ZlcmhhbmdMZWZ0IjoyMDAsIm92ZXJoYW5nUmlnaHQiOjIwMCwib3ZlcmhhbmdGcm9udCI6MjAwLCJvdmVyaGFuZ0JhY2siOjIwMCwiaG91c2Uxb24iOnRydWUsImhvdXNlMm9uIjpmYWxzZSwiaG91c2Uxd2lkdGgiOjMwMDAsImhvdXNlMndpZHRoIjozMDAwLCJjb2xvcjEiOjAsImNvbG9yMiI6MCwid2FsbEluc2lkZSI6ZmFsc2UsImhvdXNlMXdhbGwxIjoyLCJob3VzZTF3YWxsMiI6MCwiaG91c2Uxd2FsbDMiOjEsImhvdXNlMXdhbGw0IjowLCJob3VzZTJ3YWxsMSI6MywiaG91c2Uyd2FsbDIiOjAsImhvdXNlMndhbGwzIjowLCJob3VzZTJ3YWxsNCI6MX0=";
+
+function updateLinkInIFrame()
+{
+	//console.log(JFL_222553148237354);
+	JFL_222553148237354.iframeParameters= {'3durl': window.appState['linkAdmin']};
+
+	//input_50
+	//lightbox-222553148237354
+
+	// document.getElementById('shareLink').value
+
+	//document.getElementById("lightbox-222553148237354").contentWindow.document.getElementById("input_50").value = 777;
+
+	console.log(document.getElementById("lightbox-222553148237354"));
+
+	setTimeout(	function(){document.getElementById("lightbox-222553148237354").contentWindow.document.getElementById("input_50").value = 	window.appState['linkAdmin'];}, 5000);
+	//window.location.hash = '#' + encoded;
+}
+
+
+
+
+					var uniquelink = "";
 
 				 var JFL_222553148237354 = new JotformFeedback({
 				formId: '222553148237354',
 				base: 'https://form.jotform.com/',
 				windowTitle: '',
 				iframeParameters: {
-				'3durl': uniquelink
+				'3durl': 'Generating url...'
 				 },
 
 				background: '#f8e71c',
@@ -1635,11 +1670,7 @@ return false;">
 				});
 				</script>
 
-				<a class="btn lightbox-222553148237354" style="">
-
-					Overkapping opslaan
-
-				</a>
+				<a class="btn lightbox-222553148237354" style="" onclick="updateLinkInIFrame();">Overkapping opslaan</a>
 		</div>
 
 	</div>
