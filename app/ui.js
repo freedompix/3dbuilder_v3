@@ -59,7 +59,7 @@ let hash =  window.location.hash.slice(1);
 //console.log(hash);
 //console.log(atob(hash));
 
-let oxj = JSON.parse(atob(hash) && window.location.hash.includes('house') == false);
+let oxj = JSON.parse(atob(hash));
 console.log(oxj);
   window.appState['rooftype'] =   oxj.rooftype;
   window.appState['roofcolor'] =   oxj.roofcolor;
@@ -78,6 +78,10 @@ console.log(oxj);
 
   window.appState['house1width'] =   oxj.house1width;
   window.appState['house2width'] =   oxj.house2width;
+
+
+
+
 
   window.appState['color1'] =   oxj.color1;
   window.appState['color2'] =   oxj.color2;
@@ -111,23 +115,27 @@ console.log(oxj);
 
 
 
+document.getElementById("waterpipe").checked = false;
 
 if(window.appState['waterpipe']==0)  document.getElementById("waterpipe").checked =false;
-if(window.appState['waterpipe']==1)  {document.getElementById("waterpipe").checked =true;
-//  document.getElementById("waterpipe").checked =false;
-setWaterpipe();};
+if(window.appState['waterpipe']==1)
+{
+document.getElementById("waterpipe").checked =true;
+setWaterpipe();
+}
 
 
 
-  if(oxj.color1==0)color1_1Select();
-  if(oxj.color1==1)color1_2Select();
-  if(oxj.color2==0)color2_1Select();
-  if(oxj.color2==1)color2_2Select();
+if(oxj.color1==0) color1_1Select();
+if(oxj.color1==1) color1_2Select();
+if(oxj.color2==0) color2_1Select();
+if(oxj.color2==1) color2_2Select();
 
 roofColorSelect(window.appState['roofcolor']);
-if(window.appState['rooftype']==1){buildingType2Select();}
 
-  document.getElementById("wallInside").checked = oxj.wallInside;
+if(window.appState['rooftype']==1) {buildingType2Select();}
+
+document.getElementById("wallInside").checked = oxj.wallInside;
 
 if(oxj.wallInside == true)
 {
@@ -135,19 +143,40 @@ document.getElementById("color2optionsDiv").style.display ='block';
 }
 
 
-  document.getElementById("waterpipe").checked =false;
-  if (window.appState['house1on']==true) {
+
+
+
+
+  if (window.appState['house1on'] == true) {
   document.getElementById("house1on").checked = true;
   }
 
-  if (window.appState['house2on']==true) {
+  if (window.appState['house2on'] == true) {
   document.getElementById("house2on").checked = true;
   }
 
+
+  if (oxj.house1on == true) {
+  document.getElementById("house1on").checked = true;
+  }
+
+  if (oxj.house2on == true) {
+  document.getElementById("house2on").checked = true;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 for(let i=0;i<=17; i++){
 window.appSection[i]=oxj[i];
-// window.appSection[i].inner;
-
 }
 //console.log(oxj);
 //console.log(666);
@@ -407,7 +436,7 @@ document.getElementById('uiSpace').style.display='none';
 document.getElementById('sectionsList').style.display='block';
 
 
-for (i=1; i<=7; i++)
+for (i=1; i<=8; i++)
 {
 if (i != id)
 {
@@ -470,14 +499,12 @@ if (id != 0) window.appState['uiMenu'+id]=newstate;
 
 //disabling section highlight
 
-  for(let ii=0;ii<=17;ii++)
-  {
-    if (window.appState['uiMenu7'] == 0) window.scene.getMeshByName('sec_' + ii + '_plane').setEnabled(false);
-    if (window.appState['uiMenu7'] == 1) window.scene.getMeshByName('sec_' + ii + '_plane').setEnabled(true);
-
-  }
-
-
+for(let ii=0;ii<=17;ii++)
+{
+if (window.appState['uiMenu7'] == 0) window.scene.getMeshByName('sec_' + ii + '_plane').setEnabled(false);
+if (window.appState['uiMenu7'] == 1) window.scene.getMeshByName('sec_' + ii + '_plane').setEnabled(true);
+}
+if (window.appState['uiMenu7'] == 1) spaceUpdating();
 if (window.appState['uiMenu7'] == 0) window.appState['uiSpaceID'] = false;
 
 }
@@ -535,6 +562,8 @@ document.getElementById('builderBlockText6').innerHTML = '6. CALCULATE PRICE AND
 document.getElementById('builderBlockText7').innerHTML = '7. OVERKAPPING OPSLAAN';
 
 
+
+
 }
 
 function buildingType2Select()
@@ -563,6 +592,7 @@ else document.getElementById('builderOptions5').style.display = 'block';
 document.getElementById('builderBlockText8').innerHTML = '5. Configuratie Segmenten';
 document.getElementById('builderBlockText6').innerHTML = '7. CALCULATE PRICE AND ORDER';
 document.getElementById('builderBlockText7').innerHTML = '8. OVERKAPPING OPSLAAN';
+
 
 document.getElementById('builderOptions2_1').style.display='none';
 
