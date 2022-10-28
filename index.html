@@ -135,7 +135,26 @@ onOrientationChange();
 <script src="app/appbild.js"></script>
 !-->
 
-<script src="app/appbild.js"></script>
+<script src="app/constructor.js"></script>
+
+<script src="app/houses.js"></script>
+<script src="app/color.js"></script>
+<script src="app/roof_color.js"></script>
+<script src="app/ui.js"></script>
+
+<script src="app/elements_updating.js"></script>
+<script src="app/elements_creating.js"></script>
+
+
+<script src="app/space_creating.js"></script>
+<script src="app/space_updating.js"></script>
+<script src="app/space_ui.js"></script>
+
+<script src="app/app.js"></script>
+<script src="app/2d.js"></script>
+<script src="app/waterpipe.js"></script>
+
+<script src="app/calculate.js"></script>
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -156,7 +175,7 @@ onOrientationChange();
 	</div>
 
 
-	<div class="" id="optionsBox">
+	<div class="optionsBoxClass" id="optionsBox">
 		<div style="position: absolute; width: 1px; height: 60px; left: 215px; top: 16px; background: #CCCCCC;"></div>
 		<div style="position: absolute; width: 1px; height: 60px; left: 431px; top: 16px; background: #CCCCCC;"></div>
 		<div style="position: absolute; width: 1px; height: 60px; left: 647px; top: 16px; background: #CCCCCC;"></div>
@@ -225,7 +244,7 @@ onOrientationChange();
 	<div class="" id="builderUI" style="">
 
 		<div class="builderBlockStyleInactive waves-effect waves-light z-depth-0" id="builderBlock1" onclick="switchUI(1);">
-			<div class="builderBlockTextInactive" id="builderBlockText1">1.Type overkapping</div>
+			<div class="builderBlockTextInactive" id="builderBlockText1">1. Type overkapping</div>
 			<div class="builderArrowInactive" id="builderArrow1"></div>
 		</div>
 
@@ -247,7 +266,7 @@ onOrientationChange();
 		</div>
 
 		<div class="builderBlockStyleInactive waves-effect waves-light z-depth-0" id="builderBlock2" onclick="switchUI(2);">
-			<div class="builderBlockTextInactive" id="builderBlockText2">2.Afmetingen</div>
+			<div class="builderBlockTextInactive" id="builderBlockText2">2. Afmetingen</div>
 			<div class="builderArrowInactive" id="builderArrow2"></div>
 
 		</div>
@@ -309,7 +328,7 @@ document.getElementById('overhangs').style.display='block';
 document.getElementById('showOverhang').style.display='none';
 document.getElementById('hideOverhang').style.display='block';
 return false;">
-					Overhangen tonen
+					Overstek
 					<img src="css/arrow_inactive.png" style="-webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);-o-transform: rotate(90deg);
 -ms-transform: rotate(90deg);transform: rotate(90deg);">
 				</div>
@@ -409,31 +428,31 @@ return false;">
 		</div>
 
 		<div class="builderBlockStyleInactive waves-effect waves-light z-depth-0" id="builderBlock3" onclick="switchUI(3);">
-			<div class="builderBlockTextInactive" id="builderBlockText3">3.Wanden</div>
+			<div class="builderBlockTextInactive" id="builderBlockText3">3. Wand kleur + afwerking</div>
 			<div class="builderArrowInactive" id="builderArrow3"></div>
 		</div>
 
 		<div id="builderOptions3">
 
 			<div style="position: relative; height: 182px;">
-				<div class="builderOptionText">Wall color</div>
+				<div class="builderOptionText">Buitenwand</div>
 
 				<div class="optionColorActive" id="optionColor1_1" onclick="color1_1Select(); return false;">
 					<div class="optionColorCheckboxActive" id="color1_1Checkbox"></div>
 					<div class="optionColor1image"></div>
-					<div class="optionColorText">Black douglas</div>
+					<div class="optionColorText">Douglas zwart</div>
 				</div>
 
 				<div class="optionColorInactive" id="optionColor1_2" onclick="color1_2Select(); return false;">
 					<div class="optionColorCheckboxInative" id="color1_2Checkbox"></div>
 					<div class="optionColor2image"></div>
-					<div class="optionColorText">Light douglas</div>
+					<div class="optionColorText">Douglas naturel</div>
 				</div>
 
 			</div>
 
 			<div style="position: relative; height: 60px;">
-				<div class="builderOptionText">Internal Wall Enabled</div>
+				<div class="builderOptionText">Binnenwand</div>
 				<div style="position:absolute; left: 370px; width: 150px; top: 14px;">
 					<div class="switch">
 						<label>
@@ -450,7 +469,7 @@ return false;">
 				<div class="optionColorActive" id="optionColor2_1" onclick="color2_1Select(); return false;">
 					<div class="optionColorCheckboxActive" id="color2_1Checkbox"></div>
 					<div class="optionColor1image"></div>
-					<div class="optionColorText">Black douglas</div>
+					<div class="optionColorText">Douglas zwart</div>
 				</div>
 
 
@@ -458,7 +477,7 @@ return false;">
 				<div class="optionColorInactive" id="optionColor2_2" onclick="color2_2Select(); return false;">
 					<div class="optionColorCheckboxInative" id="color2_2Checkbox"></div>
 					<div class="optionColor2image"></div>
-					<div class="optionColorText">Light douglas</div>
+					<div class="optionColorText">Douglas naturel</div>
 				</div>
 			</div>
 
@@ -468,7 +487,7 @@ return false;">
 
 		<div class="builderBlockStyleInactive waves-effect waves-light z-depth-0" id="builderBlock4" onclick="switchUI(4);">
 
-			<div class="builderBlockTextInactive" id="builderBlockText4">4.Berging</div>
+			<div class="builderBlockTextInactive" id="builderBlockText4">4. Berging</div>
 			<div class="builderArrowInactive" id="builderArrow4"></div>
 
 		</div>
@@ -494,7 +513,7 @@ return false;">
 
 				<div class="inputblock">
 					<div class="inputIcon" id="inputIcon1"></div>
-					<div class="inputLabel">Breedte linker berging</div>
+					<div class="inputLabel">Breedte</div>
 					<div class="inputBorder"></div>
 					<div class="inputMM">mm</div>
 					<div class="inputMinMaxLabel">(min 1500 - max 4000)</div>
@@ -515,7 +534,7 @@ return false;">
 	document.getElementById('hideHouse1').style.display='block';
 	setTimeout(window.instance.select('house1_1'), 20);
 	return false;">
-					Add doors and window
+					Deur en raam opties tonen
 					<img src="css/arrow_inactive.png" class="houseSwitcherArrow" style="-webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);-o-transform: rotate(90deg);
 	-ms-transform: rotate(90deg);transform: rotate(90deg);">
 				</div>
@@ -526,7 +545,7 @@ return false;">
 	document.getElementById('showHouse1').style.display='block';
 	document.getElementById('hideHouse1').style.display='none';
 	return false;">
-					Add doors and window
+					Deur en raam opties tonen
 					<img src="css/arrow_inactive.png" class="houseSwitcherArrow" style="-webkit-transform: rotate(270deg);-moz-transform: rotate(270deg);-o-transform: rotate(90deg);
 	-ms-transform: rotate(270deg);transform: rotate(270deg);">
 				</div>
@@ -540,10 +559,10 @@ return false;">
 						<div class="col s12">
 							<ul class="tabs tabs1">
 								<li class="tab col s3"><a href="#house1_1" id="tabhouse1_1" onclick="zoomMove('front', 1);"
-										class="active">Front</a></li>
-								<li class="tab col s3"><a href="#house1_2" id="tabhouse1_2" onclick="zoomMove('back', 1);">Back</a></li>
-								<li class="tab col s3"><a href="#house1_3" id="tabhouse1_3" onclick="zoomMove('left', 1);">Left</a></li>
-								<li class="tab col s3"><a href="#house1_4" id="tabhouse1_4" onclick="zoomMove('right', 1);">Right</a>
+										class="active">Voor</a></li>
+								<li class="tab col s3"><a href="#house1_2" id="tabhouse1_2" onclick="zoomMove('back', 1);">Achter</a></li>
+								<li class="tab col s3"><a href="#house1_3" id="tabhouse1_3" onclick="zoomMove('left', 1);">Links</a></li>
+								<li class="tab col s3"><a href="#house1_4" id="tabhouse1_4" onclick="zoomMove('right', 1);">Rechts</a>
 								</li>
 							</ul>
 						</div>
@@ -553,7 +572,7 @@ return false;">
 								onclick="housesSet(1,1,0); zoomMove('front', 1); return false;">
 								<div class="optionHousesCheckboxActive" id="houses_1_1_0_Checkbox"></div>
 								<div class="optionHouses0image"></div>
-								<div class="optionHousesText">No window and door</div>
+								<div class="optionHousesText">Alleen wand</div>
 							</div>
 
 
@@ -561,42 +580,42 @@ return false;">
 								onclick="housesSet(1,1,1); zoomMove('front', 1);  return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_1_1_Checkbox"></div>
 								<div class="optionHouses1image"></div>
-								<div class="optionHousesText">Window</div>
+								<div class="optionHousesText">Raam</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector2" id="optionHouses_1_1_2"
 								onclick="housesSet(1,1,2); zoomMove('front', 1);  return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_1_2_Checkbox"></div>
 								<div class="optionHouses2image"></div>
-								<div class="optionHousesText">Single clawed door turning left</div>
+								<div class="optionHousesText">Enkele deur linksdraaiend</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector3" id="optionHouses_1_1_3"
 								onclick="housesSet(1,1,3); zoomMove('front', 1);  return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_1_3_Checkbox"></div>
 								<div class="optionHouses3image"></div>
-								<div class="optionHousesText">Single clawed door turning right</div>
+								<div class="optionHousesText">Enkele deur rechtsdraaiend</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector4" id="optionHouses_1_1_4"
 								onclick="housesSet(1,1,4); zoomMove('front', 1);  return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_1_4_Checkbox"></div>
 								<div class="optionHouses4image"></div>
-								<div class="optionHousesText">Double door</div>
+								<div class="optionHousesText">Dubbele deur</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector5" id="optionHouses_1_1_5"
 								onclick="housesSet(1,1,5); zoomMove('front', 1);  return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_1_5_Checkbox"></div>
 								<div class="optionHouses5image"></div>
-								<div class="optionHousesText">Single door left + window right</div>
+								<div class="optionHousesText">Enkele deur links + raam rechts</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector6" id="optionHouses_1_1_6"
 								onclick="housesSet(1,1,6); zoomMove('front', 1);  return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_1_6_Checkbox"></div>
 								<div class="optionHouses6image"></div>
-								<div class="optionHousesText">Window left + single door right</div>
+								<div class="optionHousesText">Raam links + enkele deur rechts</div>
 							</div>
 
 
@@ -611,7 +630,7 @@ return false;">
 								onclick="housesSet(1,2,0); zoomMove('back', 1); return false;">
 								<div class="optionHousesCheckboxActive" id="houses_1_2_0_Checkbox"></div>
 								<div class="optionHouses0image"></div>
-								<div class="optionHousesText">No window and door</div>
+								<div class="optionHousesText">Alleen wand</div>
 							</div>
 
 
@@ -619,42 +638,42 @@ return false;">
 								onclick="housesSet(1,2,1); zoomMove('back', 1); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_2_1_Checkbox"></div>
 								<div class="optionHouses1image"></div>
-								<div class="optionHousesText">Window</div>
+								<div class="optionHousesText">Raam</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector2" id="optionHouses_1_2_2"
 								onclick="housesSet(1,2,2); zoomMove('back', 1); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_2_2_Checkbox"></div>
 								<div class="optionHouses2image"></div>
-								<div class="optionHousesText">Single clawed door turning left</div>
+								<div class="optionHousesText">Enkele deur linksdraaiend</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector3" id="optionHouses_1_2_3"
 								onclick="housesSet(1,2,3); zoomMove('back', 1); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_2_3_Checkbox"></div>
 								<div class="optionHouses3image"></div>
-								<div class="optionHousesText">Single clawed door turning right</div>
+								<div class="optionHousesText">Enkele deur rechtsdraaiend</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector4" id="optionHouses_1_2_4"
 								onclick="housesSet(1,2,4); zoomMove('back', 1); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_2_4_Checkbox"></div>
 								<div class="optionHouses4image"></div>
-								<div class="optionHousesText">Double door</div>
+								<div class="optionHousesText">Dubbele deur</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector5" id="optionHouses_1_2_5"
 								onclick="housesSet(1,2,5); zoomMove('back', 1); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_2_5_Checkbox"></div>
 								<div class="optionHouses5image"></div>
-								<div class="optionHousesText">Single door left + window right</div>
+								<div class="optionHousesText">Enkele deur links + raam rechts</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector6" id="optionHouses_1_2_6"
 								onclick="housesSet(1,2,6); zoomMove('back', 1); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_2_6_Checkbox"></div>
 								<div class="optionHouses6image"></div>
-								<div class="optionHousesText">Window left + single door right</div>
+								<div class="optionHousesText">Raam links + enkele deur rechts</div>
 							</div>
 
 
@@ -666,7 +685,7 @@ return false;">
 								onclick="housesSet(1,3,0); zoomMove('left', 1); return false;">
 								<div class="optionHousesCheckboxActive" id="houses_1_3_0_Checkbox"></div>
 								<div class="optionHouses0image"></div>
-								<div class="optionHousesText">No window and door</div>
+								<div class="optionHousesText">Alleen wand</div>
 							</div>
 
 
@@ -674,42 +693,42 @@ return false;">
 								onclick="housesSet(1,3,1); zoomMove('left', 1); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_3_1_Checkbox"></div>
 								<div class="optionHouses1image"></div>
-								<div class="optionHousesText">Window</div>
+								<div class="optionHousesText">Raam</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector2" id="optionHouses_1_3_2"
 								onclick="housesSet(1,3,2); zoomMove('left', 1); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_3_2_Checkbox"></div>
 								<div class="optionHouses2image"></div>
-								<div class="optionHousesText">Single clawed door turning left</div>
+								<div class="optionHousesText">Enkele deur linksdraaiend</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector3" id="optionHouses_1_3_3"
 								onclick="housesSet(1,3,3); zoomMove('left', 1); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_3_3_Checkbox"></div>
 								<div class="optionHouses3image"></div>
-								<div class="optionHousesText">Single clawed door turning right</div>
+								<div class="optionHousesText">Enkele deur rechtsdraaiend</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector4" id="optionHouses_1_3_4"
 								onclick="housesSet(1,3,4); zoomMove('left', 1); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_3_4_Checkbox"></div>
 								<div class="optionHouses4image"></div>
-								<div class="optionHousesText">Double door</div>
+								<div class="optionHousesText">Dubbele deur</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector5" id="optionHouses_1_3_5"
 								onclick="housesSet(1,3,5); zoomMove('left', 1); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_3_5_Checkbox"></div>
 								<div class="optionHouses5image"></div>
-								<div class="optionHousesText">Single door left + window right</div>
+								<div class="optionHousesText">Enkele deur links + raam rechts</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector6" id="optionHouses_1_3_6"
 								onclick="housesSet(1,3,6); zoomMove('left', 1); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_3_6_Checkbox"></div>
 								<div class="optionHouses6image"></div>
-								<div class="optionHousesText">Window left + single door right</div>
+								<div class="optionHousesText">Raam links + enkele deur rechts</div>
 							</div>
 
 						</div>
@@ -720,7 +739,7 @@ return false;">
 								onclick="housesSet(1,4,0); zoomMove('right', 1); return false;">
 								<div class="optionHousesCheckboxActive" id="houses_1_4_0_Checkbox"></div>
 								<div class="optionHouses0image"></div>
-								<div class="optionHousesText">No window and door</div>
+								<div class="optionHousesText">Alleen wand</div>
 							</div>
 
 
@@ -728,42 +747,42 @@ return false;">
 								onclick="housesSet(1,4,1);  zoomMove('right', 1); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_4_1_Checkbox"></div>
 								<div class="optionHouses1image"></div>
-								<div class="optionHousesText">Window</div>
+								<div class="optionHousesText">Raam</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector2" id="optionHouses_1_4_2"
 								onclick="housesSet(1,4,2);  zoomMove('right', 1); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_4_2_Checkbox"></div>
 								<div class="optionHouses2image"></div>
-								<div class="optionHousesText">Single clawed door turning left</div>
+								<div class="optionHousesText">Enkele deur linksdraaiend</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector3" id="optionHouses_1_4_3"
 								onclick="housesSet(1,4,3);  zoomMove('right', 1); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_4_3_Checkbox"></div>
 								<div class="optionHouses3image"></div>
-								<div class="optionHousesText">Single clawed door turning right</div>
+								<div class="optionHousesText">Enkele deur rechtsdraaiend</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector4" id="optionHouses_1_4_4"
 								onclick="housesSet(1,4,4);  zoomMove('right', 1); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_4_4_Checkbox"></div>
 								<div class="optionHouses4image"></div>
-								<div class="optionHousesText">Double door</div>
+								<div class="optionHousesText">Dubbele deur</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector5" id="optionHouses_1_4_5"
 								onclick="housesSet(1,4,5);  zoomMove('right', 1); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_4_5_Checkbox"></div>
 								<div class="optionHouses5image"></div>
-								<div class="optionHousesText">Single door left + window right</div>
+								<div class="optionHousesText">Enkele deur links + raam rechts</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector6" id="optionHouses_1_4_6"
 								onclick="housesSet(1,4,6);  zoomMove('right', 1); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_1_4_6_Checkbox"></div>
 								<div class="optionHouses6image"></div>
-								<div class="optionHousesText">Window left + single door right</div>
+								<div class="optionHousesText">Raam links + enkele deur rechts</div>
 							</div>
 
 						</div>
@@ -793,7 +812,7 @@ return false;">
 
 				<div class="inputblock">
 					<div class="inputIcon" id="inputIcon1"></div>
-					<div class="inputLabel">Breedte rechter berging</div>
+					<div class="inputLabel">Breedte</div>
 					<div class="inputBorder"></div>
 					<div class="inputMM">mm</div>
 					<div class="inputMinMaxLabel">(min 1500 - max 4000)</div>
@@ -814,7 +833,7 @@ return false;">
 			document.getElementById('hideHouse2').style.display='block';
 			setTimeout(window.instance2.select('house2_1'), 20);
 			return false;">
-					Add doors and window
+					Deur en raam opties tonen
 					<img src="css/arrow_inactive.png" class="houseSwitcherArrow" style="-webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);-o-transform: rotate(90deg);
 			-ms-transform: rotate(90deg);transform: rotate(90deg);">
 				</div>
@@ -825,7 +844,7 @@ return false;">
 			document.getElementById('showHouse2').style.display='block';
 			document.getElementById('hideHouse2').style.display='none';
 			return false;">
-					Add doors and window
+					Deur en raam opties tonen
 					<img src="css/arrow_inactive.png" class="houseSwitcherArrow" style="-webkit-transform: rotate(270deg);-moz-transform: rotate(270deg);-o-transform: rotate(90deg);
 			-ms-transform: rotate(270deg);transform: rotate(270deg);">
 				</div>
@@ -835,10 +854,10 @@ return false;">
 						<div class="col s12">
 							<ul class="tabs tabs2">
 								<li class="tab col s3"><a href="#house2_1" id="tabhouse2_1" onclick="zoomMove('front', 2);"
-										class="active">Front</a></li>
-								<li class="tab col s3"><a href="#house2_2" id="tabhouse2_2" onclick="zoomMove('back', 2);">Back</a></li>
-								<li class="tab col s3"><a href="#house2_3" id="tabhouse2_3" onclick="zoomMove('left', 2);">Left</a></li>
-								<li class="tab col s3"><a href="#house2_4" id="tabhouse2_4" onclick="zoomMove('right', 2);">Right</a>
+										class="active">Voor</a></li>
+								<li class="tab col s3"><a href="#house2_2" id="tabhouse2_2" onclick="zoomMove('back', 2);">Achter</a></li>
+								<li class="tab col s3"><a href="#house2_3" id="tabhouse2_3" onclick="zoomMove('left', 2);">Links</a></li>
+								<li class="tab col s3"><a href="#house2_4" id="tabhouse2_4" onclick="zoomMove('right', 2);">Rechts</a>
 								</li>
 							</ul>
 						</div>
@@ -848,7 +867,7 @@ return false;">
 								onclick="housesSet(2,1,0); zoomMove('front', 2); return false;">
 								<div class="optionHousesCheckboxActive" id="houses_2_1_0_Checkbox"></div>
 								<div class="optionHouses0image"></div>
-								<div class="optionHousesText">No window and door</div>
+								<div class="optionHousesText">Alleen wand</div>
 							</div>
 
 
@@ -856,42 +875,42 @@ return false;">
 								onclick="housesSet(2,1,1); zoomMove('front', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_1_1_Checkbox"></div>
 								<div class="optionHouses1image"></div>
-								<div class="optionHousesText">Window</div>
+								<div class="optionHousesText">Raam</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector2" id="optionHouses_2_1_2"
 								onclick="housesSet(2,1,2); zoomMove('front', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_1_2_Checkbox"></div>
 								<div class="optionHouses2image"></div>
-								<div class="optionHousesText">Single clawed door turning left</div>
+								<div class="optionHousesText">Enkele deur linksdraaiend</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector3" id="optionHouses_2_1_3"
 								onclick="housesSet(2,1,3); zoomMove('front', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_1_3_Checkbox"></div>
 								<div class="optionHouses3image"></div>
-								<div class="optionHousesText">Single clawed door turning right</div>
+								<div class="optionHousesText">Enkele deur rechtsdraaiend</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector4" id="optionHouses_2_1_4"
 								onclick="housesSet(2,1,4); zoomMove('front', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_1_4_Checkbox"></div>
 								<div class="optionHouses4image"></div>
-								<div class="optionHousesText">Double door</div>
+								<div class="optionHousesText">Dubbele deur</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector5" id="optionHouses_2_1_5"
 								onclick="housesSet(2,1,5); zoomMove('front', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_1_5_Checkbox"></div>
 								<div class="optionHouses5image"></div>
-								<div class="optionHousesText">Single door left + window right</div>
+								<div class="optionHousesText">Enkele deur links + raam rechts</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector6" id="optionHouses_2_1_6"
 								onclick="housesSet(2,1,6); zoomMove('front', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_1_6_Checkbox"></div>
 								<div class="optionHouses6image"></div>
-								<div class="optionHousesText">Window left + single door right</div>
+								<div class="optionHousesText">Raam links + enkele deur rechts</div>
 							</div>
 						</div>
 
@@ -901,49 +920,49 @@ return false;">
 								onclick="housesSet(2,2,0); zoomMove('back', 2); return false;">
 								<div class="optionHousesCheckboxActive" id="houses_2_2_0_Checkbox"></div>
 								<div class="optionHouses0image"></div>
-								<div class="optionHousesText">No window and door</div>
+								<div class="optionHousesText">Alleen wand</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector1" id="optionHouses_2_2_1"
 								onclick="housesSet(2,2,1); zoomMove('back', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_2_1_Checkbox"></div>
 								<div class="optionHouses1image"></div>
-								<div class="optionHousesText">Window</div>
+								<div class="optionHousesText">Raam</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector2" id="optionHouses_2_2_2"
 								onclick="housesSet(2,2,2); zoomMove('back', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_2_2_Checkbox"></div>
 								<div class="optionHouses2image"></div>
-								<div class="optionHousesText">Single clawed door turning left</div>
+								<div class="optionHousesText">Enkele deur linksdraaiend</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector3" id="optionHouses_2_2_3"
 								onclick="housesSet(2,2,3); zoomMove('back', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_2_3_Checkbox"></div>
 								<div class="optionHouses3image"></div>
-								<div class="optionHousesText">Single clawed door turning right</div>
+								<div class="optionHousesText">Enkele deur rechtsdraaiend</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector4" id="optionHouses_2_2_4"
 								onclick="housesSet(2,2,4); zoomMove('back', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_2_4_Checkbox"></div>
 								<div class="optionHouses4image"></div>
-								<div class="optionHousesText">Double door</div>
+								<div class="optionHousesText">Dubbele deur</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector5" id="optionHouses_2_2_5"
 								onclick="housesSet(2,2,5); zoomMove('back', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_2_5_Checkbox"></div>
 								<div class="optionHouses5image"></div>
-								<div class="optionHousesText">Single door left + window right</div>
+								<div class="optionHousesText">Enkele deur links + raam rechts</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector6" id="optionHouses_2_2_6"
 								onclick="housesSet(2,2,6); zoomMove('back', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_2_6_Checkbox"></div>
 								<div class="optionHouses6image"></div>
-								<div class="optionHousesText">Window left + single door right</div>
+								<div class="optionHousesText">Raam links + enkele deur rechts</div>
 							</div>
 						</div>
 
@@ -952,49 +971,49 @@ return false;">
 								onclick="housesSet(2,3,0); zoomMove('left', 2); return false;">
 								<div class="optionHousesCheckboxActive" id="houses_2_3_0_Checkbox"></div>
 								<div class="optionHouses0image"></div>
-								<div class="optionHousesText">No window and door</div>
+								<div class="optionHousesText">Alleen wand</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector1" id="optionHouses_2_3_1"
 								onclick="housesSet(2,3,1); zoomMove('left', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_3_1_Checkbox"></div>
 								<div class="optionHouses1image"></div>
-								<div class="optionHousesText">Window</div>
+								<div class="optionHousesText">Raam</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector2" id="optionHouses_2_3_2"
 								onclick="housesSet(2,3,2); zoomMove('left', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_3_2_Checkbox"></div>
 								<div class="optionHouses2image"></div>
-								<div class="optionHousesText">Single clawed door turning left</div>
+								<div class="optionHousesText">Enkele deur linksdraaiend</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector3" id="optionHouses_2_3_3"
 								onclick="housesSet(2,3,3); zoomMove('left', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_3_3_Checkbox"></div>
 								<div class="optionHouses3image"></div>
-								<div class="optionHousesText">Single clawed door turning right</div>
+								<div class="optionHousesText">Enkele deur rechtsdraaiend</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector4" id="optionHouses_2_3_4"
 								onclick="housesSet(2,3,4); zoomMove('left', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_3_4_Checkbox"></div>
 								<div class="optionHouses4image"></div>
-								<div class="optionHousesText">Double door</div>
+								<div class="optionHousesText">Dubbele deur</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector5" id="optionHouses_2_3_5"
 								onclick="housesSet(2,3,5); zoomMove('left', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_3_5_Checkbox"></div>
 								<div class="optionHouses5image"></div>
-								<div class="optionHousesText">Single door left + window right</div>
+								<div class="optionHousesText">Enkele deur links + raam rechts</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector6" id="optionHouses_2_3_6"
 								onclick="housesSet(2,3,6); zoomMove('left', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_3_6_Checkbox"></div>
 								<div class="optionHouses6image"></div>
-								<div class="optionHousesText">Window left + single door right</div>
+								<div class="optionHousesText">Raam links + enkele deur rechts</div>
 							</div>
 
 						</div>
@@ -1005,7 +1024,7 @@ return false;">
 								onclick="housesSet(2,4,0); zoomMove('right', 2); return false;">
 								<div class="optionHousesCheckboxActive" id="houses_2_4_0_Checkbox"></div>
 								<div class="optionHouses0image"></div>
-								<div class="optionHousesText">No window and door</div>
+								<div class="optionHousesText">Alleen wand</div>
 							</div>
 
 
@@ -1013,42 +1032,42 @@ return false;">
 								onclick="housesSet(2,4,1); zoomMove('right', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_4_1_Checkbox"></div>
 								<div class="optionHouses1image"></div>
-								<div class="optionHousesText">Window</div>
+								<div class="optionHousesText">Raam</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector2" id="optionHouses_2_4_2"
 								onclick="housesSet(2,4,2); zoomMove('right', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_4_2_Checkbox"></div>
 								<div class="optionHouses2image"></div>
-								<div class="optionHousesText">Single clawed door turning left</div>
+								<div class="optionHousesText">Enkele deur linksdraaiend</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector3" id="optionHouses_2_4_3"
 								onclick="housesSet(2,4,3); zoomMove('right', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_4_3_Checkbox"></div>
 								<div class="optionHouses3image"></div>
-								<div class="optionHousesText">Single clawed door turning right</div>
+								<div class="optionHousesText">Enkele deur rechtsdraaiend</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector4" id="optionHouses_2_4_4"
 								onclick="housesSet(2,4,4); zoomMove('right', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_4_4_Checkbox"></div>
 								<div class="optionHouses4image"></div>
-								<div class="optionHousesText">Double door</div>
+								<div class="optionHousesText">Dubbele deur</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector5" id="optionHouses_2_4_5"
 								onclick="housesSet(2,4,5); zoomMove('right', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_4_5_Checkbox"></div>
 								<div class="optionHouses5image"></div>
-								<div class="optionHousesText">Single door left + window right</div>
+								<div class="optionHousesText">Enkele deur links + raam rechts</div>
 							</div>
 
 							<div class="optionHousesInactive housesSelector6" id="optionHouses_2_4_6"
 								onclick="housesSet(2,4,6); zoomMove('right', 2); return false;">
 								<div class="optionHousesCheckboxInative" id="houses_2_4_6_Checkbox"></div>
 								<div class="optionHouses6image"></div>
-								<div class="optionHousesText">Window left + single door right</div>
+								<div class="optionHousesText">Raam links + enkele deur rechts</div>
 							</div>
 
 						</div>
@@ -1064,7 +1083,7 @@ return false;">
 
 
 		<div class="builderBlockStyleInactive waves-effect waves-light z-depth-0" id="builderBlock7" onclick="switchUI(7);">
-			<div class="builderBlockTextInactive" id="builderBlockText7">5. Configuratie Segmenten</div>
+			<div class="builderBlockTextInactive" id="builderBlockText7">5. Segmenten</div>
 			<div class="builderArrowInactive" id="builderArrow7"></div>
 		</div>
 
@@ -1072,7 +1091,7 @@ return false;">
 
 <div id="sectionsList" style="">
 
-<div class="builderItemText" style="width: 400px;  height: 60px;">Click on 3D for configurate segment	</div>
+<div class="builderItemText" style="width: 400px;  height: 60px;">Selecteer segment op het 3D beeld</div>
 
 
 				<div style="display: none;">
@@ -1125,13 +1144,13 @@ return false;">
 
 
 		<div id="uiSpace" style="display: none; background-color: #FFFFFF;">
-		<div id="closeCross" style="left: 440px;" onclick="spaceCloseUIdiv();"></div>
+		<div id="closeCross" style="left: 425px;" onclick="spaceCloseUIdiv();"></div>
 
 
 
 			<div class="uiSpaceContainer" style="height: 15px !important; margin-top: 0px;">
-				<div class="spaceTriggerText">Wall enabled</div>
-				<div style="position:absolute; left: 370px; width: 150px; top: 14px;">
+				<div class="spaceTriggerText">Vul met hout</div>
+				<div style="position:absolute; left: 360px; width: 150px; top: 14px;">
 					<div class="switch">
 						<label>
 
@@ -1145,7 +1164,7 @@ return false;">
 
 			<div class="uiSpaceContainer" style="height: 15px !important; display: none;" >
 				<div class="spaceTriggerText">Internal Wall Enabled</div>
-				<div style="position:absolute; left: 370px; width: 150px; top: 14px;">
+				<div style="position:absolute; left: 360px; width: 150px; top: 14px;">
 					<div class="switch">
 						<label>
 
@@ -1160,8 +1179,8 @@ return false;">
 
 
 			<div class="uiSpaceContainer" style="height: 15px !important;  margin-bottom: 30px;">
-				<div class="spaceTriggerText">Align to right</div>
-				<div style="position:absolute; left: 370px; width: 150px; top: 14px; ">
+				<div class="spaceTriggerText">Bouw vanaf rechts</div>
+				<div style="position:absolute; left: 360px; width: 150px; top: 14px; ">
 					<div class="switch">
 						<label>
 
@@ -1174,38 +1193,38 @@ return false;">
 				</div>
 			</div>
 
-						<div id="spaceBlock1">
-				<div id="uiSpaceText1">Remove Element 1</div>
+			<div id="spaceBlock1">
+				<div id="uiSpaceText1">Geen Element 1</div>
 				<div class="uiSpaceButton0" id="uiSpaceButton0_0" onclick="spaceSetUI(0,0);"></div>
-				<div class="uiSpaceButton1" id="uiSpaceButton0_1" onclick="spaceSetUI(0,1);"><p class="uiSpaceButtonText">Shatter</p></div>
-				<div class="uiSpaceButton2" id="uiSpaceButton0_2" onclick="spaceSetUI(0,2);"><p class="uiSpaceButtonText">Full size window 1m</p></div>
-				<div class="uiSpaceButton3" id="uiSpaceButton0_3" onclick="spaceSetUI(0,3);"><p class="uiSpaceButtonText">Full size window 2m</p></div>
-				<div class="uiSpaceButton4" id="uiSpaceButton0_4" onclick="spaceSetUI(0,4);"><p class="uiSpaceButtonText">Glass sliding doors 2m</p></div>
-				<div class="uiSpaceButton5" id="uiSpaceButton0_5" onclick="spaceSetUI(0,5);"><p class="uiSpaceButtonText">Glass sliding doors 3m</p></div>
-				<div class="uiSpaceButton6" id="uiSpaceButton0_6" onclick="spaceSetUI(0,6);"><p class="uiSpaceButtonText">Glass sliding doors 4m</p></div>
+				<div class="uiSpaceButton1" id="uiSpaceButton0_1" data-count="1000" onclick="spaceSetUI(0,1);"><p class="uiSpaceButtonText">Shutters</p></div>
+				<div class="uiSpaceButton2" id="uiSpaceButton0_2" data-count="1000" onclick="spaceSetUI(0,2);"><p class="uiSpaceButtonText">Glaskozijn 1m</p></div>
+				<div class="uiSpaceButton3" id="uiSpaceButton0_3" data-count="2000" onclick="spaceSetUI(0,3);"><p class="uiSpaceButtonText">Glaskozijn 2m</p></div>
+				<div class="uiSpaceButton4" id="uiSpaceButton0_4" data-count="2000" onclick="spaceSetUI(0,4);"><p class="uiSpaceButtonText">Glazen schuipui 2-delig</p></div>
+				<div class="uiSpaceButton5" id="uiSpaceButton0_5" data-count="3000" onclick="spaceSetUI(0,5);"><p class="uiSpaceButtonText">Glazen schuipui 3-delig</p></div>
+				<div class="uiSpaceButton6" id="uiSpaceButton0_6" data-count="4000" onclick="spaceSetUI(0,6);"><p class="uiSpaceButtonText">Glazen schuipui 4-delig</p></div>
 			</div>
 
 			<div id="spaceBlock2">
-				<div id="uiSpaceText2">Remove Element 2</div>
+				<div id="uiSpaceText2">Geen Element 2</div>
 				<div class="uiSpaceButton0" id="uiSpaceButton1_0" onclick="spaceSetUI(1,0);"></div>
-				<div class="uiSpaceButton1" id="uiSpaceButton1_1" onclick="spaceSetUI(1,1);"><p class="uiSpaceButtonText">Shatter</p></div>
-				<div class="uiSpaceButton2" id="uiSpaceButton1_2" onclick="spaceSetUI(1,2);"><p class="uiSpaceButtonText">Full size window 1m</p></div>
-				<div class="uiSpaceButton3" id="uiSpaceButton1_3" onclick="spaceSetUI(1,3);"><p class="uiSpaceButtonText">Full size window 2m</p></div>
-				<div class="uiSpaceButton4" id="uiSpaceButton1_4" onclick="spaceSetUI(1,4);"><p class="uiSpaceButtonText">Glass sliding doors 2m</p></div>
-				<div class="uiSpaceButton5" id="uiSpaceButton1_5" onclick="spaceSetUI(1,5);"><p class="uiSpaceButtonText">Glass sliding doors 3m</p></div>
-				<div class="uiSpaceButton6" id="uiSpaceButton1_6" onclick="spaceSetUI(1,6);"><p class="uiSpaceButtonText">Glass sliding doors 4m</p></div>
+				<div class="uiSpaceButton1" id="uiSpaceButton1_1" data-count="1000" onclick="spaceSetUI(1,1);"><p class="uiSpaceButtonText">Shutters</p></div>
+				<div class="uiSpaceButton2" id="uiSpaceButton1_2" data-count="1000" onclick="spaceSetUI(1,2);"><p class="uiSpaceButtonText">Glaskozijn 1m</p></div>
+				<div class="uiSpaceButton3" id="uiSpaceButton1_3" data-count="2000" onclick="spaceSetUI(1,3);"><p class="uiSpaceButtonText">Glaskozijn 2m</p></div>
+				<div class="uiSpaceButton4" id="uiSpaceButton1_4" data-count="2000" onclick="spaceSetUI(1,4);"><p class="uiSpaceButtonText">Glazen schuipui 2-delig</p></div>
+				<div class="uiSpaceButton5" id="uiSpaceButton1_5" data-count="3000" onclick="spaceSetUI(1,5);"><p class="uiSpaceButtonText">Glazen schuipui 3-delig</p></div>
+				<div class="uiSpaceButton6" id="uiSpaceButton1_6" data-count="4000" onclick="spaceSetUI(1,6);"><p class="uiSpaceButtonText">Glazen schuipui 4-delig</p></div>
 
 			</div>
 
 			<div id="spaceBlock3">
-				<div id="uiSpaceText3">Remove Element 3</div>
+				<div id="uiSpaceText3">Geen Element 3</div>
 				<div class="uiSpaceButton0" id="uiSpaceButton2_0" onclick="spaceSetUI(2,0);"></div>
-				<div class="uiSpaceButton1" id="uiSpaceButton2_1" onclick="spaceSetUI(2,1);"><p class="uiSpaceButtonText">Shatter</p></div>
-				<div class="uiSpaceButton2" id="uiSpaceButton2_2" onclick="spaceSetUI(2,2);"><p class="uiSpaceButtonText">Full size window 1m</p></div>
-				<div class="uiSpaceButton3" id="uiSpaceButton2_3" onclick="spaceSetUI(2,3);"><p class="uiSpaceButtonText">Full size window 2m</p></div>
-				<div class="uiSpaceButton4" id="uiSpaceButton2_4" onclick="spaceSetUI(2,4);"><p class="uiSpaceButtonText">Glass sliding doors 2m</p></div>
-				<div class="uiSpaceButton5" id="uiSpaceButton2_5" onclick="spaceSetUI(2,5);"><p class="uiSpaceButtonText">Glass sliding doors 3m</p></div>
-				<div class="uiSpaceButton6" id="uiSpaceButton2_6" onclick="spaceSetUI(2,6);"><p class="uiSpaceButtonText">Glass sliding doors 4m</p></div>
+				<div class="uiSpaceButton1" id="uiSpaceButton2_1" data-count="1000" onclick="spaceSetUI(2,1);"><p class="uiSpaceButtonText">Shutters</p></div>
+				<div class="uiSpaceButton2" id="uiSpaceButton2_2" data-count="1000" onclick="spaceSetUI(2,2);"><p class="uiSpaceButtonText">Glaskozijn 1m</p></div>
+				<div class="uiSpaceButton3" id="uiSpaceButton2_3" data-count="2000" onclick="spaceSetUI(2,3);"><p class="uiSpaceButtonText">Glaskozijn 2m</p></div>
+				<div class="uiSpaceButton4" id="uiSpaceButton2_4" data-count="2000" onclick="spaceSetUI(2,4);"><p class="uiSpaceButtonText">Glazen schuipui 2-delig</p></div>
+				<div class="uiSpaceButton5" id="uiSpaceButton2_5" data-count="3000" onclick="spaceSetUI(2,5);"><p class="uiSpaceButtonText">Glazen schuipui 3-delig</p></div>
+				<div class="uiSpaceButton6" id="uiSpaceButton2_6" data-count="4000" onclick="spaceSetUI(2,6);"><p class="uiSpaceButtonText">Glazen schuipui 4-delig</p></div>
 			</div>
 </div>
 		</div>
@@ -1284,7 +1303,7 @@ return false;">
 		</div>
 
 		<div class="builderBlockStyleInactive waves-effect waves-light z-depth-0" id="builderBlock6" onclick="switchUI(6);">
-			<div class="builderBlockTextInactive" id="builderBlockText6">6. CALCULATE PRICE AND ORDER</div>
+			<div class="builderBlockTextInactive" id="builderBlockText6">6. Materiaallijst</div>
 			<div class="builderArrowInactive" id="builderArrow6"></div>
 		</div>
 
@@ -1603,43 +1622,21 @@ return false;">
 
 
 		<div class="builderBlockStyleInactive waves-effect waves-light z-depth-0" id="builderBlock8" onclick="switchUI(8);">
-			<div class="builderBlockTextInactive" id="builderBlockText8">7. OVERKAPPING OPSLAAN</div>
+			<div class="builderBlockTextInactive" id="builderBlockText8">7. Opslaan + offerte</div>
 			<div class="builderArrowInactive" id="builderArrow8"></div>
 		</div>
 
 		<div id="builderOptions8" style="display: none;">
 
 				<script src ="https://form.jotform.com/static/feedback2.js" type="text/javascript">
-
-function updateLinkInIFrame()
-{
-	//console.log(JFL_222553148237354);
-	JFL_222553148237354.iframeParameters= {'3durl': window.appState['linkAdmin']};
-
-	//input_50
-	//lightbox-222553148237354
-
-	// document.getElementById('shareLink').value
-
-	//document.getElementById("lightbox-222553148237354").contentWindow.document.getElementById("input_50").value = 777;
-
-	console.log(document.getElementById("lightbox-222553148237354"));
-
-	setTimeout(	function(){document.getElementById("lightbox-222553148237354").contentWindow.document.getElementById("input_50").value = 	window.appState['linkAdmin'];}, 5000);
-	//window.location.hash = '#' + encoded;
-}
-
-
-
-
-					var uniquelink = "";
+					var uniquelink = "https://form.jotform.com/222553148237354";
 
 				 var JFL_222553148237354 = new JotformFeedback({
 				formId: '222553148237354',
 				base: 'https://form.jotform.com/',
 				windowTitle: '',
 				iframeParameters: {
-				'3durl': 'Generating url...'
+				'3durl': uniquelink
 				 },
 
 				background: '#f8e71c',
@@ -1651,7 +1648,11 @@ function updateLinkInIFrame()
 				});
 				</script>
 
-				<a class="btn red lightbox-222553148237354" style="" onclick="updateLinkInIFrame();">Overkapping opslaan</a>
+				<a class="btn lightbox-222553148237354" style="">
+
+					Opslaan + offerte
+
+				</a>
 		</div>
 
 	</div>
