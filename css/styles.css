@@ -21,10 +21,10 @@
 }
 
 #canvas2d {
+  transform: var(--zoomScale);
   width: calc(100vw - 468px);
   height: calc(100vw - 468px);
   position: absolute;
-  top: 0;
   top: calc((100vh - (100vw - 468px))/2);
   left: 468px;
   outline: none;
@@ -114,8 +114,6 @@
   left: 36px;
 }
 
-
-
 #builderUI {
   width: 468px;
   height: calc(100vh - 56px);
@@ -198,7 +196,7 @@
   font-size: 16px;
   line-height: 19px;
   color: #000000;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 
@@ -314,6 +312,7 @@ html {
   left: calc((100vw + 468px)/2 - 432px);
   background-color: #FFFFFF;
 }
+
 
 #optionsBoxBlock1,
 #optionsBoxBlock2,
@@ -851,6 +850,12 @@ html {
   width: 30px;
 }
 
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+}
+
 .lightbox-222553148237354{
   margin-top: 16px; 
   margin-bottom: 16px; 
@@ -869,12 +874,14 @@ html {
 
 .canvas2dFullScreen {
   position: absolute !important;
-  width: 100vw !important;
-  top: 100px !important;
-  left: 0px !important;
+  height: 100vmin !important;
+  width: 100vmin !important;
+  top: 0 !important;
+  left: calc((100vmax - 100vmin)/2) !important;
   overflow-x: hidden;
   overflow-y: hidden;
 }
+
 
 .optionsBoxFullScreen {
   left: calc((100vw - 864px) / 2) !important; 	
@@ -882,31 +889,30 @@ html {
   transform: scale(0.875);
 }
 
-.iconInfoFullScreen {
-  left: 10px !important;	
-  top: 100px !important;  
-}
 
 .iconFullScreenFullScreen {
-  left: 10px !important;	
+  right: 20px !important;	
 }
 
 .iconInfoFullScreen {
-  right: 10px !important;	
+  right: 20px !important;	
 }
-
-.iconFullScreenFullScreen {
-  right: 10px !important;	
-  top: 60px !important; 
-}
-
 
 @media screen and ( max-width: 468px ){
-
 
 .optionsBoxFullScreen {
   left: calc(100vw - 666px) !important; 	
   top: calc(100% - 85px) !important; 
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.canvas2dFullScreen {
+  position: absolute !important;
+  height: 100vmin !important;
+  width: 100vmin !important;
+  top: calc((100vmax - 60%)/2) !important;
+  left: calc((100vmax - var(--zoomScale))/2) !important;
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -1039,21 +1045,23 @@ html {
   }
 
   #iconInfo {
-    transform: scale(0.875);
+    display: none;
+    /* transform: scale(0.875);
     top: calc(100% - 398px);
     right: 10px;
     background-image: url("../css/icon_information.png");
     background-repeat: no-repeat;
-    overflow-y: hidden;
+    overflow-y: hidden; */
   }
 
   #optionsBox {
-    transform: scale(0.4);
+    display: none;
+    /* transform: scale(0.4);
     width: 864px;
     left: -198px;
     top: calc(100% - 426px);
     background-color: #FFFFFF;
-    overflow-y: hidden;
+    overflow-y: hidden; */
   }
   
   #lightbox-222553148237354{
