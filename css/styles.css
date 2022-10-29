@@ -901,10 +901,11 @@ html {
 @media screen and ( max-width: 468px ){
 
 .optionsBoxFullScreen {
-  left: calc(100vw - 666px) !important; 	
+  display: none;
+  /* left: calc(100vw - 666px) !important; 	
   top: calc(100% - 85px) !important; 
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: hidden; */
 }
 
 .canvas2dFullScreen {
@@ -918,8 +919,9 @@ html {
 }
 
 .iconInfoFullScreen {    
-  left: calc(100vw - 58px) !important;	
-  top: calc(100% - 58px) !important; 
+  display: none;
+  /* left: calc(100vw - 58px) !important;	
+  top: calc(100% - 58px) !important;  */
 }
 
 .iconFullScreenFullScreen {
@@ -986,13 +988,17 @@ html {
     position: fixed;
     top: calc(100% - 343px);
     width: 468px;
-    height: 73vmin;
+    height: 100vmin;
     left: 0;
     background-color: #FFFFFF;
     overflow-x: hidden;
     overflow-y: auto;
     box-shadow: 0px 0px 18px rgba(52, 52, 52, 0.2);
     padding-bottom: 15px;
+  }
+
+  .builderOptions7{
+    overflow-y: hidden;
   }
 
   .itemListPrice {
