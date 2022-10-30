@@ -900,13 +900,13 @@ html {
 
 @media screen and ( max-width: 468px ){
 
-.optionsBoxFullScreen {
+/* .optionsBoxFullScreen {
   display: none;
-  /* left: calc(100vw - 666px) !important; 	
+  left: calc(100vw - 666px) !important; 	
   top: calc(100% - 85px) !important; 
   overflow-x: hidden;
-  overflow-y: hidden; */
-}
+  overflow-y: hidden;
+} */
 
 .canvas2dFullScreen {
   position: absolute !important;
@@ -918,11 +918,11 @@ html {
   overflow-y: hidden;
 }
 
-.iconInfoFullScreen {    
+/* .iconInfoFullScreen {    
   display: none;
-  /* left: calc(100vw - 58px) !important;	
-  top: calc(100% - 58px) !important;  */
-}
+  left: calc(100vw - 58px) !important;	
+  top: calc(100% - 58px) !important; 
+} */
 
 .iconFullScreenFullScreen {
   right: calc(100vw - 58px) !important;	
@@ -1050,29 +1050,27 @@ html {
     overflow-y: hidden;
   }
 
-  .iconInfo {
+  /* .iconInfo {
     display: none;
-    overflow-y: hidden;
-    overflow-x: hidden; 
-    /* transform: scale(0.875);
+    transform: scale(0.875);
     top: calc(100% - 398px);
     right: 10px;
     background-image: url("../css/icon_information.png");
     background-repeat: no-repeat;
-    overflow-y: hidden; */
-  }
+    overflow-y: hidden;
+  } */
 
-  .optionsBox {
+  /* .optionsBox {
     display: none;
     overflow-y: hidden;
     overflow-x: hidden; 
-    /* transform: scale(0.4);
+    transform: scale(0.4);
     width: 864px;
     left: -198px;
     top: calc(100% - 426px);
     background-color: #FFFFFF;
-    overflow-y: hidden; */
-  }
+    overflow-y: hidden;
+  } */
   
   #lightbox-222553148237354{
     margin-top: 16px; 
