@@ -883,7 +883,7 @@ html {
 }
 
 
-.optionsBoxFullScreen {
+/* .optionsBoxFullScreen {
   left: calc((100vw - 864px) / 2) !important; 	
   top: calc(100vh - 120px) !important; 
   transform: scale(0.875);
@@ -896,7 +896,7 @@ html {
 
 .iconInfoFullScreen {
   right: 20px !important;	
-}
+} */
 
 @media screen and ( max-width: 468px ){
 
@@ -1050,8 +1050,10 @@ html {
     overflow-y: hidden;
   }
 
-  #iconInfo {
+  .iconInfo {
     display: none;
+    overflow-y: hidden;
+    overflow-x: hidden; 
     /* transform: scale(0.875);
     top: calc(100% - 398px);
     right: 10px;
@@ -1060,8 +1062,10 @@ html {
     overflow-y: hidden; */
   }
 
-  #optionsBox {
+  .optionsBox {
     display: none;
+    overflow-y: hidden;
+    overflow-x: hidden; 
     /* transform: scale(0.4);
     width: 864px;
     left: -198px;
