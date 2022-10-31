@@ -885,10 +885,9 @@ html {
 }
 
 
-#optionsBoxFullScreen {
-  display: none !important;
-  /* left: calc((100vw - 864px) / 2) !important; 	
-  top: calc(100vh - 120px) !important; 
+.optionsBoxFullScreen {
+  left: calc((100vw + 468px)/2 - 632px) !important; 	
+  /*top: calc(100vh - 120px) !important; 
   transform: scale(0.875); */
 }
 
@@ -904,12 +903,12 @@ html {
 
 @media screen and ( max-width: 468px ){
 
-#optionsBoxFullScreen {
-  display: block !important;
-  left: calc(100vw - 666px) !important; 	
+.optionsBoxFullScreen {
+  display: none !important;
+  /* left: calc(100vw - 666px) !important; 	
   top: calc(100% - 85px) !important; 
   overflow-x: hidden;
-  overflow-y: hidden; 
+  overflow-y: hidden; */
 }
 
 .canvas2dFullScreen {
