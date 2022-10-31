@@ -201,8 +201,9 @@
   margin-bottom: 10px;
   padding-left: 34px;
   height: 56px;
-  border-top: 2px solid #F3F3F3;
+  border-bottom: 2px solid #F3F3F3;
   padding-top: 16px;
+  padding-bottom: 16px;
 
 }
 
