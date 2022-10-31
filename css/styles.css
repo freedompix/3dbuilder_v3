@@ -886,7 +886,7 @@ html {
 
 
 #optionsBoxFullScreen {
-  display: none;
+  display: none !important;
   /* left: calc((100vw - 864px) / 2) !important; 	
   top: calc(100vh - 120px) !important; 
   transform: scale(0.875); */
@@ -898,14 +898,14 @@ html {
 }
 
 .iconInfoFullScreen {
-  display: none;
+  display: none !important;
   /* right: 20px !important;	 */
 }
 
 @media screen and ( max-width: 468px ){
 
 #optionsBoxFullScreen {
-  display: none;
+  display: none !important;
   /* left: calc(100vw - 666px) !important; 	
   top: calc(100% - 85px) !important; 
   overflow-x: hidden;
@@ -923,7 +923,7 @@ html {
 }
 
 .iconInfoFullScreen {    
-  display: none;
+  display: none !important;
   /* left: calc(100vw - 58px) !important;	
   top: calc(100% - 58px) !important;  */
 }
