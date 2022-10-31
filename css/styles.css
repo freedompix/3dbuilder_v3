@@ -898,18 +898,18 @@ html {
 }
 
 .iconInfoFullScreen {
-  display: none !important;
-  /* right: 20px !important;	 */
+  display: block !important;
+  right: 20px !important;
 }
 
 @media screen and ( max-width: 468px ){
 
 #optionsBoxFullScreen {
-  display: none !important;
-  /* left: calc(100vw - 666px) !important; 	
+  display: block !important;
+  left: calc(100vw - 666px) !important; 	
   top: calc(100% - 85px) !important; 
   overflow-x: hidden;
-  overflow-y: hidden; */
+  overflow-y: hidden; 
 }
 
 .canvas2dFullScreen {
