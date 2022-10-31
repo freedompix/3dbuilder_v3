@@ -189,14 +189,19 @@
 
 .builderOptionTextMiddle {
   width: 100%;
-  text-align: center;
+  text-align: left;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
   color: #000000;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  padding-left: 34px;
+  height: 56px;
+  border-bottom: 2px solid #F3F3F3;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 
@@ -207,7 +212,6 @@
   height: 128px;
   left: 36px;
   top: 56px;
-
 }
 
 #optionHouse2 {
